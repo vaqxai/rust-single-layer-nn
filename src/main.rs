@@ -15,14 +15,20 @@ fn train() {
     // TODO: lines iter to vector
     let mut input_letters = count_letters(input);
     pPoland.train(input, 1.0);
+    pEnglish.train(input 0.0);
+    pGerman.train(0.0);
 
     input = read_file("english.txt");
     input_letters = count_letters(input);
     pEnglish.train(input, 1.0);
+    pPoland.train(input, 0.0);
+    pGerman.train(input, 0.0);
 
     input = read_file("german.txt");
     input_letters = count_letters(input);
     pGerman.train(input, 1.0);
+    pPoland.train(input, 0.0);
+    pEnglish.train(input, 0.0);
 
     let test_data = read_file("test.txt");
     let outcome_polish = pPoland.predict(&test_data);
