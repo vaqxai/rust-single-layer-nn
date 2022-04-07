@@ -2,10 +2,8 @@ mod math;
 mod perceptron;
 use perceptron::Perceptron;
 mod fileread;
-use fileread::read_file;
 mod lettercounter;
 use lettercounter::count_letters;
-
 
 
 fn train() {
