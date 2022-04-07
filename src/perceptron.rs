@@ -41,7 +41,7 @@ impl Perceptron {
 
 	}
 
-	pub fn train(&mut self, inputs: Vec<f64>, expected_output: f64) {
+	pub fn train(&mut self, inputs: &Vec<f64>, expected_output: f64) {
 		let output = self.predict(&inputs);
 		let error = expected_output - output;
 		for i in 0..self.weights.len() {
