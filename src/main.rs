@@ -10,10 +10,7 @@ use clap::Parser;
 
 fn train(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut Perceptron) {
 
-    // TODO: Prepare the data
-    // TODO: Add multiple iteration training with different data
     // TODO: Mod perceptrons to use a different classification function
-    // TODO: Add a parser for user-input
 
     let mut input_letters = count_letters(&fileread::file_to_str_ascii_only("train/polish.txt"));
     p_polish.train(&input_letters, 1.0);
