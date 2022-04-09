@@ -1,4 +1,4 @@
-use crate::math;
+use crate::{math, vprint};
 use std::process;
 use std::fmt::Display;
 
@@ -56,7 +56,7 @@ impl Perceptron {
 			self.weights[i] += self.learning_rate * error * inputs[i];
 		}
 		self.bias -= self.learning_rate * error;
-		println!("Training step: weights: {:?}, bias: {}", self.weights, self.bias);
+		vprint(format!("Training step: weights: {:?}, bias: {}", self.weights, self.bias));
 	}
 }
 
