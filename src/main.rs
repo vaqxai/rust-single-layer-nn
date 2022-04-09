@@ -15,17 +15,17 @@ fn train(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut P
     // TODO: Mod perceptrons to use a different classification function
     // TODO: Add a parser for user-input
 
-    let mut input_letters = count_letters(&fileread::file_to_str("train/polish.txt"));
+    let mut input_letters = count_letters(&fileread::file_to_str_ascii_only("train/polish.txt"));
     p_polish.train(&input_letters, 1.0);
     p_english.train(&input_letters, 0.0);
     p_german.train(&input_letters, 0.0);
 
-    input_letters = count_letters(&fileread::file_to_str("train/english.txt"));
+    input_letters = count_letters(&fileread::file_to_str_ascii_only("train/english.txt"));
     p_english.train(&input_letters, 1.0);
     p_polish.train(&input_letters, 0.0);
     p_german.train(&input_letters, 0.0);
 
-    input_letters = count_letters(&fileread::file_to_str("train/german.txt"));
+    input_letters = count_letters(&fileread::file_to_str_ascii_only("train/german.txt"));
     p_german.train(&input_letters, 1.0);
     p_polish.train(&input_letters, 0.0);
     p_english.train(&input_letters, 0.0);
@@ -33,7 +33,7 @@ fn train(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut P
 }
 
 fn test(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut Perceptron, filepath: &str){
-    let test_data = count_letters(&fileread::file_to_str(filepath));
+    let test_data = count_letters(&fileread::file_to_str_ascii_only(filepath));
     let outcome_polish = p_polish.predict(&test_data);
     let outcome_english = p_english.predict(&test_data);
     let outcome_german = p_german.predict(&test_data);
@@ -69,5 +69,16 @@ fn main() {
         train(&mut p_polish, &mut p_english, &mut p_german);
         println!("Perceptrons trained {} times", i+1);
         println!("Polish perceptron: {}\nEnglish perceptron: {}\nGerman perceptron: {}", p_polish, p_english, p_german);
+    }
+
+    if let Some(text) = args.text {
+        let mut input_letters = count_letters(&text);
+        let outcome_polish = p_polish.predict(&input_letters);
+        let outcome_english = p_english.predict(&input_letters);
+        let outcome_german = p_german.predict(&input_letters);
+
+        println!("Perceptron thinks this text is polish: {} german {} english {} ", outcome_polish, outcome_german, outcome_english);
+    } else {
+        test(&mut p_polish, &mut p_english, &mut p_german, &args.testfile);
     }
 }
