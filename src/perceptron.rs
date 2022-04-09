@@ -47,7 +47,7 @@ impl Perceptron {
 		let output = self.predict(&inputs);
 		let error = expected_output - output;
 
-		if (inputs.len() != self.weights.len()) {
+		if inputs.len() != self.weights.len() {
 			println!("Inputs and weights must be the same length, but were: {}, {} in {}", inputs.len(), self.weights.len(), self);
 			process::exit(0x0100);
 		}
