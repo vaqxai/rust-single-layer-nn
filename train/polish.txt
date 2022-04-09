@@ -1,0 +1,1140 @@
+Komputer (od ang. computer[a][1]); dawniej: mózg elektronowy, elektroniczna maszyna cyfrowa[2], maszyna matematyczna[3] – maszyna przeznaczona do przetwarzania informacji, które da się zapisać w formie ciągu cyfr albo sygnału ciągłego. Maszyna roku tygodnika „Time” w 1982 roku.
+
+Mimo że mechaniczne maszyny liczące istniały od wielu stuleci, komputery w sensie współczesnym pojawiły się dopiero w połowie XX wieku, gdy zbudowano pierwsze komputery elektroniczne. Miały one rozmiary sporych pomieszczeń i zużywały kilkaset razy więcej energii niż współczesne komputery osobiste (PC), a jednocześnie miały miliardy razy mniejszą moc obliczeniową. Współcześnie są prowadzone także badania nad komputerami biologicznymi i optycznymi.
+
+Małe komputery mogą zmieścić się nawet w zegarku i są zasilane baterią. Komputery osobiste stały się symbolem ery informatycznej. Najliczniejszymi maszynami liczącymi są systemy wbudowane sterujące najróżniejszymi urządzeniami – od odtwarzaczy MP3 i zabawek po roboty przemysłowe.
+
+
+Spis treści
+1	Komputery i inne maszyny liczące
+2	Komputery analogowe
+3	Programowalność
+4	Podstawowe elementy komputera
+5	Typy komputerów
+6	Historia komputerów
+7	Polskie komputery
+8	Maszyny poprzedzające komputer
+9	Zobacz też
+10	Uwagi
+11	Przypisy
+12	Linki zewnętrzne
+Komputery i inne maszyny liczące
+Komputer od typowego kalkulatora odróżnia zdolność wykonywania wielokrotnie, automatycznie powtarzanych obliczeń, według algorytmicznego wzorca zwanego programem, gdy tymczasem kalkulator może zwykle wykonywać tylko pojedyncze działania. Granica jest tu umowna, ponieważ taką definicję komputera spełniają też kalkulatory programowalne (naukowe, inżynierskie), jednak kalkulatory służą tylko do obliczeń numerycznych, podczas gdy nazwa komputer najczęściej dotyczy urządzeń wielofunkcyjnych.
+
+Global Digital Divide1.png
+Jakkolwiek istnieją mechaniczne urządzenia liczące, które potrafią realizować całkiem złożone programy, zazwyczaj nie zalicza się ich do komputerów. Warto jednak pamiętać, że prawzorem komputera jest abstrakcyjny model zwany maszyną Turinga, a pierwsze urządzenia ułatwiające obliczenia były znane w starożytności, np. abakus z 440 p.n.e.
+
+W początkowym okresie rozwoju komputerów budowano komputery zerowej generacji na przekaźnikach i elementach mechanicznych.
+
+Właściwie wszystkie współczesne komputery to maszyny elektroniczne. Próby budowania komputerów optycznych (wykorzystujących przełączniki optyczne), optoelektronicznych (połączenie elementów optycznych i elektronicznych), biologicznych (wykorzystujące wypreparowane komórki nerwowe) czy molekularnych (wykorzystujące jako bramki logiczne pojedyncze cząsteczki) są jeszcze w powijakach i do ich praktycznego zastosowania jest wciąż długa droga. Innym rodzajem komputera jest komputer kwantowy, którego układ przetwarzający dane wykorzystuje efekty fizyczne wynikające z mechaniki kwantowej.
+
+Komputery analogowe
+ Osobny artykuł: Komputer analogowy.
+W definicji komputera mieszczą się też urządzenia do przeliczania wartości reprezentowanych przez wielkość ciągłą (napięcie lub prąd elektryczny). Programowanie ich polega na określeniu toru przetwarzania sygnałów przełącznikami i ewentualnie określeniu stałych za pomocą potencjometrów. Komputery takie stosowano w połowie XX wieku i istniały nawet wyspecjalizowane w tym celu układy scalone. Obecnie nie opłaca się implementować algorytmów obliczeniowych w technice analogowej ze względu na niską cenę mikroprocesorów. Można jeszcze spotkać (np. w Rosji) analogowe komputery balistyczne służące do obliczania toru pocisków artyleryjskich, jednak i tam zastępuje się je komputerami cyfrowymi.
+
+Programowalność
+To, co odróżnia współczesne komputery od wszystkich innych maszyn, to możliwość ich programowania, czyli wprowadzenia do pamięci komputera listy instrukcji, które mogą być wykonane w innym czasie.
+
+W większości przypadków instrukcje, które komputer wykonuje, są bardzo proste – dodawanie dwóch liczb, przeniesienie danych z jednego miejsca w inne, wyświetlenie komunikatu itd. Instrukcje te odczytywane są z pamięci komputera i zazwyczaj wykonywane są w tej samej kolejności, co w pamięci. Istnieją jednak instrukcje umożliwiające „skok” w pewne określone miejsce programu i wykonanie go z tego miejsca. Ponadto instrukcje skoku mogą być wykonane warunkowo, co umożliwia wykonanie różnych zestawów instrukcji w zależności od uzyskanych wcześniej wyników obliczeń. Ponadto istnieją instrukcje umożliwiające tworzenie podprogramów.
+
+Programowanie można w pewnym stopniu przyrównać do czytania książki. W większości wypadków słowa odczytywane są po kolei, zdarzają się jednak momenty, gdy czytelnik wraca do wcześniejszego rozdziału lub omija nieciekawy fragment. Komputery mają możliwość wykonania pewnych instrukcji w pętli, dopóki nie zostanie spełniony jakiś warunek.
+
+Można tu użyć przykładu człowieka próbującego zsumować kolejne liczby na kalkulatorze. Dodaje 1 + 2, do wyniku dodaje 3 itd. Przy próbie zsumowania 10 liczb nie stanowi to problemu, jednak już przy tysiącu po pierwsze zajmuje to bardzo dużo czasu, po drugie przy tak dużej ilości operacji istnieje duże prawdopodobieństwo błędu. Komputer z kolei wykona tę operację w ułamku sekundy, przy użyciu prostego programu:
+
+mov #0,sum        ; ustaw sum na 0
+mov #1,num        ; ustaw num na 1
+loop: add num,sum ; dodaj num i sum
+add #1,num        ; dodaj 1 do num
+cmp num,#1000     ; porównaj num z 1000
+ble loop          ; jeżeli num <= 1000, wróć do 'loop'
+halt              ; koniec programu. wstrzymaj działanie
+Po otrzymaniu rozkazu wykonania programu komputer wykona serię operacji dodawania. Prawdopodobieństwo wystąpienia pomyłki jest znikome. Komputery jednak nie potrafią myśleć samodzielnie i dany problem mogą rozwiązać wyłącznie według algorytmu przygotowanego przez człowieka. Inteligentna istota, napotkawszy podobne zadanie, mogłaby zorientować się, że do jego wykonania wystarczy użyć prostego równania:
+
+{\displaystyle 1+2+3+...+(n-1)+n={\frac {n(n+1)}{2}};n=1000}{\displaystyle 1+2+3+...+(n-1)+n={\frac {n(n+1)}{2}};n=1000}
+Innymi słowy komputer wykona postawione przed nim zadanie, nie zastanawiając się nad efektywnością wykonanej przez niego „pracy”.
+
+Podstawowe elementy komputera
+Większość współczesnych komputerów opartych jest na tzw. architekturze von Neumanna (od nazwiska Johna von Neumanna), tj. składa się z trzech typów podstawowych elementów:
+
+procesora – podzielonego na część arytmetyczno-logiczną, czyli układu, który faktycznie wykonuje wszystkie konieczne obliczenia oraz część sterującą (często obok CPU obecny jest także GPU czy procesor dźwięku)
+pamięci RAM – (od ang. Random Access Memory), czyli układy scalone, które przechowują program i dane (umożliwia to m.in. samomodyfikację programu) oraz bieżące wyniki obliczeń procesora i stale, na bieżąco wymienia dane z procesorem
+urządzeń wejścia/wyjścia – które służą do komunikacji komputera z otoczeniem.
+Typy komputerów
+ Osobny artykuł: Typy komputerów.
+Współcześnie komputery dzieli się na:
+
+komputery osobiste („PC”, z ang. personal computer)
+smartfony (ang. smartphone) - mają podobne podzespoły i oprogramowanie co komputery osobiste.
+konsola – komputer wyspecjalizowany w programach rozrywkowych. Zazwyczaj korzysta z telewizora jako głównego wyświetlacza. Posiada ograniczone oprogramowanie przygotowane do wydajnego uruchamiania programów i gier. Na niektórych modelach można zainstalować inny system operacyjny i wykorzystywać do specyficznych zastosowań, np. procesory graficzne konsoli PS3 nadają się np. do łamania różnego rodzaju kodów.
+komputery domowe – poprzedniki komputerów osobistych, korzystające z telewizora jako monitora.
+komputery mainframe – często o większych rozmiarach, których zastosowaniem jest przetwarzanie dużych ilości danych na potrzeby różnego rodzaju instytucji, pełnienie roli serwerów itp.
+superkomputery – największe komputery o dużej mocy obliczeniowej, używane do czasochłonnych obliczeń naukowych i symulacji skomplikowanych systemów.
+komputery wbudowane – (lub osadzone, ang. embedded) specjalizowane komputery służące do sterowania urządzeniami z gatunku automatyki przemysłowej, elektroniki użytkowej (np. stare telefony komórkowe itp.) czy wręcz poszczególnymi komponentami wchodzącymi w skład komputerów.
+Historia komputerów
+Najwybitniejsi naukowcy, których prace przyczyniły się do powstania komputerów:
+
+Christopher Latham Sholes (maszyna do pisania, 1867)
+Blaise Pascal (kalkulator od nazwiska konstruktora zwany Pascaliną, 1642)
+Gottfried Leibniz (system binarny, żywa ława do obliczeń, mechanizm stepped drum)
+Abraham Stern (maszyna licząca)
+Charles Babbage (maszyna różnicowa, maszyna analityczna)
+Ada Lovelace (prace teoretyczne, wizjonerskie w jej czasach koncepcje wykorzystania komputerów)
+Claude Shannon (teoretyczne podstawy budowy komputerów – „przekucie” algebr Boole’a i współczesnej mu wiedzy o elektronice)
+Alan Turing (teoretyczne podstawy informatyki, maszyna Turinga i uniwersalna maszyna Turinga)
+Niektóre z historycznych modeli komputerów:
+
+Atanasoff-Berry Computer – maszyna do rozwiązywania układów równań algebraicznych liniowych, skonstruowana w roku 1939 przez Johna Atanasoffa i jego studenta Clifforda Berry’ego.
+Z3 – w pełni automatyczny komputer o zmiennym programie zbudowany przez niemieckiego inżyniera Konrada Zuse w 1941.
+Colossus – wyprodukowane przez rząd brytyjski podczas drugiej wojny światowej w liczbie 11 sztuk komputery lampowe, których zadaniem było łamanie szyfrów (zwłaszcza do złamania szyfrów maszyny Lorenza).
+ENIAC – tworzony w latach 1943–1946 elektroniczny komputer, który składał się z 18 tys. lamp elektronowych, 1500 przekaźników, ważył 30 ton i miał wymiary 15 na 9 metrów.
+Polskie komputery
+cyfrowe: K-202, PRS-4, XYZ, ZAM, UMC, Odra, Mera 300, Mera 400, Poltype, R32, Mazovia, Meritum, Elwro 800 Junior, ComPAN 8, Menopc 900
+analogowe: ELWAT, AKAT-1, ARR
+Maszyny poprzedzające komputer
+maszyna do pisania
+maszyna do księgowania
+maszyna analityczna
+dalekopis
+teleks
+telegraf
+maszyny matematyczne: arytmometr, kalkulator Curta, kalkulator na korbkę, maszyna licząca, maszyna fakturująca, maszyna różnicowa, sumator, suwak logarytmiczny, automat obrachunkowy, maszyna do fakturowania, maszyna kalkulacyjna, pascalina, maszyna Turinga
+Zobacz też
+Informacje w projektach siostrzanych
+Commons-logo.svg  Multimedia w Wikimedia Commons
+Wikiquote-logo.svg  Cytaty w Wikicytatach
+Wikibooks-logo.svg  Podręczniki w Wikibooks
+WiktionaryPl nodesc.svg  Definicje słownikowe w Wikisłowniku
+Wikiversity-logo-correct.svg  Materiały edukacyjne w Wikiwersytecie
+	Zobacz publikację
+Podstawowe komponenty komputera w Wikibooks
+Podstawowe pojęcia związane z komputerami:
+
+moc obliczeniowa
+sieć komputerowa
+oprogramowanie
+generacja komputera
+symulacja komputerowa
+
+Elektronika – dziedzina techniki i nauki zajmująca się wytwarzaniem i przetwarzaniem sygnałów w postaci prądów i napięć elektrycznych lub pól elektromagnetycznych. Wykorzystywanie zjawisk oddziaływania pomiędzy ładunkami do przenoszenia informacji.
+
+
+Spis treści
+1	Etymologia
+2	Podstawy
+3	Klasyfikacja dziedziny elektroniki
+4	Typy układów elektronicznych
+5	Elementy elektroniki
+6	Wybrane zastosowania
+7Przypisy
+8	Bibliografia
+Etymologia
+Elektronika (z gr. elektron 'bursztyn, który można naelektryzować przez potarcie’ i -ikos 'na sposób; odnoszący się do’)[1]
+
+Podstawy
+Jest to dziedzina techniki i nauki zajmująca się obwodami elektrycznymi zawierającymi, obok elementów elektronicznych biernych, elementy aktywne takie jak lampy próżniowe, tranzystory i diody. W obwodach takich można wzmacniać słabe sygnały dzięki nieliniowym charakterystykom elementów czynnych (i ich możliwościom sterowania przepływem elektronów). Podobnie możliwość pracy urządzeń jako przełączniki pozwala na przetwarzanie sygnałów cyfrowych.
+
+Swój rozwój elektronika zawdzięcza badaniom w różnych dziedzinach nauki, głównie fizyce (elektromagnetyzm, fizyka ciała stałego – szczególnie półprzewodniki) i matematyce (modele matematyczne obwodów i sygnałów).
+
+W odróżnieniu od elektrotechniki, która też bazuje na wiedzy z zakresu elektromagnetyzmu, elektronika nie zajmuje się ogólnie rzecz biorąc zagadnieniami energii elektrycznej, ale zagadnieniami związanymi z sygnałami (zob. też przetwarzanie sygnałów). Rozróżnienie obu dyscyplin nastąpiło około 1906 roku, kiedy to Lee De Forest wynalazł triodę, dzięki której bez użycia urządzeń mechanicznych można było już wówczas wzmacniać urządzeniem elektrycznym słabe sygnały radiowe lub akustyczne. Do lat 50. XX wieku dziedzina ta sprowadzała się do radiotechniki (tak ją nazywano) – a jej zasadnicze zastosowania obejmowały projektowanie nadajników, odbiorników i lamp próżniowych. Historycznie elektronika wyrosła więc z radiotechniki – pierwszymi układami elektronicznymi były powstające w czasach I wojny światowej nadajniki i odbiorniki radiowe. Współcześnie większość urządzeń elektronicznych projektuje się z użyciem elementów półprzewodnikowych, za pomocą których można sterować przepływem elektronów podobnie jak w lampach elektronowych, a układy elektroniczne implementowane są często jako układy scalone (tzw. mikroelektronika, zob. też nanoelektronika) w tym układy programowalne i układy specjalizowane.
+
+Klasyfikacja dziedziny elektroniki
+Elektronika powszechnego użytku (w tym programowalne układy cyfrowe, multimedia, systemy nadzoru wizyjnego)
+Elektronika przemysłowa (w tym energoelektronika, elektroniczne układy technologiczne, systemy sterowania)
+Radioelektronika (elektronika morska, radiokomunikacja i technika radarowa)
+Mikroelektronika, fotonika i nanotechnologie
+Mikrosystemy i systemy elektroniczne
+Typy układów elektronicznych
+W zależności od interpretacji znaczenia przetwarzanego sygnału układy dzieli się na:
+
+układy elektroniczne analogowe – opisuje je technika analogowa, analogowe przetwarzanie sygnałów
+liniowe,
+nieliniowe (np. generator drgań, pętla fazowa, modulator, demodulator, prostownik, stabilizator),
+układy elektroniczne cyfrowe – opisuje je technika cyfrowa i oparta na niej technika mikroprocesorowa
+układy cyfrowe kombinacyjne - stan wyjść zależy tylko od bieżących stanów wejść,
+układy cyfrowe sekwencyjne - stan wyjść zależy od stanu obecnego wejść oraz wejść w stanach poprzednich.
+Elementy elektroniki
+Do konstrukcji urządzeń elektronicznych służą różnorodne przyrządy i układy:
+
+elementy aktywne: półprzewodnikowe (tranzystory, tyrystory, układy scalone, diody półprzewodnikowe itp.), lampy próżniowe (diody, triody, pentody itd.)
+elementy bierne: rezystory, kondensatory, cewki.
+elementy akustoelektroniczne: filtry, rezonatory, linie opóźniające, czujniki itp.
+elementy optoelektroniczne: lasery, światłowody, detektory promieniowania itp.
+elementy fotoniczne (łączące elementy akustoelektroniczne z optoelektronicznymi): modulatory, wzmacniacze, detektory itp.
+Elementy elektroniczne często montuje się z użyciem obwodów drukowanych.
+
+Wybrane zastosowania
+urządzenia pomiarowe
+elektroniczne systemy medyczne (zob. inżynieria biomedyczna) i środowiskowe (zob. monitoring)
+inżynieria dźwięku (zob. też elektroakustyka, sonar)
+telekomunikacja – radiokomunikacja (także mobilna, komórkowa oraz radiolokacja i radionawigacja), teletransmisja i telewizja, sieci telekomunikacyjne i teleinformatyczne (także satelitarne – zob. satelita telekomunikacyjny, antena satelitarna)
+inżynieria komputerowa
+urządzenia automatyki
+układy elektroniki przemysłowej
+agrotronika
+technika mikrofal i elektronika bardzo wysokich częstotliwości
+kompatybilność elektromagnetyczna
+
+Informatyka (niem. Informatik, ang. computer science, computing, computer engineering, IT, ICT)[1] – nauka ścisła oraz techniczna zajmująca się przetwarzaniem informacji, w tym również technologiami przetwarzania informacji oraz technologiami wytwarzania systemów przetwarzających informacje[2]. Zajmuje się rozwiązywaniem problemów obliczeniowych, opisem procesów algorytmicznych oraz tworzeniem programów komputerowych i częściowo sprzętu komputerowego (z wyłączeniem zagadnień materialnych i energetycznych)[3][4][5]. Informatyka początkowo stanowiła część matematyki, z czasem wyodrębniła się do oddzielnej dyscypliny. W języku polskim termin „informatyka” zaproponował w październiku 1968 r. Romuald Marczyński (w Zakopanem, na ogólnopolskiej konferencji podczas wykładu zatytułowanego „Informatyka, czyli maszyny matematyczne i przetwarzanie informacji”)[6], na wzór francuskiego informatique i niemieckiego Informatik.
+
+
+Spis treści
+1	Etymologia
+2	Przegląd dyscyplin informatycznych
+2.1	Informatyka teoretyczna
+2.1.1	Algorytmika. Algorytmy i struktury danych
+2.1.2	Teoria obliczeń. Języki, automaty, złożoność
+2.1.3	Teoria informacji i kodowania
+2.1.4	Informatyka kwantowa
+2.1.5	Teoria języków programowania, typów, kompilacji
+2.2	Inżynieria komputerowa
+2.2.1	Logika obliczeniowa i technika cyfrowa
+2.2.2	Architektura i organizacja komputerów
+2.2.3	Przetwarzanie równoległe i rozproszone
+2.2.4	Programowanie niskopoziomowe
+2.2.5	Sieci komputerowe
+2.2.6	Systemy operacyjne
+2.3	Informatyka praktyczna
+2.3.1	Grafika komputerowa
+2.3.2	Inżynieria oprogramowania
+2.3.3	Cyberbezpieczeństwo i kryptologia
+2.3.4	Bazy danych, eksploracja danych, danologia
+2.4	Systemy i technologie komputerowe
+2.4.1	Sztuczna inteligencja
+2.4.2	Systemy wbudowane i obliczenia czasu rzeczywistego
+2.4.3	Widzenie komputerowe i rozpoznawanie wzorców
+2.4.4	Przetwarzanie obrazów i mowy
+2.4.5	Gry komputerowe i symulatory
+2.4.6	Interfejsy i interakcje człowiek-komputer
+2.4.7	Technologie webowe, mobilne i multimedia
+2.5	Informatyka stosowana
+2.5.1	Informatyka w biologii, chemii i kognitywistyce
+2.5.2	Dalsze zastosowania
+3	Edukacja
+3.1	Szkoła podstawowa, liceum i technikum
+3.2	Studia wyższe
+4	Zobacz też
+5	Przypisy
+Etymologia
+Termin informatics nie mógł zostać wprowadzony do słownictwa amerykańskiego z uwagi na problemy prawne – istniało tam przedsiębiorstwo o nazwie Informatics Inc(ang.), co zablokowało chęć zmiany nazwy ACM na Society for Informatics. Wówczas popularny był już tam termin computer science – dosłownie: „nauka o komputerze” – co może być mylące, stąd spotykał się często z krytyką środowisk akademickich[7]. Proponowano wiele alternatywnych nazw, m.in. Computer Studies, Computics, Computing Science, Computation Science, Information engineering, Information Technology. Association for Computing Machinery będące najważniejszą organizacją branżową przyjął termin computing na nazwę ogólnej dyscypliny. Częściowo powrócono jednak później do computer science ze względu na to, że termin ten się silnie zakorzenił. Współcześnie określenie computing odnosi się do całej dyscypliny, a computer science to jej część w której obowiązuje rygor naukowy, podczas gdy informatyka techniczna skupia się na aspektach praktycznych i traktowana jest jako nauka inżynierska. W informatyce technicznej można wyróżnić szereg specjalności, takich jak inżynieria komputerowa (computer engineering, technische Informatik[8]) związana z tworzeniem sprzętu komputerowego i oprogramowania wbudowanego, technologia informacyjna (information technology), współcześnie najczęściej spotykana w tworzeniu oprogramowania dla zastosowań biznesowych, inżynieria oprogramowania (software engineering), odnosząca się ogólnie do programowania, lecz ściśle związana z zarządzaniem procesem wytwarzania oprogramowania. SE i IT są czasem na wzór niemiecki zbiorczo nazywane informatyką praktyczną (niem. praktische Informatik)[9][10].
+
+Przetwarzanie informacji jest różnie interpretowane, przez co istnieją różne definicje informatyki. Uniwersytet Edynburski definiuje ją jako naukę o systemach obliczeniowych, w której centralną notacją jest transformacja informacji[2]. Według Petera J. Denninga podstawowym pytaniem leżącym u podstaw informatyki jest: „Co można zautomatyzować?”[11]. Według teorii Stuarta C. Shapiro, informatyka jest nauką przyrodniczą, która bada procedury. Adam Olszewski wyróżnił pięć rodzajów obiektów, które są przedmiotem zainteresowania informatyki: funkcje efektywnie obliczalne, algorytmy, programy komputerowe, realizacje i maszyny[12]. W roku 2005, w ACM Computing Curricula[13] przedstawiono następujący opis:
+
+Ogólnie rzecz biorąc, możemy zdefiniować informatykę (computing) jako jakąkolwiek zorientowaną na cel działalność wymagającą, korzystającą z lub tworzącą maszyny obliczeniowe. W związku z tym informatyka obejmuje projektowanie i budowanie systemów sprzętu i oprogramowania do szerokiego zakresu celów; przetwarzanie, strukturyzację i zarządzanie różnymi rodzajami informacji; obliczeniowe badania naukowe; sprawianie, by systemy komputerowe zachowywały się inteligentnie; (...) Lista jest praktycznie nieskończona, a możliwości są ogromne.
+
+Przegląd dyscyplin informatycznych
+Informatyka jest tylko o komputerach, tak jak astronomia tylko o teleskopach.
+
+Edsger Dijkstra
+Jako dyscyplina informatyka obejmuje szereg tematów, od teoretycznych badań nad algorytmami i teorią obliczalności po praktyczne zagadnienia związane z implementowaniem systemów obliczeniowych zarówno w warstwie sprzętowej, jak i oprogramowaniu[3][4]. CSAB, dawniej zwana Computing Sciences Accreditation Board – w skład której wchodzą przedstawiciele Association for Computing Machinery (ACM) oraz IEEE Computer Society (IEEE CS)[14] – identyfikuje cztery obszary, które uważa za kluczowe dla informatyki: teoria obliczeń, algorytmy i struktury danych, języki i metodologia programowania oraz budowa i architektura komputerów. Oprócz tych czterech podstawowych obszarów, CSAB identyfikuje również takie dziedziny, jak inżynieria oprogramowania, sztuczna inteligencja, sieci komputerowe i komunikacja, systemy baz danych, obliczenia równoległe, obliczenia rozproszone, interakcja człowiek–komputer, grafika komputerowa, systemy operacyjne oraz metody numeryczne i symboliczne jako będące ważnymi dziedzinami informatyki[3].
+
+Początkowo towarzystwa ACM i IEEE CS publikowały własne oddzielne zalecenia dotyczące programów studiów. Z czasem postanowiono utworzyć wspólną dyscyplinę oraz wspólne zalecenia dotyczące programów kształcenia. W pracach nad ujednoliceniem programów studiów uczestniczyły oranizacje: ACM, IEEE Computer Society, Association for Information Systems, ACM SIG Information Technology Education, British Computer Society, International Federation for Information Processing, ABET and CSAB. Wyróżniono 5 głównych specjalizacji[15]: inżynieria komputerowa (ang. computer engineering, CE), informatyka naukowa (ang. computer science, CS), systemy informacyjne (ang. information systems, IS), technologia informacji (ang. information technology, IT), inżynieria oprogramowania (ang. software engineering, SE). W 2020 podobna grupa organizacji przygotowała programy studiów dla kolejnych 2 specjalizacji: cyberbezpieczeństwo (ang. cybersecurity) oraz danologię (ang. data Science). W Niemczech zwyczajowo dzieli się natomiast na informatykę teoretyczną, techniczną, praktyczną oraz realizacje i stosowaną.
+
+Architektur der Informatik
+Peter J. Denning z kolei w swoim artykule o informatyce[16] pogrupował treści w następujące działy: algorytmy i struktury danych, języki oprogramowania, architektura komputerów i oprogramowania, systemy operacyjne i sieci, inżynieria oprogramowania, bazy danych i wyszukiwanie informacji, sztuczna inteligencja i robotyka, grafika komputerowa, interakcja człowiek–komputer, symulacje komputerowe i obliczenia numeryczne, informatyka ekonomiczna, bioinformatyka. Jednocześnie dla każdego z tych obszarów zaproponował podział na trzy podejścia dotyczące strony teoretycznej, abstrakcyjnej oraz twórczej.
+
+Informatyka teoretyczna
+Teoretyczna informatyka (ang. theoretical computer science) ma ducha matematycznego i abstrakcyjnego, ale motywację czerpie z praktycznych i codziennych obliczeń. Jej celem jest zrozumienie natury obliczeń, w konsekwencji czego wprowadza ich coraz bardziej efektywne metody. Jest ona częścią matematyki i informatyki która grupuje matematyczne podstawy informatyki. Jej najważniejsze obszary to teoria obliczeń, teoria informacji oraz algorytmika. Informatyka teoretyczna stara się odpowiedzieć na fundamentalne pytania w informatyce np. P versus NP problem i stanowi trzon dla bardziej praktycznych dziedzin.
+
+Algorytmika to więcej niż dział informatyki. Tkwi ona w centrum wszystkich działów informatyki.
+
+David Harel, Algorithmics. The Spirit of Computing[17]
+Algorytmika. Algorytmy i struktury danych
+ Osobne artykuły: Algorytmika, Algorytm i Struktura danych.
+Algorytmika zajmuje się projektowaniem i analizą algorytmów i struktur danych. Jest najstarszą i jedną z najważniejszych dziedzin informatyki. Wśród jej podstawowych obszarów można wymienić projektowanie i analizę algorytmów, geometrię obliczeniową, optymalizację kombinatoryczną oraz logikę algorytmiczną. Historycznie podstawowymi zagadnieniami są algorytmy sortowania, kompresji, przeszukiwania czy szyfrowania oraz metody numeryczne. Algorytmy podlegają klasyfikacji, wyróżniając np. algorytmy zachłanne jak algorytm Dijkstry czy algorytm Kruskala, metody generowania liczb losowych, metody optymalizacji itd. Do podstawowych struktur danych należą rekord, tablica, stos, lista, kolejka, drzewa czy grafy. Próbą połączenia idei struktur danych i algorytmów jest paradygmat programowania obiektowego.
+
+Comparison computational complexity.svg	Sorting quicksort anim.gif	Tree (computer science).svg	TSP Deutschland 3.png	SimplexRangeSearching.svg	Contraction vertices.jpg
+Analiza algorytmów	Projektowanie algorytmów	Struktury danych	Algorytmy zachłanne	Geometria obliczeniowa	Algorytmy probabilistyczne
+Teoria obliczeń. Języki, automaty, złożoność
+ Osobne artykuły: Teoria obliczeń i Teoria automatów.
+Teoria obliczeń dzieli się on na trzy główne części: teorię automatów, teorię obliczalności oraz teorię złożności. Teoria automatów zajmuje definicjami i własnościami modeli obliczeń, matematycznymi modelami maszyn liczących. W uproszczeniu zajmuje się ona odpowiedzią na pytanie czym jest komputer, teoria obliczalności odpowiedzią na pytanie, które problemy dają się rozwiązać przy pomocy komputera, a teoria złożoności – odpowiedzą na pytanie jak szybko da się to zrobić[18][19]. Przykładowymi zagadnieniami są Maszyna Turinga czy Hipoteza Churcha-Turinga. Języki formalne stanowią podstawę badań nad językami komputerowymi, jak i naturalnymi w lingwistyce. Systemy formalne są tworzone i badane zarówno jako samodzielne abstrakcyjne twory, jak i systemy opisu rzeczywistości.
+
+DFAexample.svg	Syntax tree.svg	{\displaystyle M=\{X:X\notin X\}}{\displaystyle M=\{X:X\notin X\}}	Complexity classes.svg	Kellerautomat.svg
+Teoria automatów	Język formalny	Teoria obliczalności	Teoria złożoności obliczeniowej	Automat komórkowy
+Teoria informacji i kodowania
+ Osobny artykuł: Teoria informacji.
+Matematyczna teoria informacji zajmuje się problematyką informacji, w tym podstawami teoretycznymi dla przetwarzania i przesyłania informacji, np. w celu ich transmisji lub kompresji. Przykładowo wprowadza takie pojęcia jak komunikat, entropia, ciało skończone czy bit będący podstawową jednostką w informatyce. Teoria kodowania zajmuje się tworzeniem i analizą reprezentacji danych w komputerze. Wyróżnia się m.in. kodowanie znaków czy kodowanie transportowe, do których należą np. kod stałopozycyjny.
+
+Informatyka kwantowa
+ Osobny artykuł: Informatyka kwantowa.
+Informatyka kwantowa to gałąź informatyki łącząca ją z mechaniką kwantową, w której do przetwarzania informacji wykorzystywane są własności układów kwantowych[20]. Elementarnym nośnikiem informacji kwantowej jest kubit, kwantowy odpowiednik bitu. Stan kubitu opisany jest przez dowolną kombinację liniową stanów bazowych. W najbardziej popularnym modelu kwantowego przetwarzania informacji, operacje na kubitach są reprezentowane za pomocą bramek kwantowych. Najbardziej spektakularny sukces informatyki kwantowej to kwantowa kryptografia. Natomiast najbardziej obiecującym kierunkiem badań są prace dotyczące idei kwantowego komputera. Dynamiczny rozwój technologii w ostatnich latach spowodował że gałąź ta wyłamuje się poza czysto-teoryczne rozważania. Stworzono pewne realizacje bramek kwantowych, a na targach CES w 2018 roku amerykańskie przedsiębiorstwo informatyczne IBM zaprezentowała swój działający, 50-kubitowy komputer kwantowy[21].
+
+Teoria języków programowania, typów, kompilacji
+ Osobny artykuł: Teoria języków programowania.
+Teoria języków programowania (ang. Programming language theory, PLT) to dziedzina informatyki zajmująca się projektowaniem, wdrażaniem, analizą, charakteryzacją i klasyfikacją języków programowania oraz ich indywidualnymi cechami[22]. Przykładowymi obszarami PLT są semantyki formalne (ang. formal semantics), teoria typów (ang. type theory)[23] czy metaprogramowanie. Na języki programowania składa się składnia, semantyka i biblioteki standardowe, zazwyczaj posiadają co najmniej obsługę wejścia-wyjścia, obsługę plików, obsługę wielowątkowości, zarządzanie pamięcią operacyjną, podstawowe typy danych, funkcje do zarządzania nimi np. operacje na ciągach znaków. Ważnym obszarem PLT jest też teoria kompilacji, na której proces składa się wykonanie poleceń preprocesora, analiza leksykalna, analiza składniowa, analiza semantyczna, optymalizacja kodu wynikowego i generacja kodu. Języki klasyfikuje się według poziomu abstrakcji na którym operują na języki niskiego poziomu oraz języki wysokiego poziomu, wyróżnia się także wiele paradygmatów programowania[24][25].
+
+Logic.svg	Compiler.svg	Lambda lc.svg	Python add5 syntax.svg	Programming paradigms.svg
+Teoria typów	Teoria kompilacji	Teoria języków programowania	Języki programowania	Paradygmaty programowania
+Inżynieria komputerowa
+ Osobny artykuł: Inżynieria komputerowa.
+Inżynieria komputerowa (ang. computer engineering, niem. Technishe Informatik) – zajmuje się tworzeniem systemów komputerowych. Do jej zadań należy projektowanie, wytwarzanie, integracja i eksploatacja sprzętu cyfrowego, w tym urządzeń sieciowych. Początkowo zajmowała się głównie tworzeniem procesorów, a współcześnie ważną jej rolę stanowi także tworzenie sprzętu i sterowników dla systemów wbudowanych, które wraz z pojawieniem się koncepcji IoT mają coraz większe znaczenie[26]. Do jej zagadnień należy architekturą i organizacją systemów komputerowych na poziomie sprzętowym oraz oprogramowania sprzętowego.
+
+Logika obliczeniowa i technika cyfrowa
+ Osobny artykuł: Technika cyfrowa.
+Technika cyfrowa zajmuje się projektowaniem i analizą układów cyfrowych. Do jej elementarnych zagadnień należą bramki logiczne, rejestry, układy sekwencyjne i układy kombinacyjne. Obejmuje syntezę logiczną i odwzorowanie technologiczne[27]. Współcześnie jej zagadnienia są kształtowane z jednej strony przez języki opisu sprzętu, a z drugiej przez bezpośrednio programowalne macierze bramek[27][28]. Układy logiczne początkowo implementowano jako układy mechaniczne, następnie jako elektromechaniczne i dominujące współcześnie układy elektroniczne.
+
+Architektura i organizacja komputerów
+ Osobny artykuł: Architektura komputera.
+Architektura komputerów (AK) to główny obszar inżynierii komputerowej zajmujący się projektowaniem i podstawową strukturą systemów komputerowych oraz budową i organizacją ich podzespołów. Główny obszar AK stanowi architektura procesorów na którą składa się model programowy procesora oraz mikroarchitektura procesora[29]. Procesory są głównym elementem systemów komputerowych. Szczególna uwaga jest poświęcona na sposobie, w jaki procesor wykonuje instrukcje i uzyskuje dostęp do adresów w pamięci. Przykładowe zagadnienia to DMA czy kontroler[30][31]. Ważnymi obszarami AK są także magistrale oraz pamięci komputerowe. Pamięcią komputerową nazywa się różnego rodzaju urządzenia i bloki funkcjonalne komputera, służące do przechowywania danych i programów (systemu operacyjnego oraz aplikacji). Istnieje jej wiele rodzajów, m.in. rejestry procesora, pamięć podręczna procesora, pamięć RAM, dyski półprzewodnikowe (SSD), dyski twarde (HDD). Wyróżnia się pamięci zewnętrzne i wewnętrzne. Magistralę komunikacyjną (ang. bus) definiuje się jako zespół linii przenoszących sygnały oraz układy wejścia-wyjścia służące do przesyłania sygnałów między połączonymi urządzeniami w systemach mikroprocesorowych[32].
+
+ABasicComputer.gif	Z80 arch.svg	Intel Nehalem arch.svg	Computer system bus(fixed).svg	Intel Core2 arch.svg	Uarm metal wiki2.jpg
+Architektura procesorów	Architektura pamięci	Magistrale	Mikroarchitektura procesorów	Pamięć komputerowa	Urządzenia wejścia-wyjścia
+Przetwarzanie równoległe i rozproszone
+ Osobne artykuły: Przetwarzanie współbieżne, Obliczenia równoległe i Obliczenia rozproszone.
+Obliczenia równoległe to obszar badający możliwość obliczeń, w której wiele instrukcji jest wykonywanych jednocześnie. Taka forma przetwarzania danych była wykorzystywana przez wiele lat, głównie przy wykorzystaniu superkomputerów, a szczególne zainteresowanie zyskała w ostatnich latach, z uwagi na fizyczne ograniczenia uniemożliwiające dalsze zwiększanie częstotliwości taktowania procesorów. Obliczenia równoległe stały się dominującym wzorcem w architekturze komputerowej, głównie za sprawą upowszechnienia procesorów wielordzeniowych. Ze względu na skalę można wyróżnić obliczenia równoległe na poziomie: bitów, instrukcji, danych i zadań. Współbieżność jest właściwością systemów, w których obliczenia wykonuje się jednocześnie i potencjalnie korzystają ze wspólnych zasobów i/lub wchodzą w interakcje ze sobą. Opracowano wiele modeli obliczeń równoległych, w tym sieci Petriego, rachunek procesowy (ang. process calculus) i model maszyny dostępu równoległego (ang. parallel random-access machine, PRAM). Kiedy wiele komputerów jest podłączonych do sieci podczas korzystania ze współbieżności, jest to nazywane systemem rozproszonym. w którym to komputery mają własną pamięć, a informacje są wymieniane, by osiągnąć wspólne cele.
+
+SIMD cpu diagram1.svg	Distributed-parallel.svg	MIMD.svg	Superscalarpipeline.png	An illustration of the dining philosophers problem.png
+Przetwarzanie współbieżne	Przetwarzanie rozproszone	Przetwarzanie równoległe	Potokowość	Problem 5 filozofów
+Programowanie niskopoziomowe
+ Osobny artykuł: Programowanie niskopoziomowe.
+Oprogramowanie niskopoziomowe pisze się w językach niskiego poziomu. Są to głównie języki asemblera, stanowią symboliczny zapis instrukcji procesora i danych, który w prosty sposób odpowiada zapisowi binarnemu. Języki asemblerowe wprowadzone w celu czytelnej dla człowieka reprezentacji języków maszynowych komputerów. W przeciwieństwie do języków wysokiego poziomu, typowe języki asemblerowe charakteryzują się strukturą liniową (wierszową). Każdy wiersz tekstu może zawierać pojedynczą instrukcję procesora lub dyrektywę asemblera[33].
+
+CPU block diagram.svg	Apple II Monitor.png	Wikipedia in binary.gif	X86 Paging 4K.svg	IF-THEN-ELSE-END flowchart.svg
+Rozkazy	Kod maszynowy	Kod binarny	Rejestry	Instrukcje
+Sieci komputerowe
+ Osobny artykuł: Sieć komputerowa.
+Sieci komputerowe to gałąź informatyki mająca na celu tworzenie sieci między komputerami nazywanych węzłami, umożliwiając im współdzielenie zasobów. W sieciach komputerowych urządzenia komputerowe wymieniają się danymi za pomocą warstw sieciowych. W modelu OSI wyróżnia się warstwę aplikacji, prezentacji, sesji, transportową, sieciową, łącza danych i fizyczną, a w modelu TCP/IP – będącym podstawą struktury internetu – wyróżnia się warstwy aplikacji, transportową, internetową i dostępu do sieci. Te łącza danych są ustanawiane za pomocą mediów kablowych, takich jak skrętka lub kable światłowodowe, oraz mediów bezprzewodowych, takich jak np. Wi-Fi[34]. Jednymi z podstawowych zagadnień sieci są protokoły oraz urządzenia sieciowe. Do najpopularniejszych urządzeń sieciowych należy karta sieciowa, router, koncentrator, przełącznik, punkt dostępowy, most, ekspander zasięgu Wi-Fi (repeater Wi-Fi), adaptery PowerLine, serwery wydruku, kamery IP, bramki VoIP orazy telefony IP[35]. Protokołem komunikacyjnym nazywa się zbiór ścisłych reguł i kroków postępowania, które są automatycznie wykonywane przez urządzenia sieciowe w celu nawiązania łączności i wymiany danych. Definiują one syntaks, semantykę, synchronizację komunikacji oraz możliwe metody naprawiania błędów. Protokoły te mogą zostać wdrożone za pomocą hardwaru, oprogramowania lub obu jednocześnie[36].
+
+Rozszerzonagwiazda.jpeg	Kapsułkowanie danych wg modelu odniesienia OSI.svg	DHCP session.svg	SPOF pl.png	Internet map 1024.jpg
+Topologie sieci komputerowej	Architektura sieci	Protokoły sieciowe	Urządzenie sieciowe	Internet
+Systemy operacyjne
+ Osobny artykuł: System operacyjny.
+Systemy operacyjny pełnią szczególną rolę w informatyce. Jest to oprogramowanie zarządzające systemem komputerowym, tworzące środowisko do uruchamiania i kontroli zadań. Najważnieszym elementem systemu operacyjnych jest jego jądro wykonujące i kontrolujące zadania m.in. planisty czasu procesora, ustalającego które zadanie i jak długo będzie wykonywane czy przełącznika zadań, odpowiedzialnego za przełączanie pomiędzy uruchomionymi zadaniami. System operacyjny posiada także swoją powłokę, czyli specjalny program komunikujący użytkownika z systemem operacyjnym oraz system plików – sposób ustrukturyzowanego zapisu danych na nośniku. Osoby administrujące systemami nazwa się administratorami (pot. adminami). Współcześnie najważniejszą rodziną systemów operacyjnych jest GNU/Linux oraz Windows.
+
+Device-driver-pl.svg	Thread pool.svg	System operacyjny schemat ogolny.svg	Dir command in Windows Command Prompt.png	FSV-OSX-screenshot.png
+Sterowniki	Planista	Jądro systemu operacyjnego	Powłoka systemowa	System plików
+Informatyka praktyczna
+ Osobne strony: Programowanie komputerów i Kategoria:Konstrukcje programistyczne.
+Programowanie komputerów to proces projektowania, tworzenia, testowania i utrzymywania kodu źródłowego programów komputerowych w tym dla urządzeń mikroprocesorowych (mikrokontrolery). Programowanie pod różnymi postaciami jest obecne w większości działów informatyki. Kod źródłowy jest napisany w języku programowania, z użyciem określonych reguł, może on być modyfikacją istniejącego programu lub czymś zupełnie nowym. Programowanie wymaga wiedzy i doświadczenia w wielu dziedzinach, jak projektowanie aplikacji, algorytmika, struktury danych, języki programowania i narzędzia programistyczne, kompilatory, czy sposób działania podzespołów komputera. Między programistami trwają debaty, czy programowanie komputerów jest sztuką, rzemiosłem czy procesem inżynieryjnym. Bezpośrednią formą sztuki w tej dziedzinie jest demoscena. Programowanie komputerów integruje ze sobą większość gałęzi informatyki. Istnieje wiele gałęzi rozwoju technik programowania, jednak wszystkie z nich bazują na wspólnych podstawach. Niezależnie czy to będzie aplikacja webowa w Javascript, gra komputerowa w C++ czy program mikrokontrolera w C, używają one podstawowych konstrukcji programistycznych. Podstawymi pojęciami od których zaczyna się naukę programowania są między innymi zmienne, tablice, instrukcje warunkowe, pętle, wskaźniki, łańcuchy, funkcje, debugowanie, biblioteki oraz zarządzanie pamięcią. Języki dzieli sią na generacje: 2GL, 3GL, 4GL, 5GL. Wyróżnia się między innymi języki akcji, języki algorytmiczne, języki dziedzinowe, języki interpretowane, języki kompilowane, języki mnemoniczne, języki nieproceduralne, języki niezależne komputerowo, języki niskiego poziomu, języki opisu zadań, języki problemowe, języki proceduralne, języki symulacyjne, języki uniwersalne, języki wysokiego poziomu i języki uniwersalne. Do najpopularniejszych języków programowania zalicza się: Java, C, Python, C++, Visual Basic .NET, C#, JavaScript, PHP, SQL, Język Asemblera, Swift, Objective-C, Ruby, Groovy, Go, Perl, Delphi, MATLAB, Visual Basic.
+
+Programmiersprache Umfeld.png	For loop.png	Mapa conceptual del software libre.png	C Hello World Program.png	Quellcodebeispiel C++.png
+Języki wysokiego poziomu	Przepływ sterowania	Biblioteki programistyczne	Programowanie obiektowe	Programowanie strukturalne
+Grafika komputerowa
+ Osobny artykuł: Grafika komputerowa.
+Grafika komputerowa to dział informatyki zajmujący się cyfrową syntezą i manipulacją treści wizualnych. Ze względu na reprezentację danych dzieli się na grafikę rastrową i wektorową, a ze względu na charakter danych na grafikę dwuwymiarową, trójwymiarową i ruchomą. Obejmuje także obecnie szybko rozwijające się przetwarzenie obrazów. Grafikę komputerową można także podzielić na teoretyczną skupiającą się algorytmach graficznych i praktyczną, skupiającą się manipulacji obrazem czy modelowaniu 3D np. w programie Blender. Grafika komputerowa stanowi podstawę współczesnych gier, animacji, symulacji czy wizualizacji komputerowych. Renderowanie polega na analizie stworzonego wcześniej modelu danej sceny oraz utworzenie na jej podstawie dwuwymiarowego obrazu wyjściowego w formie statycznej lub animacji. Podczas renderowania rozpatrywane są m.in. odbicia, cienie, załamania światła, wpływy atmosfery (w tym mgła), efekty wolumetryczne itp.
+
+Raster graphic fish 20x23squares sdtv-example.png	DeCasteljau-evaluate point.svg	Texture mapping demonstration animation.gif	Raytracing-schemat.png	Pavlovsk Railing of bridge Yellow palace Winter bw threshold.jpg
+Grafika rastrowa	Grafika wektorowa	Grafika trójwymiarowa	Renderowanie i animacja	Cyfrowe przetwarzanie obrazów
+Inżynieria oprogramowania
+ Osobny artykuł: Inżynieria oprogramowania.
+Inżynieria oprogramowania, także inżynieria systemów informatycznych – zajmuje się procesem i metodykami tworzenia systemów informatycznych: od analizy i określenia wymagań, przez projektowanie i wdrożenie, aż do ewolucji gotowego oprogramowania. Termin inżynieria oprogramowania po raz pierwszy został użyty w przełomie lat 1950/60 (ale oficjalnie za narodziny tej dyscypliny podaje się lata 1968 i 1969, w których miały miejsce dwie konferencje sponsorowane przez NATO, odpowiednio w Garmisch i Rzymie). Wyróżnia fazy produkcji oprogramwania: specyfikacji, projektowania, implementacji, integracji i ewoluacji, a także dostarcza systematycznych metodyk jego tworzenia, jak m.in. model kaskadowy, prototypowy czy zwinny, w tym scrum. Wprowadza takie pojęcia jak np. cykl życia programu czy metryka oprogramowania. Wyróżnia się także jej specjalizacje np. inżynieria systemów mobilnych, inżynieria systemów baz danych, inżynieria sytemów wbudowanych czy inżynieria gier komputerowych. Wzorcem projektowym (ang. design pattern) nazywa się uniwersalne, sprawdzone w praktyce rozwiązanie często pojawiających się, powtarzalnych problemów projektowych. Pokazuje powiązania i zależności pomiędzy klasami oraz obiektami i ułatwia tworzenie, modyfikację oraz utrzymanie kodu źródłowego. Jest opisem rozwiązania, a nie jego implementacją. Architekturą oprogramowania nazwywa podstawową organizację systemu wraz z jego komponentami, wzajemnymi powiązaniami, środowiskiem pracy i regułami ustanawiającymi sposób jego budowy i rozwoju. Metody formalne – tworzenie specyfikacji, projektowania i weryfikacji oprogramowania lub systemów informatycznych w języku formalnym. Metody formalne najlepiej opisać jako zastosowanie dość szerokiej gamy podstaw teoretycznych informatyki, w szczególności rachunku logicznego, języków formalnych, teorii automatów, systemu dynamiki zdarzeń dyskretnych i semantyki programów, a także systemów typów i typów danych algebraicznych do specyfikacji i weryfikacji problemów w oprogramowaniu i sprzęcie.
+
+UML Diagrams.jpg	Prototyp.svg	Wikimedia Server Architecture (simplified).svg	SoftwareDevelopmentLifeCycle.jpg	CodeCmmt002.svg
+Diagramy UML	Wzorce projektowe	Architektura oprogramowania	Metodyki wytwarzania oprogramowania	Metody formalne
+Cyberbezpieczeństwo i kryptologia
+ Osobne artykuły: Bezpieczeństwo komputerowe i Kryptologia.
+Kryptologia dzieli się na kryptografię, czyli gałąź wiedzy o utajnianiu wiadomości oraz kryptoanalizę, czyli gałąź wiedzy o przełamywaniu zabezpieczeń oraz o deszyfrowaniu wiadomości przy braku klucza lub innego wymaganego elementu schematu szyfrowania (szyfru). Przykładowe metody to atak brute force czy kryptoanaliza liniowa. Bezpieczeństwo komputerowe (ang. computer security'', pot. cybersecurity, hacking) zajmuje się zapewnianiem poufności i bezpieczeństwa danych. Osoby posiadające szeroką i zaawansowaną wiedzę informatyczną, lecz nieetycznie z niej korzystający nazywani są hakerami. Ich szczególnym zainteresowaniem jest wyszukiwanie luk (dziur) w systemach operacyjnych, programach, sieciach komputerowych czy urządzeniach do niej podłączonych w celu przejęcia nad nimi zdalnej kontroli. Wyróżnia się wiele klasycznych ataków komputerowych takich jak na przykład DDoS, HTTP Flood, UDP flood, smurf attack, session hijacking, a także wiele rodzajów wirusów komputerowych, trojanów, snifferów czy rootkitów. W odpowiedzi powstało wiele technik obrony systemów informatycznych, np. obrona w głąb, security through obscurity czy głębokie ukrycie[37][38].
+
+Virus Blaster.jpg	Rkhunter on Mac OS X.png	Circle of spam.svg	SHA-1.svg	CPU ring scheme.svg
+Wirusy komputerowe	Sniffery i Rootkity	Botnet	Funkcje skrótu	Obrona w głąb
+Bazy danych, eksploracja danych, danologia
+Danologia (ang. Data science) wykorzystuje metody naukowe, procesy, algorytmy, narzędzia i systemy informatyczne do wydobywania wiedzy i spostrzeżeń z wielu danych strukturalnych i nieustrukturyzowanych, tzw. Big data. Eksploracją danych (ang. data mining) nazywa się jeden z procesów uzyskiwania wiedzy z baz danych. Idea eksploracji danych polega na wykorzystaniu szybkości komputera do znajdowania ukrytych dla człowieka (właśnie z uwagi na ograniczone możliwości czasowe) prawidłowości w danych zgromadzonych w hurtowniach danych. Big data to termin odnoszący się do dużych, zmiennych i różnorodnych zbiorów danych, których przetwarzanie i analiza jest trudna, ale jednocześnie wartościowa. Obecne użycie terminu big data zwykle odnosi się do użycia analizy predykcyjnej, analizy zachowania użytkownika lub niektórych innych zaawansowanych metod analizy danych, które wydobywają wartość z danych, a rzadko do określonego rozmiaru zestawu danych. Baza danych to zorganizowany zbiór danych, ogólnie przechowywanych i dostępnych z systemu komputerowego. Tam, gdzie bazy danych są bardziej złożone, często są opracowywane przy użyciu formalnych technik projektowania i modelowania. System zarządzania bazą danych (DBMS) to oprogramowanie, które współdziała z użytkownikami końcowymi, aplikacjami i samą bazą danych w celu przechwytywania i analizy danych. Oprogramowanie DBMS obejmuje dodatkowo podstawowe narzędzia do zarządzania bazą danych.
+
+Systemy i technologie komputerowe
+ Osobne artykuły: System komputerowy, System informatyczny i Technika informatyczna.
+Systemy informatyczne (ang. information processing systems) może opisać jako zbiór powiązanych ze sobą elementów, które przetwarzają informacje, najczęściej z wykorzystaniem sprzętu i oprogramowania komputerowego.
+
+Sztuczna inteligencja
+ Osobny artykuł: Sztuczna inteligencja.
+Sztuczna inteligencja (SI, ang. Artificial intelligence, AI) to obszar informatyki zajmujący się komputerowym symulowaniem inteligencji – tworzeniem modeli zachowań inteligentnych oraz systemów komputerowych symulujących te zachowania[39][40]. Szczególnym zainteresowaniem darzy się problemy które nie są bezpośrednio algorytmizowalne, jak rozpoznawanie obrazów, tłumaczenie maszynowe czy rozpoznawanie mowy. Sztuczna inteligencja jest związana z logiką rozmytą, algorytmami ewolucyjnymi, sieciami neuronowymi, robotyką i sztucznym życiem. SI bywa nazywane także inteligencją obliczeniową (ang. Computational Intelligence, CI). Uczeniem maszynowym (ang. Machine learning, ML) nazwa się analizę procesów uczenia się oraz tworzeniem systemów, które doskonalą swoje działanie na podstawie doświadczeń z przeszłości. Jedną z wiodących technologii jest TensorFlow[41]. Systemy te posiadają zdolność do samouczenia się i nazywa się je systemami samouczącymi. Podstawowymi metodami ML są symboliczne uczenie się (nazywane także indukcyjnym, ang. symbolic/inductive learning) oraz sztuczne sieci neuronowe (ang. artificial neural networks)[42]. Nazywa się tak połączone grupy węzłów, podobne do rozległej sieci neuronów w ludzkim mózgu. Głębokie sieci neuronowe (także głębokie uczenie maszynowe, ang. deep learning lub differential programming) to podkategoria uczenia maszynowego – nazywa się tak metody oparte na sztucznych sieciach neuronowych z uczeniem reprezentatywnym (ang. feature learning lub representation learning). Uczenie się może być nadzorowane, częściowo nadzorowane lub nienadzorowane[43]. Sztuczne życie (ang. artificial life, AL, niem. Künstliches Leben, KL) to kierunek badań, zorientowany na zrozumienie i wykorzystanie istoty życia. Pomysłodawcą i ojcem chrzestnym tego podejścia był amerykański matematyk i informatyk Christopher Langton, który zaproponował je w 1986 roku. Dziedzina obejmuje między innymi: tworzenie różnorodnych modeli życia oraz prowadzenie symulacji w środowisku programowym, sprzętowym i biochemicznym, symulacje ewolucji biologicznej oraz innych procesów biologicznych za pomocą metod informatycznych, badania i symulacje układów niebiologicznych, zachowujących się podobnie jak układy biologiczne (np. automatów komórkowych), algorytmy ewolucyjne i ewolucję programów komputerowych.
+
+Artificial neural network.svg	Kernel Machine.svg	Tensorflow logo.svg	Dnaconformations.png	Rule alignment.gif
+Sieć neuronowa	Uczenie maszynowe	TensorFlow	Algorytmy ewolucyjne	Inteligencja rozproszona
+Systemy wbudowane i obliczenia czasu rzeczywistego
+ Osobne artykuły: System wbudowany i System czasu rzeczywistego.
+Systemy wbudowane to systemy komputerowe specjalnego przeznaczenia, który staje się integralną częścią obsługiwanego przez niego sprzętu komputerowego (hardware). System wbudowany musi spełniać określone wymagania ściśle zdefiniowane pod kątem zadań, które ma wykonywać. Każdy system wbudowany oparty jest na mikroprocesorze (lub mikrokontrolerze) zaprogramowanym do wykonywania ograniczonej liczby zadań lub nawet wyłącznie do jednego zadania. W systemach wbudowanych najpopularniejszymi modelami programowymi procesorów są RISC oparte na zasadach architektury harvardzkiej lub ARM. W systemach czasu rzeczywistego wynik i efekt działania jest zależny od chwili wypracowania tego wyniku. Systemy wbudowane współcześnie znajdują zastosowania np. do w autonomicznych pojazach, w ineternecie rzeczy czy w urządzeniach rozrywkowych.
+
+Widzenie komputerowe i rozpoznawanie wzorców
+ Osobny artykuł: Rozpoznawanie wzorców.
+Rozpoznawanie wzorców (ang. pattern recognition) to pole badawcze w obrębie uczenia maszynowego. Może być definiowane jako działanie polegające na pobieraniu surowych danych i podejmowaniu dalszych czynności zależnych od kategorii do której należą te dane. W rozpoznawaniu wzorców dąży się do klasyfikacji danych (wzorców) w oparciu o wiedzę aprioryczną lub o informacje uzyskane na drodze statystycznej analizy danych służącej wydobywaniu cech obiektów. Klasyfikowane wzorce to zazwyczaj grupy wyników pomiaru lub obserwacji definiujące położenie odpowiadających im punktów w wielowymiarowej przestrzeni cech.
+
+Intersection over Union - object detection bounding boxes.jpg	Cosine Series Plus Noise TFM.png	OpenCV Logo with text svg version.svg	Corner.png	Cluster-2.svg
+Computer Vision	Rozpoznawanie mowy	OpenCV	Przetwarzanie języka naturalnego	Analiza skupień
+Przetwarzanie obrazów i mowy
+Sygnały cyfrowe to strumienie bitów informacji, ich przetwarzanie polega na wykonaniu na nich pewnych operacji oraz ich interpretacją. Do głównych zastosowań należy przetwarzanie dźwięku, kompresja dźwięku, segmentacja obrazów, kodowanie wideo, przetwarzanie mowy, rozpoznawanie mowy oraz telekomunikacja cyfrowa.
+
+Gry komputerowe i symulatory
+ Osobne artykuły: Gra komputerowa, Symulacja komputerowa i Programista gier komputerowych.
+Gry komputerowe to rodzaj oprogramowania komputerowego przeznaczonego do celów rozrywkowych lub edukacyjnych, wymagające od użytkownika (gracza) rozwiązywania zadań logicznych lub zręcznościowych. Gry komputerowe mogą być uruchamiane na komputerach osobistych, specjalnych automatach, konsolach do gry, telewizorach, telefonach komórkowych oraz innych urządzeniach mobilnych. Gry, podobnie jak symulacje komputerowe mają wirtualizować pewien fragment rzeczywistości. Zaawansowane gry i symulacje są pisane w czystych językach programowania, najczęściej obiektowych – jak Simula czy C++ lub są oparte na silnikach jak Unity. Dla mniej wymagających symulacji powstały także uniwersalne programy.
+
+Osmosis computer simulation.jpg	Screenshot phun.PNG	Battle for Mandicor 0.0.5.png	Raytracing reflection.png	Activemarker2.PNG
+Silniki graficzne	Gra symulacyjna	Tworzenie gry komputerowej	Renderowanie	Modelowanie trójwymiarowe
+Interfejsy i interakcje człowiek-komputer
+ Osobny artykuł: Interakcja człowiek–komputer.
+Interakcją człowiek–komputer nazywa się wzajemne oddziaływanie między człowiekiem a komputerem zachodzące poprzez interfejs użytkownika, czyli część sprzętu i oprogramowania zajmującą się obsługą urządzeń wejścia-wyjścia przeznaczonych dla interakcji z użytkownikiem. Istnieje wiele rodzajów interfejsów, są to m.in. wiersz poleceń, interfejs tekstowy czy interfejs graficzny. Obecnie prowadzone są intensywne badania nad wirtualną rzeczywistością, a także interfejsami mózg-komputer.
+
+Linux command-line. Bash. GNOME Terminal. screenshot.png	Head-mounted display and wired gloves, Ames Research Center.jpg	Image-AR TD0.jpg	The.Matrix.glmatrix.2.png	Reactable Multitouch.jpg
+Wiersz poleceń	Rzeczywistość wirtualna	Rzeczywistość rozszerzona	Interfejs mózg–komputer	User experience
+Technologie webowe, mobilne i multimedia
+Aplikacja internetowa (ang. web application), zwana również aplikacją webową – program komputerowy, który pracuje na serwerze i komunikuje się poprzez sieć komputerową z hostem użytkownika komputera z wykorzystaniem przeglądarki internetowej użytkownika, będącego w takim przypadku interaktywnym klientem aplikacji internetowej. Od komputerów mobilnych (np. smartfony, tablety) oczekuje się, że mogą być swobodnie transportowane podczas normalnego użytkowania, oraz pozwalają na przesyłanie danych, głosu i wideo. System mobilny, także przetwarzanie mobilne (ang. mobile computing) obejmuje komunikację mobilną oraz sprzęt i oprogramowanie mobilne. Kwestie komunikacyjne obejmują sieci ad hoc, infrastrukturę sieci, a także właściwości komunikacyjne, protokoły, formaty danych i konkretne technologie. Typowy sprzęt mobilny zawiera często różne sensory, np. akcelerometry które są w stanie wykrywać i odbierać sygnały. Najważniejsze mobilne systemy operacyjne to iOS oraz Android Linux, gdzie dominują języki Java i Kotlin[44].
+
+Informatyka stosowana
+Informatyka w biologii, chemii i kognitywistyce
+Bioinformatyka (z niem. Bioinformatik) – interdyscyplinarna dziedzina obejmujmująca rozwój metod obliczeniowych służących do badania struktury, funkcji i ewolucji genów, genomów i białek. Ponadto odpowiada za rozwój metod wykorzystywanych do zarządzania i analizy informacji biologicznej gromadzonej w toku badań genomicznych oraz badań prowadzonych z zastosowaniem wysokoprzepustowych technik eksperymentalnych[45].
+Chemioinformatyka (z niem. Chemoinformatik), także informatyka chemiczna to nauka zajmująca się wykorzystaniem informatyki do rozwiązywania różnorodnych problemów chemicznych jak np. teoria grafów chemicznych czy badania przestrzeni chemicznej[46][47]. Te techniki, nazywane często metodami in silico, wykorzystywane są do przeprowadzania obliczeń w blisko związanej z nią chemii obliczeniowej oraz w chemii kwantowej i procesie projektowania leków. Nauka ta znajduje zastosowanie w wielu gałęziach przemysłu chemicznego do analizy i przetwarzania danych chemicznych.
+Neuroinformatyka (z niem. Neuroinformatik) znajduje zastosowania w kognitywistyce, przy badaniu przetwarzania informacji przez systemy nerwowe w celu zastosowania ich w systemach technicznych, m.in. w tworzeniu modeli obliczeniowych, narzędzi analitycznych i baz danych do udostępniania, integracji i analizy danych eksperymentalnych oraz rozwoju teorii na temat funkcji układu nerwowego. W kontekście INCF neuroinformatyka odnosi się do informacji naukowych na temat podstawowych danych eksperymentalnych, ontologii, metadanych, narzędzi analitycznych i modeli obliczeniowych układu nerwowego. Informatyka kognitywna także odnosi się do zastosowań w kognitywistyce[48]. Jednym z najbardziej znanych specjalistów kognitywstyki w Polsce jest Włodzisław Duch. Kolejnym powiązanym obszarem jest informatyka afektywna.
+Genome viewer screenshot small.png	Evolution fate duplicate genes - vector.svg	TE-Nervous system diagram.svg	The protein interaction network of Treponema pallidum.png	Svm separating hyperplanes.png
+Bioinformatyka	Genoinformatyka(ang.)	Neuroinformatyka	Chemioinformatyka	Informatyka afektywna
+Dalsze zastosowania
+Socjoinformatyka, także informatyka społeczna odnosi się do szeroko rozumianego związku pomiędzy technologiami informatycznymi i światem społecznym. Obejmuje między innymi web mining, reality mining, symulacje społeczeństw i boty społeczne. Przedmiotem zainteresowania badaczy jest także z jednej strony wpływ informatycznych technologii komunikacyjnych na zmiany społeczne i psychologiczne wśród osób, które z nich korzystają. Z drugiej strony badany jest wpływ zjawisk społecznych na systemy informatyczne, między innymi komunikatory, serwisy społecznościowe.
+Geoinformatyka – zajmuje się numerycznym przetwarzaniem i analizowaniem informacji geograficznej (geoinformacji). Geoinformatyka jest opisywana jako nauka i technika zajmująca się strukturą i charakterem informacji geograficznych, jej przechwytywaniem, klasyfikacją, przetwarzaniem, przedstawieniem i wizualizacją[49]. Do zastosowań geoinformatyki zalicza się kartografię, geodezję, GPS, fotogrametrię, teledetekcję, analizę danych przestrzennych, mapowanie webowe i nawigację.
+Informatyka śledcza – dostarcza cyfrowych środków dowodowych dotyczących przestępstw popełnionych cyfrowo lub przy użyciu systemów teleinformatycznych. Jej zadaniami są: zbieranie, odzyskiwanie, analiza i prezentacja cyfrowych danych, znajdujących się na różnego rodzaju nośnikach (dyski twarde komputerów, dyskietki, płyty CD, pamięci przenośne, serwery, telefony komórkowe itp.), oraz w coraz popularniejszych ostatnio systemach i serwisach zdalnego gromadzenia, przechowywania i przetwarzania danych, takich jak serwisy społecznościowe, przestrzeń dyskowa w chmurze czy wyszukiwarki internetowe.
+Informatyka mechaniczna, także mechainformatyka (z niem. Maschinenbauinformatik) – zastosowania informatyki w mechanice. Zajmuje się m.in. informatycznymi aspektami druku 3D, programowania CNC, mechaniki komputerowej, oraz oprogramowaniem do projektownia CAD.
+Informatyka medyczna – zajmujuje się zbieraniem, przetwarzaniem, przechowywaniem, udostępnianiem i przesyłaniem danych medycznych oraz metodami tworzenia urządzeń i systemów informatycznych wykorzystywanych w medycynie. Informatyka medyczna znajduje zastosowania między innymi w systemach wspomagania diagnostyki (np. IBM Watson for Oncology)[50], oprogramowaniu robotów medycznych, systemach rejestracji, przetwarzania i analizy sygnałów i obrazów medycznych oraz systemach teleinformatycznych dla telemedycyny[51].
+Informatyka materiałowa – zastosowania informatyki w materiałoznawstawie i inżynierii materiałowej.
+Informatyka przemysłowa – zastosowania informatyki w przemyśle.
+Informatyka ekonomiczna (czasem określana również jako informatyka gospodarcza lub informatyka zarządcza) – jej przedmiotem zainteresowania są systemy informatyczne w organizacjach (szczególnie w przedsiębiorstwach).
+Edukacja
+Szkoła podstawowa, liceum i technikum
+W ramach I etapu edukacji (klasy I-III) uczniowie mają zajęcia z edukacji informatycznej w ramach edukacji wczesnoszkolnej. Klasy IV, V, VI, VII, VIII (II etap edukacyjny) mają już przedmiot informatyka[52]. Najważniejszym celem kształcenia informatycznego uczniów jest rozwój umiejętności myślenia obliczeniowego (z ang. computational thinking), skupionego na kreatywnym rozwiązywaniu problemów z różnych dziedzin ze świadomym i bezpiecznym wykorzystaniem przy tym metod i narzędzi wywodzących się z informatyki[53]. Takie podejście, rozpoczęte w szkole podstawowej, jest kontynuowane w liceum ogólnokształcącym i technikum zarówno w zakresie podstawowym, jak i rozszerzonym. Przedmiot informatyka jest realizowany przez wszystkich uczniów w każdej klasie, począwszy od klasy I szkoły podstawowej i jest kontynuowany w liceum ogólnokształcącym i technikum[53].
+
+Studia wyższe
+Informatyka jest wykładana na uniwersytetach oraz na politechnikach. Na politechnikach programy studiów są nastawione na zagadnienia inżynierskie, a na uniwersytetach na zagadnienia naukowe. Istnieją także programy studiów nastawione na praktyczne zastosowania. Z uwagi na ograniczoną liczbę miejsc oraz fakt że informatyka jest chętnie wybieranym kierunkiem studiów, obowiązują na nią stosunkowo wysokie progi punktowe. W roku akademickim 2018/2019 zgłosiło się 42759 chętnych[54]. W najlepszych uczelniach w kraju w pierwszej kolejności są przyjmowani finaliści Olimpiady Informatycznej. Spośród najlepszych jest wyłaniana reprezentacja Polski na różne międzynarodowe konkursy informatyczne np. Akademickie mistrzostwa świata w programowaniu zespołowym[55].
+
+Programowanie komputerów – proces tworzenia programu komputerowego, który ma realizować określone zadania. Kod źródłowy jest napisany w języku programowania.
+
+Między programistami trwają debaty, czy programowanie komputerów jest sztuką, rzemiosłem czy procesem inżynieryjnym. Bezpośrednią formą sztuki w tej dziedzinie jest demoscena oraz nowoczesne gry komputerowe.
+
+Inną debatą dotyczącą tego przedmiotu jest stopień, w jakim język programowania wpływa na formę, jaką przybiera oraz jak funkcjonuje końcowy program. Jest ona analogiczna do hipotezy Sapira-Whorfa w lingwistyce. Programowanie zwykle wymaga wiedzy w dziedzinie algorytmów i struktur danych, języków i metodologii programowania, architektury komputerów i oprogramowania oraz wiedzy dziedzinowej, w zależności od powstającego programu. Z perspektywy inżynierii oprogramowania programowanie (implementacja) jest tylko jednym z etapów powstawania programu.
+
+
+Spis treści
+1	Programiści
+2	Języki programowania
+3	Historia programowania
+4	Nowoczesne programowanie
+4.1	Nowoczesne języki
+4.2	Debugowanie
+5	Zawody programistyczne
+6	Zobacz też
+7	Przypisy
+8	Linki zewnętrzne
+Programiści
+ Osobny artykuł: Programista.
+Osoba programująca komputery nazywa się programistą. Ich praca zazwyczaj obejmuje:
+
+analizę wymagań systemowych
+specyfikację aplikacji
+architekturę systemu informatycznego
+programowanie
+kompilację oprogramowania
+testowanie oprogramowania
+dokumentację programu
+integrację systemów
+konserwację oprogramowania.
+Języki programowania
+ Osobny artykuł: Język programowania.
+Różne języki programowania pozwalają na wykorzystanie różnych stylów programowania zwanych również paradygmatami programowania oraz specyficznych cech danego języka. Wybór konkretnego języka może zależeć od indywidualnych upodobań, polityki firmy tworzącej oprogramowanie lub ze względu na zadanie, jakie końcowa aplikacja ma realizować (języki dziedzinowe). Najlepszym rozwiązaniem jest wybór języka programowania najbardziej dostosowanego do rozwiązywanego zadania i ewentualnej istniejącej infrastruktury. Najważniejsze kryteria wyboru języka programowania to: paradygmat i rodzaj języka, przenośność i wydajność kompilatorów, dojrzałość oraz dostępność narzędzi i dokumentacji. Ze względów takich jak brak kompilatorów dla danej platformy sprzętowej, niewystarczająca wydajność wynikowego kodu aplikacji, czy konieczność utrzymania i integracji z już istniejącą infrastrukturą, może nie być to możliwe lub zbyt kosztowne do zrealizowania. W przypadku większych projektów istotne jest też, jak szybko można znaleźć odpowiednio wykwalifikowane osoby znające konkretny język i jak szybko uda się z nich stworzyć sprawny zespół.
+
+Historia programowania
+
+Programowanie komputera analogowego ELWAT z końca lat 60. XX wieku, przez łączenie tablicy połączeń
+Mechaniczne urządzenia liczące są konstruowane już od czasów starożytnych. Mechanizm z Antykithiry pochodzący z czasów starożytnej Grecji (150–100 p.n.e.) był mechanicznym kalkulatorem opartym na zespole kół zębatych, służącym do obliczeń astronomicznych[1]. Arabski wynalazca Al-Jazari zbudował w 1206 roku programowalny automat perkusyjny z pałeczkami oraz krzywkami umieszczonymi na drewnianym bębnie w określonych miejscach. W miarę obrotu bębna uderzały one o dźwignie, które odgrywały określony dźwięk na instrumencie perkusyjnym. W 1805 roku powstało krosno tkackie Josepha Marie Jacquarda. Maszyna korzystała z kart dziurkowanych, na których zapisany był wzór tkaniny do wytworzenia. Zmieniając zestaw kart, można było uzyskać tkaniny z innymi wzorami. Pomysł ten został później podchwycony przez Hermana Holleritha z IBM.
+
+W 1833 roku Charles Babbage zaczął budowę maszyny analitycznej będącej w istocie mechanicznym, programowalnym protokomputerem, który wyprzedzał swoją epokę. Z powodu trudności konstrukcyjnych, a także braku zainteresowania rządu Wielkiej Brytanii wynalazca nie dokończył swojego wynalazku, lecz projekt został opisany przez Adę Lovelace, która napisała także dla niego pierwszy program obliczający liczby Bernoulliego i w ten sposób została pierwszym programistą (a właściwie programistką) w historii.
+
+Wynalezienie architektury von Neumanna umożliwiło przechowywanie programów komputerowych w pamięci operacyjnej komputera razem z danymi. Pierwsze programy musiały być składane bezpośrednio z operacji oferowanych przez konkretną maszynę, często w notacji binarnej. Każdy model używał innego zestawu komend, co ograniczało przenośność. W późniejszych latach zaprojektowano pierwsze asemblery, gdzie programista mógł wpisywać instrukcje w formacie tekstowym z wykorzystaniem zapisu symbolicznego zamiast numeru rozkazu, np. ADD X, TOTAL. W 1954 roku stworzony został pierwszy język programowania wysokiego poziomu, FORTRAN, gdzie programiści mogli bezpośrednio formułować wyrażenia matematyczne w podobnym stylu, do jakiego jesteśmy przyzwyczajeni: y = x^2 + 5*x – 7. Tekst programu, lub inaczej jego źródło, było tłumaczone do postaci zrozumiałej dla maszyny za pomocą specjalnej aplikacji zwanej kompilatorem. W późniejszych latach powstały nowe języki programowania, często zorientowane do tworzenia konkretnych typów aplikacji.
+
+W początkowych latach istnienia komputerów (ok. 1940–1960), programy komputerowe były wprowadzane do pamięci komputera za pośrednictwem kart dziurkowanych lub papierowych taśm. Pod koniec lat sześćdziesiątych pojawiły się pierwsze urządzenia do elektronicznego przechowywania informacji oraz terminale komputerowe, dzięki którym kod źródłowy mógł być wprowadzany bezpośrednio do komputera za pomocą edytorów tekstu.
+
+Wraz z rozwojem Internetu oraz sieci komputerowych pojawiły się narzędzia ułatwiające zespołową pracę nad programami, takie jak systemy kontroli wersji. Kod źródłowy jest tutaj przechowywany na centralnym serwerze, natomiast programiści wysyłają do niego poprawki z własnych kopii lokalnych. Wszystkie zmiany są rejestrowane, a program zarządzający potrafi inteligentnie łączyć ze sobą fragmenty modyfikowane niezależnie przez dwóch programistów, dzięki czemu nie może zaistnieć sytuacja przypadkowego skasowania efektu pracy innego członka zespołu.
+
+Obecnie programowanie komputerów jest atrakcyjną karierą w niemal każdym kraju rozwiniętym, ze względu na stale rosnący popyt na nowe aplikacje komputerowe. Niektóre z najbogatszych osób świata są programistami z zawodu, na przykład Bill Gates (Microsoft), Larry Ellison (Oracle), Larry Page (Google) czy Hasso Plattner (SAP).
+
+Nowoczesne programowanie
+Kolejnymi krokami w każdym projekcie programistycznym powinny być analiza wymagań, modelowanie, implementacja i eliminacja błędów (debugging). Istnieje wiele różnych sposobów na zrealizowanie każdego z tych etapów.
+
+Współcześni programiści korzystają z wielu specjalistycznych narzędzi wspomagających tworzenie i zarządzanie złożonymi aplikacjami. Proces tworzenia programu komputerowego zazwyczaj rozpoczyna się od stworzenia analizy wymagań oraz zaprojektowania architektury. Popularnymi technikami modelowania są tutaj OOAD oraz MDA. Unified Modelling Language (UML) jest powszechnie akceptowaną notacją do prezentowania obu z nich.
+
+Dopiero wtedy następuje tworzenie właściwego kodu źródłowego. Przy złożonych aplikacjach korzysta się z zaawansowanych środowisk IDE wyposażonych w szereg dodatkowych menedżerów pokazujących różne informacje o strukturze aplikacji oraz w rozbudowany system wykrywania i usuwania błędów. Popularnymi środowiskami IDE są Visual Studio firmy Microsoft oraz projekt Eclipse nadzorowany przez IBM.
+
+Obecnie istotnym zagadnieniem jest kontrolowanie wersji kodu źródłowego, który często jest modyfikowany w sposób rozproszony przez wielu programistów. Im większy projekt (np. taki jak system operacyjny: FreeBSD, NetBSD, GNU/Linux itp.) tym większe znaczenie ma integrowanie wielu zmian oraz zarządzanie nimi (np. śledzenie zmian niezależnie np. od przemieszczania się plików itp.). Do takich systemów zaliczyć można np. CVS, Subversion, svk, Git, Bazaar i inne. Wiele dużych, komercyjnych środowisk programistycznych zintegrowanych jest w system kontroli wersji.
+
+Usuwanie błędów z gotowej aplikacji jest ostatnim krokiem rozwoju oprogramowania. Trudność jego realizacji zależy od środowiska, jakości kodu źródłowego oraz wybranego języka programowania. Istnieją dwa główne sposoby debugowania: statyczna analiza kodu i dynamiczna. Pierwszy polega na analizie kodu źródłowego pod kątem występowania możliwych błędów. Drugi, na analizie programu w trakcie pracy, służą ku temu specjalne narzędzia, zwane debugerami oraz fragmenty kodu zawarte bezpośrednio w programie, których jedynym zadaniem jest pomoc w znalezieniu błędów.
+
+Nowoczesne języki
+Współcześnie używanymi językami programowania są: C, C++, Objective-C, C#, Visual Basic, Java, Delphi, Cobol, PHP, Perl, Python, Ruby, Kotlin czy Rust.
+
+Wiele języków wyewoluowało z C, jak na przykład C++, C# czy Java. Języki Java, Python i Ruby są popularne, gdyż pozwalają na bardzo szybkie tworzenie aplikacji oraz są uruchamiane w wirtualnej maszynie, co pozwala na uniknięcie wielu problemów znanych z języków niższego poziomu, takich jak przepełniania bufora czy nieprawidłowe wskaźniki. Jednakże większość programów biurowych, jak na przykład edytory tekstu czy grafiki, jest napisanych w wydajniejszych językach, takich jak C, C++ czy Delphi.
+
+Systemy operacyjne są niemal całkowicie napisane w wydajnych językach, ponieważ w tym przypadku szybkość jest priorytetowa. Naukowe programy są zwykle zaimplementowane w Fortranie, gdyż przy użyciu nowszych kompilatorów możliwa jest w nim bardzo wydajna optymalizacja obliczeń arytmetycznych. Cobol jest wciąż na silnej pozycji w zagranicznych korporacyjnych i rządowych centrach danych, głównie na serwerach Mainframe. PHP i Java górują w programach korzystających z baz danych. Python, będąc językiem ogólnego zastosowania, jest wykorzystywany zwykle do administrowania systemem i na stronach WWW.
+
+Istniejące języki programowania są stale rozwijane i modernizowane, powstają też zupełnie nowe, często innowacyjne języki i kompilatory.
+
+Debugowanie
+Debugowanie jest bardzo ważną częścią procesu tworzenia oprogramowania, ponieważ program z błędami jest zwykle bezużyteczny. Języki takie jak C czy pisanie bezpośrednio w asemblerze mogą stanowić wyzwanie nawet dla doświadczonych programistów. Bliski kontakt ze sprzętem oprócz dużej wydajności i kontroli nad nim, niesie ze sobą również podatność na wystąpienie poważnych błędów takich jak przepełnienie bufora, błędne wskaźniki czy niezainicjowana pamięć. Przepełnienie bufora może uszkodzić sąsiednie segmenty pamięci i spowodować błąd w zupełnie innej linii programu; jest również bardzo skuteczną metodą ataku – pozwala na wykonanie praktycznie dowolnego kodu poprzez nadpisanie wskaźnika powrotnego funkcji. Z tego powodu narzędzia takie jak Valgrind, Purify czy Boundschecker są niemal niezbędne przy tworzeniu nowoczesnych aplikacji w C czy C++.
+
+Języki takie jak Java, PHP i Python zapobiegają większości takich błędów, ale za cenę spadku wydajności programu wynikowego. Jest to akceptowalne w programach, którym większość czasu zabierają zapytania do bazy danych.
+
+Zawody programistyczne
+Od kilku dekad organizowanych jest szereg konkursów programistycznych skierowanych przeważnie do młodych programistów (uczniów szkół średnich i studentów). W Polsce odbywa się kilka dużych konkursów tego typu, a wśród nich, kierowane do studentów Akademickie Mistrzostwa Polski w Programowaniu Zespołowym, czy skierowana do uczniów szkół średnich Olimpiada Informatyczna organizowana przez Ministerstwo Edukacji. Istnieją też portale skupiające zawodników startujących w tego typu konkursach (zob. online judge), które zawierają zbiory zadań i pozwalają na automatyczne sprawdzanie rozwiązań.
+
+Osobliwą formą zawodów programistycznych są kompoty (od ang. competition – turniej) organizowane przez społeczność demosceniczną na zlotach takich jak np. Assembly i inne. Kategorie Demo i intro w głównej mierze skupiają się na konkurencji w umiejętności tworzenia najwydajniejszego kodu lub wykazania niezwykłego programistycznego polotu. Często też mają miejsce kategorie, w których ogranicza się rozmiar kodu np. 4 KB, 8 KB, 64 KB 96 KB itp. W takim przypadku autor lub autorzy próbują zbudować niezwykle urozmaicony i rozbudowany program multimedialny mieszczący się w zadanych ramach.
+
+Językoznawstwo, inaczej lingwistyka (od łac. lingua „język”) – dziedzina nauki zajmująca się badaniem języka pod kątem jego jednostek, struktury, funkcji i rozwoju[1]. Język jako złożone, wieloaspektowe zjawisko społeczne można badać z różnych perspektyw i przy użyciu różnych podejść metodycznych[2].
+
+Termin „lingwistyka”, o pochodzeniu łacińsko-romańskim, ma swoje rodzime odpowiedniki w językach słowiańskich (np. słow. jazykoveda, pol. językoznawstwo, ukr. мовознавство mowoznawstwo). Powstały one w wyniku skalkowania terminu niemieckiego (Sprachwissenschaft)[3].
+
+
+Spis treści
+1	Językoznawstwo a filologia i gramatyka
+2	Podział językoznawstwa
+3	Językoznawstwo w systemie nauk
+4	Zróżnicowanie języków
+5	Właściwości języka
+6	Mowa versus pismo
+7	Normatywność a opisowość
+8	Historia językoznawstwa
+9	Zobacz też
+10	Uwagi
+11	Przypisy
+12	Bibliografia
+13	Linki zewnętrzne
+Językoznawstwo a filologia i gramatyka
+Nauką o języku jest również filologia, która w odróżnieniu od lingwistyki, badającej język bez względu na jego medium, zajmuje się przejawami językowymi w formie pisanej, tj. tekstami literackimi. Przedmiotem filologii jest nie tylko język, ale również tradycja literacka danego języka. Pojęcie filologii jako nauki o języku i literaturze pojawiło się w połowie XIX wieku. Starszy rodowód ma jednak termin „filologia klasyczna”, który obejmował nie tylko język i literaturę, ale ogólne dzieje, prawo, ekonomię, religię oraz filozofię Rzymian i Greków, czyli materialną i duchową kulturę klasycznych narodów europejskich. Filologia ma szerszy zakres pojęciowy niż lingwistyka w tym sensie, że bada zarówno język, jak i literaturę danego narodu. Z drugiej strony jest pojęciowo węższa, gdyż w jej zakres nie wchodzi badanie przedpiśmiennego okresu rozwoju języka[3].
+
+Gramatyka jako termin ma o wiele dłuższą tradycję niż lingwistyka i filologia[3]. O ile filologia i lingwistyka ukształtowały się w epoce nowożytnej, to termin „gramatyka” pojawił się już w piśmiennictwie starogreckim. Grecki uczony Dionizjusz Trak (170–190 p.n.e.) był autorem opisu języka greckiego zatytułowanego Technē grammatikē (techne – rzemiosło, technika; gramma – litera, znak; grammatikos – piśmienny, wykształcony). Praca ta była pierwszą gramatyką europejską, która wyróżniła osiem części mowy[3]. Stała się wzorem dla późniejszych gramatyk; przeniesiona na grunt rzymski, stała się wzorem dla gramatyk łacińskich, a za ich pośrednictwem – wpłynęła na teorie gramatyczne w krajach europejskich[4][5].
+
+Podział językoznawstwa
+Językoznawstwo synchroniczne zajmuje się badaniem synchronii językowej[1], czyli wyodrębnionego stanu istnienia systemu językowego, jego jednostek i ich wzajemnych relacji w wyróżnionym momencie. Pod pojęciem synchronicznego stanu języka rozumie się nie tylko jego współczesną postać, ale również jego stan w konkretnej historycznej epoce rozwoju. Potrzebę badania języka w ujęciu synchronicznym zaczęła priorytetyzować XX-wieczna teoria językoznawcza, pod którą podwaliny położył Ferdinand de Saussure, autor teorii strukturalno-systemowej. Koncepcje de Saussure’a o systemowym i funkcyjnym rozumieniu języka zostały rozwinięte przez Praskie Koło Lingwistyczne, założone w 1926 roku[2].
+
+Lingwistyka diachroniczna zaś bada diachronię językową[1], czyli rozwój systemu językowego na przestrzeni czasu[2]. W jej obrębie można wyróżnić językoznawstwo historyczno-porównawcze, historię poszczególnych języków i etymologię[1]. Termin „diachronia” pokrywa się w znacznym stopniu z pojęciem historii języka, które może być rozumiane w węższym lub szerszym sensie. W węższym ujęciu historia to okres rozwoju społeczeństwa i języka, który pozostawił po sobie świadectwa piśmienne. W tym kontekście okres rozwoju pozbawiony tradycji piśmienniczej określa się jako okres prehistoryczny. Zgodnie z tym rozumieniem diachronię można podzielić na historyczną i prehistoryczną[2].
+
+Lingwistyka porównawcza, zajmująca się porównywaniem dwóch lub większej liczby języków, może przybierać charakter typologiczny (kategoryzuje języki w pewne typy) lub konfrontatywny (kontrastywny) (porównuje wszystkie aspekty języków). Badaniami porównawczymi w kontekście rozwoju spokrewnionych języków zajmuje się językoznawstwo historyczno-porównawcze. Całościowo językoznawstwo porównawcze (synchroniczne lub diachroniczne) określa się jako komparatystykę[6].
+
+Jako że język stanowi fakt społeczny, miejsce języka w społeczeństwie, jego związek z kulturą i zależność od czynników historycznych są zainteresowaniami badawczymi wchodzącymi w obręb dalszych dyscyplin: socjolingwistyki, etnolingwistyki, geolingwistyki, dialektologii i lingwistyki arealnej. W ramach interdyscyplinarnego badania języków uformowały się: filozofia języka, psycholingwistyka, neurolingwistyka oraz lingwistyka inżynieryjna, która stanowi zastosowanie językoznawstwa. Do językoznawstwa stosowanego zalicza się również fonetykę eksperymentalną, teorię przekładu, teorię nauczania języków obcych, leksykografię, lingwistykę kliniczną, niekiedy również socjolingwistykę i psycholingwistykę. Ze względu na naturę metod badawczych można rozróżnić językoznawstwo kwalitatywne (systemowo-strukturalne), algebraiczne i kwantytatywne (statystyczne)[1].
+
+Badania językoznawcze można rozdzielić między dwoma podrozdziałami tej nauki – językoznawstwem szczegółowym (konkretnym) i językoznawstwem ogólnym. W odróżnieniu od językoznawstwa ogólnego, które zajmuje się cechami charakteryzującymi dowolny język, językoznawstwo szczegółowe bada odrębne języki bądź ich zbiory, zbliżone genetycznie lub geograficznie. Zagadnienia wchodzące w zakres językoznawstwa ogólnego dzieli się niekiedy na dwie grupy: ogólne językoznawstwo właściwe (w sensie węższym) i językoznawstwo teoretyczne. W odróżnieniu od właściwego językoznawstwa ogólnego, w zakres językoznawstwa teoretycznego włącza się tylko te kwestie lingwistyczne, które odnoszą się do najbardziej istotnych cech języka, jego ogólnej istoty[7].
+
+Ferdinand de Saussure czynił rozróżnienie między językoznawstwem wewnętrznym, badającym wewnętrzną strukturę języka, a językoznawstwem zewnętrznym, zajmującym się związkami języka z innymi obszarami i realiami[8][9].
+
+Oprócz przedstawionych wyżej koncepcji istnieją jeszcze inne podziały lingwistyki. Można również odróżnić językoznawstwo teoretyczne, zajmujące się przede wszystkim budowaniem teorii języka, od językoznawstwa stosowanego, zajmującego się możliwościami oraz sposobami wykorzystania lingwistyki w różnych obszarach życia i innych dyscyplinach naukowych[10].
+
+Językoznawstwo w systemie nauk
+Językowi jako umiejętności psychofizycznej przypisuje się ścisły związek z całym życiem społecznym, kulturą i myśleniem ludzkim. Z tego względu językoznawstwo wykazuje powiązanie z innymi naukami o społeczeństwie, jego kulturze, ideologii oraz myśleniu treściowym i formalnym. Badanie dźwiękowej postaci języka wiąże lingwistykę z niektórymi naukami przyrodniczymi, zwłaszcza z fizyką i fizjologią[11].
+
+Nauką badającą funkcjonowanie społeczeństwa w najszerszym ujęciu jest socjologia, która jako samodzielna dyscyplina naukowa wyodrębniła się w drugiej połowie XIX wieku. Jej przedmiotem jest klasyfikacja oraz opis wszelkich grup i całostek społecznych łączonych na podstawie bliskości geograficznej, kooperacji ekonomicznej, jednorodności językowej, wyznania religijnego itp. Społeczne rozwarstwienie, począwszy od najmniejszych grup społecznych, jakimi są rodziny, aż po największe grupy, jakimi są klasy, narody i państwa, znaczenie wpływa na zróżnicowanie językowe, przede wszystkim na kształtowanie się dialektów terytorialnych i socjolektów. Z drugiej strony sama mowa jest czynnikiem integrującym, o czym świadczy fakt, że za jeden z podstawowych składników tożsamości narodu uchodzi wspólny język, oddzielający dany naród od innych. Związek socjologii i lingwistyki ma zatem charakter obustronny. Lingwistyka wykorzystuje ustalenia socjologii, a socjologia wykorzystuje ustalenia lingwistyki. W wyniku współpracy socjologii i językoznawstwa uformowała się dyscyplina zwana socjolingwistyką[11].
+
+Etnografia jako nauka o kulturze materialnej i duchownej również wykazuje związek z lingwistyką. Jako że język jest najwyraźniejszym wyznacznikiem tożsamości etnicznej, poznanie związku języka danego etnosu z językami sąsiadującymi umożliwia etnografowi identyfikację historycznych i kulturowych związków między ludami. Językoznawca badający język nie może zaś zignorować wiedzy o etnografii narodu posługującego się daną mową; inaczej trudność sprawiłoby mu zrozumienie określeń odnoszących się do faktów z życia materialnego i kulturowego narodu. Potrzeba współdziałania między etnografią a lingwistyką jest widoczna najwyraźniej przy badaniu dialektów regionalnych (w dialektologii). Przy analizie zasobu słownego gwar niezbędna jest bowiem znajomość panujących w danym miejscu realiów. Wiedza na temat danego dialektu pomaga etnografowi w zbliżeniu się do przedstawicieli badanego etnosu. Dlatego przy nauczaniu etnografii wagę przypisuje się również lingwistyce (dialektologii), a monografie etnograficzne zawierają również informacje o języku (dialekcie) właściwym dla danej grupy etnicznej. Z kooperacji językoznawstwa i etnografii uformowała się dyscyplina zwana etnolingwistyką, która zajmuje się przede wszystkim badaniem tzw. społeczeństw prymitywnych, żyjących w organizacji plemiennej. Godne uwagi w kontekście etnolingwistyki są Stany Zjednoczone (badanie plemion indiańskich) i w ZSSR (grupy etniczne mówiące m.in. językami uralskimi)[12].
+
+Wśród nauk artystycznych z językoznawstwem związane są literaturoznawstwo (w tym poetyka) i historia literatury. Teoria literatury i poetyka czerpią w znacznej mierze z ustaleń językoznawstwa, np. w zakresie fonetyki (kwestie rymu i rytmu w poezji), leksykologii i semantyki (metafora, metonimia), stylistyki i teorii tekstu. Z drugiej strony literatura piękna wraz z literaturą fachową tworzą punkt wyjścia do badania rozwarstwienia i rozwoju zasobu leksykalnego języka oraz jego struktury gramatycznej. Teoria literatury i poetyka dają lingwistyce impulsy do analizy funkcji estetycznej języka[13].
+
+Językoznawstwo związane jest również z nauką o znakach, czyli semiotyką (termin zaczerpnięty od amerykańskich filozofów, Peirce’a i Morrisa) lub semiologią (termin Saussurre’a). W życiu codziennym człowiek nie tylko posługuje się językiem jako najbogatszym systemem znaków, ale również kieruje się innymi zespołami znaków, np. symbolami. Językoznawstwo za pośrednictwem semiotyki łączy się również z cybernetyką (nauką o sterowaniu systemami) i teorią informacji, tj. nauką o informacjach, zwłaszcza o sposobach ich przekazu i transformacji. Cybernetyka była jednym z czynników, które po drugiej wojnie światowej doprowadziły do rewolucji naukowo-technicznej. Uniwersalność cybernetyki przejawia się w tym, że nie szuka różnic między badanymi faktami, ale wykrywa relacje, które je nawzajem łączą. Cybernetyka przedostała się do ogólnej teorii systemów i ustanowiła związek również z językoznawstwem; jednym z głównych zadań lingwistyki jest bowiem analiza i opis systemów językowych[14].
+
+Z nauk przyrodniczych blisko związanych z językoznawstwem największe znaczenie mają fizjologia i anatomia (przy badaniu wymowy, artykulacji głosek), z nauk fizycznych zwłaszcza akustyka (przy badaniu własności akustycznych głosek). W związku z tym fonetykę jako naukę o dźwiękowej płaszczyźnie mowy można podzielić na fonetykę organogenetyczną (fizjologiczną, artykulacyjną) i na fonetykę akustyczną[15].
+
+Zróżnicowanie języków
+Ważną częścią badań lingwistycznych jest dociekanie istoty różnic pomiędzy językami świata. Jest to szczególnie istotne dla zrozumienia ludzkich umiejętności językowych. Jeżeli zdolności językowe człowieka są ściśle ograniczone przez biologiczne właściwości gatunku ludzkiego, wówczas języki muszą być bardzo do siebie podobne. Jeżeli zdolności lingwistyczne człowieka są nieograniczone, wtedy języki mogą znacznie się od siebie różnić.
+
+Istnieje wiele różnych sposobów na zinterpretowanie podobieństw pomiędzy językami. Na przykład: język łaciński używany przez Rzymian przekształcił się w hiszpański w Hiszpanii i włoski we Włoszech. Podobieństwa pomiędzy hiszpańskim i włoskim w wielu przypadkach wynikają ze wspólnego pochodzenia tych języków. A więc w zasadzie, jeżeli dwa języki mają pewną wspólną właściwość, to ta właściwość może istnieć dzięki pochodzeniu ze wspólnego prajęzyka lub pewnej właściwości ludzkich umiejętności językowych. Istnieje zawsze możliwość przypadkowego podobieństwa, zwłaszcza w zakresie leksyki, tak jak w przypadku hiszpańskiego słowa mucho i angielskiego much, które nie są ze sobą powiązane historycznie, chociaż dzielą to samo znaczenie i podobne brzmienie.
+
+Często możliwość wspólnego dziedzictwa może być zasadniczo wykluczona. Biorąc pod uwagę fakt, że uczenie się języków przychodzi ludziom w miarę łatwo, można stwierdzić, że językami posługiwano się przynajmniej tak długo, jak istnieje współczesny człowiek, czyli około pięćdziesięciu tysięcy lat. Niezależne pomiary zmian językowych (na przykład porównywanie tekstów języka starożytnego do języków wywodzących się z niego i używanych współcześnie) sugerują, że zmiana przebiega w takim tempie, że nie można zrekonstruować języka, którym mówiono więcej niż 10 000 lat temu. W konsekwencji cechy wspólne języków mówionych w różnych częściach świata nie są uznawane jako dowód na wspólne pochodzenie.
+
+Co więcej, istnieją udokumentowane przypadki języków migowych rozwijających się w społecznościach ludzi upośledzonych słuchowo, którzy nie mogli mieć kontaktu z językiem mówionym. Okazało się, że języki migowe mają cechy języków mówionych, co umacnia hipotezę, że cechy te nie są zawdzięczane wspólnemu przodkowi, lecz ogólnym właściwościom sposobu przyswajania języka.
+
+Zbiór przypuszczalnie wspólnych właściwości wszystkich języków określa się mianem gramatyki uniwersalnej. Uniwersalne właściwości języka mogą być częściowo przypisane uniwersalnym aspektom ludzkiego doświadczenia. Na przykład: wszyscy ludzie używają wody i fakt, że we wszystkich językach występuje termin określający wodę jest z pewnością z tym związany. Wyzwanie, które stawia gramatyka uniwersalna wymaga poradzenia sobie z tym problemem. Doświadczenie jest częścią procesu, poprzez który jednostki uczą się języków. Jednakże doświadczenie samo w sobie nie jest wystarczające, ponieważ zwierzęta trzymane wśród ludzi uczą się języka ludzkiego w bardzo małym stopniu, lub wcale się go nie uczą.
+
+Przypuszczalnie wszystkie języki świata rozróżniają rzeczowniki od czasowników – jest to generalnie przyjęta zasada. Mogłoby to wymagać bardziej wyszukanego wyjaśnienia, ponieważ rzeczowniki i czasowniki nie istnieją w świecie, lecz są tylko częścią języka.
+
+Właściwości gramatyki uniwersalnej mogą być związane z ogólnymi właściwościami ludzkiego poznania lub z pewną właściwością ludzkiego poznania, która jest charakterystyczna dla danego języka. Potrzebna jest znacznie większa wiedza na temat ludzkiego poznania, by móc dokonać znaczącego rozróżnienia. W rezultacie w lingwistyce teoretycznej występują uogólnienia, ale lingwiści nie zajmują stanowiska, czy takie uogólnienie może mieć wpływ na inne aspekty poznania.
+
+Właściwości języka
+Od czasów starożytnej Grecji utrzymuje się, że języki są zorganizowane wokół gramatycznych kategorii, takich jak rzeczownik czy czasownik, mianownik lub biernik, teraźniejszość czy przeszłość. Słownictwo i gramatyka języka są zorganizowane wokół tych elementarnych kategorii. Poza tworzeniem konkretnego użycia odrębnych kategorii, język ma ważną właściwość, organizuje elementy w struktury rekurencyjne. To pozwala, na przykład, wyrażeniu rzeczownikowemu zawrzeć inne wyrażenie rzeczownikowe (jak na przykład „usta szympansa”) lub zdaniu zawrzeć inne zdanie (na przykład „Myślę, że pada.”). Chociaż rekurencja w gramatyce została bezwzględnie rozpoznana dużo wcześniej (na przykład przez Jespersena), znaczenie tego aspektu języka zostało w pełni uświadomione po publikacji książki Syntactic Structures Noama Chomsky’ego w 1957 roku, która przedstawia formalną gramatykę fragmentu angielskiego. Przedtem najbardziej szczegółowe opisy systemów lingwistycznych były systemami fonologicznymi lub morfologicznymi, które były zamknięte i dopuszczały niewiele kreatywności.
+
+Chomsky używał bezkontekstowej gramatyki, powiększając ją za pomocą przekształceń. Od tego czasu bezkontekstowa gramatyka opisuje konkretne fragmenty różnych języków, jednakże udowodniono, że ludzkie języki zawierają szeregowe zależności, którymi bezkontekstowa gramatyka nie może zajmować się dostatecznie. To wymaga zwiększonej umiejętności, na przykład przekształcania. Ważną kwestią jest również to, że zdania rzeczownikowe przed zwrotami czasownikowymi są identyfikowane z czasownikami w zwrotach czasownikowych, w kolejności od lewej do prawej strony.
+
+Mowa versus pismo
+Większość współczesnych lingwistów żywi przekonanie, że język mówiony jest bardziej fundamentalny. Przyjmują oni, że badanie mowy jest ważniejsze od badania języka pisanego[16]. Przyczyny tego spojrzenia są następujące:
+
+język pisany jest wtórną reprezentacją języka mówionego, niewypracowaną na gruncie większości języków mówionych (większą część języków świata tworzą języki niepiśmienne)[17];
+język mówiony jest uniwersalny i spontaniczny, język pisany zaś wymaga świadomej nauki[18] i funkcjonuje pod silniejszym wpływem gramatyki normatywnej[19];
+język mówiony, zwłaszcza swobodny[19], zawiera formy niestandardowe i jest zróżnicowany regionalnie, piśmiennictwo zaś reprezentuje formy standardowe i uniemożliwia wykrycie np. zróżnicowania dźwiękowego języka[17].
+Językoznawcy zauważają wartość badań nad tekstem. W przypadku badań językoznawczych, do których stosuje się metody lingwistyki informatycznej i korpusowej, język pisany jest często o wiele bardziej wygodny przy przetwarzaniu dużej ilości danych. Trudno jest znaleźć albo stworzyć wielkie korpusy języka mówionego. Są one zazwyczaj sporządzane na piśmie. W dodatku lingwiści zwrócili się ku pisemnemu dyskursowi, który pojawia się w różnych rodzajach komunikacji za pośrednictwem komputerów, uznając go za realną dziedzinę badań językoznawczych.
+
+Badania języka pisanego są w każdym wypadku uważane za dziedzinę językoznawstwa[16].
+
+Normatywność a opisowość
+Współczesne językoznawstwo jest opisywane jako przedsięwzięcie deskryptywne (opisowe), stroniące od sądów preskryptywnych (normatywnych)[20][21]. Zgodnie z tą definicją lingwiści koncentrują swoją działalność naukową na bezstronnej obserwacji języka i badaniu jego rzeczywistej natury. Ich zadaniem jest opisanie zasad znanych rodzimym użytkownikom języka, na podstawie intuicji i praktyki językowej tych osób[20], przy czym przedmiotem badań językoznawczych mogą być zarówno odmiany standardowe języków, jak i te mniej prestiżowe[21][16]. Naukowe rozumienie językoznawstwa kontrastuje zatem z popularnymi wyobrażeniami na temat tej dyscypliny, które nieściśle utożsamiają lingwistów z normatywistami (preskryptywistami; osobami zajmującymi się tzw. kulturą języka) bądź poliglotami[22]. Potocznie językoznawstwo bywa postrzegane jako dyscyplina poświęcona poprawności językowej[23] lub utożsamiane z poradnictwem językowym[24].
+
+Popularne koncepcje poprawności i błędu językowego, choć powszechne wśród elit kulturalnych, uchodzą za umotywowane panującymi uwarunkowaniami społecznymi[21][25], a regulacji językowej można przypisać charakter nienaukowy[26]. Językoznawstwo dystansuje się od dyktowania zasad etykiety językowej[20]. Normatywizm funkcjonuje jednak w niektórych tradycjach lingwistyki, m.in. w krajach szeroko pojmowanej Europy Wschodniej[27]. Również polska lingwistyka jest w stosunkowo dużym stopniu skupiona na krytyce językowej i popularyzacji kultury mowy, czym odróżnia się np. od językoznawstwa brytyjskiego, odrzucającego preskryptywność[28].
+
+Historia językoznawstwa
+ Zobacz też: Historia językoznawstwa.
+Wczesne teksty indyjskich Wed wskazują na strukturę języków – język składa się ze zdań mających cztery stadia rozwojowe, które są wyrażone w trzech czasach (przeszłym, teraźniejszym i przyszłym). Zdania składają się z wyrazów, które mają dwie odrębne formy istnienia (formę wokalną – słowo, i formę wyobrażeniową – znaczenie). Wyrazy te są zazwyczaj czasownikami, które reprezentują czynności ze świata rzeczywistego, i rzeczownikami, które występują w siedmiu[a] przypadkach (w zależności od sposobu uczestnictwa w czynnościach ze świata rzeczywistego).
+
+Indyjski gramatyk Panini (około 520–460 p.n.e.) jest często uznawany za prekursora językoznawstwa. Jest znany jako autor dzieła gramatycznego pod tytułem Aṣṭādhyāyī, do dzisiaj używanego w nauce i analizie sanskrytu. Gramatyka Paniniego jest wysoko usystematyzowana i techniczna, wprowadziła pojęcia fonemu, morfemu i rdzenia (rozpoznane dopiero przez zachodnich językoznawców około dwóch tysięcy lat później). Reguły Paniniego opisują całość morfologii języka. Następstwem tego, że jego gramatyka skupia się na zwięzłości, jest jej nieintuicyjna struktura, przypominająca współczesny język maszynowy (jako przeciwieństwo zrozumiałych przez ludzi języków programowania). Zaawansowane logiczne zasady i techniki Paniniego miały duży wpływ zarówno na starożytne, jak również na współczesne językoznawstwo.
+
+Bhartrihari (ok. 450–510) – kolejny ważny autor teorii indyjskiego językoznawstwa. Stworzył on teorię, według której akt mowy składa się z czterech etapów:
+
+pierwszy – konceptualizacja danej myśli,
+drugi – jej werbalizacja oraz sekwencjonowanie,
+trzeci – wygłoszenie wypowiedzi w przestrzeń, wszystko to wykonane przez mówcę,
+i czwarty – zrozumienie wypowiedzi przez słuchacza – osobę interpretującą.
+Praca Paniniego oraz Bhartrihariego miała znaczący wpływ na wiele z podstawowych poglądów zaproponowanych przez wykładowcę sanskrytu, Ferdinanda de Saussure’a, który jest powszechnie uważany za ojca współczesnego językoznawstwa strukturalnego.
+
+W 760 roku na Środkowym Wschodzie perski językoznawca Sibawajh stworzył w swojej obszernej pracy pod tytułem Al-kitab fi al-nahw (‏الكتاب في النحو‎ – „Księga o gramatyce“) szczegółowy i profesjonalny opis arabskiego, ukazując wiele lingwistycznych aspektów języka. Sibawajh w swojej książce odróżnił fonetykę od fonologii.
+
+Lingwistyka rozwija się na gruncie naukowym od XIX wieku, kiedy to była zdominowana przez badania historyczno-porównawcze. W pierwszych dekadach XX wieku wykształciła się lingwistyka synchroniczna (opisowa) i stopniowo wzrasta koncentracja na badaniu języka jako uniwersalnego narzędzia komunikacji i myślenia ludzkiego w oparciu o materiał zgromadzony w ramach badań różnych języków świata. Na przełomie XIX i XX wieku ukształtowały się zalążki innych dyscyplin językoznawczych. Powstało językoznawstwo ogólne jako dyscyplina integrująca, zajmująca się prawidłowościami wewnętrznej struktury i rozwoju języka. Pod wpływem teorii Ferdinanda de Saussure’a badania synchroniczne zostały odgraniczone od diachronicznych[1].
+
+Do pierwszych zachodnich językoznawców zaliczają się Jakob Grimm, który w roku 1822 stworzył zasadę spółgłoskowych zmian w wymowie znaną jako prawo Grimma, Karl Verner, który ułożył prawo Vernera, August Schleicher, który stworzył „Stammbaumtheorie” oraz Johannes Schmidt, który w roku 1872 stworzył „Wellentheorie” („model falowy”). Ferdinand de Saussure jest twórcą współczesnej lingwistyki strukturalnej. Edward Sapir, lider w amerykańskiej lingwistyce strukturalnej, był jednym z pierwszych, którzy badali zależności pomiędzy nauką o języku a antropologią. Jego metodologia ma ogromny wpływ na jego wszystkich następców. Początkowo badania nad językiem odbywały się w ramach filologii, traktującej język przede wszystkim jako narzędzie literatury. Konsekwencją tego podejścia był preskryptywizm i traktowanie języka mówionego jako niedoskonałej wersji języka pisanego.
+
+Od lat 60. XX wieku głównym modelem języka jest model formalny Noama Chomsky’ego, który rozwinął się pod kierunkiem jego nauczyciela, Zelliga Harrisa, będącego z kolei pod ogromnym wpływem Leonarda Bloomfielda. Chomsky pozostaje najbardziej wpływowym językoznawcą na świecie. Lingwiści zajmujący się head-driven phrase structure grammar (HPSG) czy gramatyką leksykalno-funkcyjną (LFG), podkreślają znaczenie formalizacji i formalnego rygoru w opisie lingwistycznym, i dystansują się nieco od ostatniej pracy Chomsky’ego (program „minimalistyczny” dla gramatyki transformacyjnej), przyłączając się bardziej do wcześniejszych jego prac. Lingwiści związani z teorią optymalności wskazują uogólnienia pod względem naruszalnych reguł, co jest większym odejściem od głównego nurtu językoznawstwa, a lingwiści zajmujący się różnymi rodzajami gramatyki funkcjonalnej i lingwistyki kognitywnej mają tendencję do podkreślania braku autonomii wiedzy lingwistycznej i braku uniwersalności struktur lingwistycznych, dlatego też znacznie odchodzą od paradygmatu Chomsky’ego.
+
+Albert Einstein (wym. [ˈalbɐt ˈaɪ̯nʃtaɪ̯n] i) (ur. 14 marca 1879 w Ulm, zm. 18 kwietnia 1955 w Princeton) – niemieckojęzyczny fizyk teoretyczny, noblista; zwykle uznawany za naukowca niemiecko-żydowskiego, choć miał też silne związki ze Szwajcarią i USA; por. niżej. Einstein zrewolucjonizował zarówno mechanikę, jak i teorię pola, głównie w wersji klasycznej, choć odegrał też kluczową rolę dla mechaniki kwantowej. Laureat Nagrody Nobla w dziedzinie fizyki za 1921 rok, w uznaniu za „wkład do fizyki teoretycznej, zwłaszcza opis prawa efektu fotoelektrycznego”.
+
+Einstein to twórca szczególnej teorii względności, która ulepszyła mechanikę Newtona i zastąpiła w tej korekcyjnej roli teorię eteru Lorentza[a]. Autor wynikającej z STW równoważności masy i energii, czasem formułowanej słynnym wzorem E = mc2. Został on potwierdzony przez reakcje subatomowe, np. jądrowe; doprowadziło to do rewizji zasady zachowania masy, samego pojęcia materii i otworzyło epokę jądrowej broni oraz energetyki. Twórca ogólnej teorii względności, która połączyła newtonowskie prawo powszechnego ciążenia z nową mechaniką. Nie była to jedyna ani nawet pierwsza synteza tego typu[b], jednak OTW w odróżnieniu od konkurencji okazała się poprawna, zostając nowym paradygmatem w opisie grawitacji. Einstein oparł na swojej teorii pierwsze modele kosmologiczne oraz pierwsze przewidywania grawitacyjnych fal czasoprzestrzeni. Wprowadził też do niej opcjonalną stałą kosmologiczną, która później okazała się możliwym wyjaśnieniem ciemnej energii. Teoria Einsteina dzięki tym i innym wynikom doprowadziła do rozkwitu astrofizyki w XX wieku.
+
+Naukowiec przewidział również istnienie fotonu – postulując dualizm korpuskularno-falowy światła. Było to poprawne wyjaśnienie efektu fotoelektrycznego, przewidujące też nowe zjawiska jak efekt Comptona, które ostatecznie potwierdziło cząstki światła. Hipoteza Einsteina umożliwiła też innym fizykom stworzenie właściwej mechaniki kwantowej – dzięki przeniesieniu tej dualistycznej koncepcji na elektron przez de Broglie’a. Jednocześnie Einstein był czołowym krytykiem najczęstszej, kopenhaskiej interpretacji kwantów i współautorem paradoksu EPR. Wprowadzone w nim pojęcie splątania kwantowego umożliwiło nie tylko badanie kwantowych fundamentów i możliwości ewentualnej rewizji tej teorii; otworzyło też całą dyscyplinę informatyki kwantowej. Odkrywca emisji wymuszonej, na której opierają się lasery. Opisał też statystykę Bosego-Einsteina i możliwość istnienia kondensatu Bosego-Einsteina – czasem nazywanego piątym stanem skupienia, łamiącego intuicyjne własności materii jak nieprzenikliwość. Einstein przysłużył się też innym dziedzinom fizyki jak klasyczna mechanika statystyczna – jego model ruchów Browna dostarczył koronnych dowodów teorii atomistycznej. Badania Einsteina nad materią skondensowaną obejmowały też teorię ciała stałego. Jego prace nad unitarną teorią pola nie spełniły oczekiwań, jednak znalazły odzwierciedlenie w późniejszych, potencjalnie prawdziwych modelach pól i cząstek jak teoria strun.
+
+Dzięki tym osiągnięciom Einstein jest uważany za jednego z największych fizyków XX wieku lub największego z nich; szczyty rankingów dzieli z innymi ojcami fizyki kwantowej jak Paul Dirac, Werner Heisenberg czy Erwin Schrödinger. Jego ogólna teoria względności jest uważana za jeden z największych przełomów w fizyce XX wieku, obok wspomnianej teorii kwantów[1]. Ponadto Einstein jest uznawany za jednego z największych fizyków w całej historii, obok Newtona, Maxwella czy Galileusza. W 1999 r. czasopismo naukowe „Physics World” w gronie 100 wiodących fizyków przeprowadziło ankietę. Jako największego fizyka wszech czasów wskazano właśnie Einsteina[1]. W tym samym roku portal „PhysicsWeb” zorganizował sondaż, który przyznał Einsteinowi drugie miejsce[2]. W 1999 r. Einstein był też uznany za człowieka stulecia według amerykańskiego tygodnika „Time”[3].
+
+Ten wybitny fizyk miał też wkład do filozofii nauki, popularyzacji fizyki i jej historii oraz zajmował się aktywizmem politycznym. Jego teorie wywarły również wpływ na rozwój XX-wiecznej matematyki, zwłaszcza geometrii różniczkowej[4] z analizą na rozmaitościach, topologii różniczkowej i teorii grup Liego[potrzebny przypis]. Kariera Einsteina trwała przeszło pół wieku; przez ten czas opublikował ponad 450 prac, w tym przeszło 300 naukowych[c][5][6]. Był zatrudniony w różnych instytucjach w Szwajcarii, Austro-Węgrzech, Niemczech i USA; był m.in. profesorem Uniwersytetu w Zurychu, Uniwersytetu Karola w Pradze, Politechniki Federalnej w Zurychu (ETHZ), Uniwersytetu Berlińskiego i Instytutu Badań Zaawansowanych (IAS) w Princeton.
+
+
+Spis treści
+1	Życiorys
+1.1	Dzieciństwo i rodzina
+1.2	Edukacja szkolna
+1.3	Eksperyment myślowy ze światłem
+1.4	Studia i pierwsze małżeństwo
+1.5	Cudowny rok 1905
+1.6	Początki kariery akademickiej
+1.7	Ogólna teoria względności i rozwód
+1.8	Drugie małżeństwo i Nagroda Nobla
+1.9	Przeprowadzka do Stanów Zjednoczonych
+1.10	Amerykański projekt jądrowy
+1.11	Prace unifikacyjne
+1.12	Schyłek życia
+1.13	Śmierć
+2	Nagrody
+2.1	Nagroda Nobla
+2.2	Inne wyróżnienia
+3	Narodowość i obywatelstwo
+3.1	Stan formalny
+3.2	Opinia Einsteina
+4	Niektóre odkrycia
+5	Poglądy
+5.1	Krytyka interpretacji kopenhaskiej
+5.2	Poglądy filozoficzne
+5.2.1	Metodologia
+5.2.2	Inne poglądy
+5.3	Poglądy religijne
+5.3.1	Dzieciństwo
+5.3.2	Dorosłość
+5.3.3	Perspektywy
+5.3.4	Kosmiczna religia
+5.4	Poglądy polityczne i gospodarcze
+6	Upamiętnienie
+7	Zobacz też
+8	Uwagi
+9	Przypisy
+10	Bibliografia
+11	Literatura
+12	Linki zewnętrzne
+Życiorys
+Dzieciństwo i rodzina
+Rodzice Alberta Einsteina
+
+Hermann Einstein
+
+Pauline Koch
+
+Albert Einstein w wieku trzech lat (1882)
+Albert Einstein urodził się w piątek 14 marca 1879 r. o godzinie 11:30 w domu przy Bahnhofstrasse B nr 135 w mieście Ulm położonym w Wirtembergii na południu Niemiec[7]. Jego matką była Paulina Einstein (z domu Koch), a ojcem – Hermann Einstein. Oboje byli Żydami[8]. Hermann Einstein handlował pierzynami[9]. Później jego brat Jacob namówił go do wspólnego założenia zakładu produkującego instalacje gazowe i wodno-kanalizacyjne[10][11]. W 1881 r. cała rodzina przeniosła się do Monachium, gdzie powstał zakład. Tam też 18 listopada 1881 r. urodziła się Maria[12][13] – jedyna siostra Einsteina.
+
+Albert Einstein pierwszy raz zetknął się z nauką, gdy miał pięć lat. Jego ojciec pokazał mu kompas, którego działanie wywarło na nim „głębokie i trwałe wrażenie”[14][15]. W tym czasie Einstein rozpoczął naukę w domu. Ponieważ jego matka była muzykiem[9], Albert w wieku sześciu lat zaczął uczyć się gry na skrzypcach. Lekcje gry pobierał do trzynastego roku życia. Grał do późnej starości, dopóki nie zaczęło mu to sprawiać zbyt dużego trudu[16].
+
+Edukacja szkolna
+
+Albert Einstein w wieku 14 lat (1893)
+
+Świadectwo maturalne Einsteina (1896)
+W 1886 r. zaczął uczęszczać do szkoły powszechnej, gdzie był jednym z najlepszych uczniów[17][18][15]. Od 1888 r. chodził do katolickiego Gimnazjum Luitpolda w Monachium[19][7], gdzie również odnosił sukcesy.
+
+Firma Einsteinów zaczęła podupadać, a w 1894 r. rodzina przeniosła się do Mediolanu[20][21]. Syna pozostawiono w Monachium, pod opieką członków dalszej rodziny, dla ukończenia szkoły[22][23]. Według Marii Einstein jej brat w tym okresie stał się nerwowy. Pojawiły się nawet objawy depresji[d][24]. Pół roku po wyjeździe rodziców Einstein wypisał się ze szkoły i dołączył do rodziców w Mediolanie, gdzie sam przygotowywał się do wstąpienia na uniwersytet[24]. W październiku 1895 r. przyjechał do Zurychu, gdzie przystąpił do egzaminu wstępnego na tamtejszą politechnikę (ETHZ)[e]. Potrzebował na to specjalnego pozwolenia, gdyż brakowało mu dwóch lat do minimalnego dopuszczalnego wieku[24]. Próba zdania egzaminu zakończyła się niepowodzeniem. Powodem były słabe wyniki egzaminów z przedmiotów humanistycznych[25][7][26].
+
+Za radą dyrektora ETHZ Einstein postanowił spędzić rok w Aarau w Szwajcarii, by ukończyć szkołę średnią[25][27]. We wrześniu 1896 r. zdał tam maturę. Uzyskał dobre oceny z niemal wszystkich przedmiotów – zwłaszcza ze śpiewu i muzyki oraz fizyki i matematyki[f][28]. W tym samym roku zrzekł się obywatelstwa niemieckiego. Zrobił to najprawdopodobniej w celu uniknięcia służby wojskowej[29] lub na znak protestu przeciwko nastrojom militarnym panującym wówczas w Niemczech[30]. Bez przynależności państwowej przystąpił ponownie do egzaminów na ETHZ, które tym razem zdał. Jednocześnie do tej samej sekcji przyjęto Milevę Marić[31], która później wywarła duży wpływ na życie Einsteina.
+
+Eksperyment myślowy ze światłem
+Jest możliwe, że Einstein w wieku 16 lat (ok. 1895) rozważał ważny eksperyment myślowy. Wspomniał o tym publicznie po raz pierwszy ponad pół wieku później, w swoich Notach autobiograficznych z 1946[g]. Młody Albert miał się zastanawiać, co by się stało przy ruchu z prędkością światła[h]. Wówczas fale elektromagnetyczne takie jak światło stałyby nieruchomo w miejscu, nie wykazując żadnego ruchu. Miałoby to przeczyć zarówno intuicji, jak i równaniom Maxwella[32]. Ta anegdota jest trudna do zinterpretowania z różnych powodów:
+
+Einstein w tym wieku prawdopodobnie nie znał jeszcze równań Maxwella. Być może stary Einstein zwrócił uwagę, że sam eksperyment myślowy znał już w wieku 16 lat, a późniejsza znajomość równań Maxwella utwierdziła go w niedorzeczności takiego wyniku[33].
+Ten wynik eksperymentu myślowego nie stanowi większego problemu dla teorii eteru. Były one wówczas powszechnie uznawane i młody Einstein prawdopodobnie w nie wierzył. Brak obserwacji „zamrożonych” fal można wytłumaczyć tym, że Ziemia porusza się względem eteru z prędkością dużo mniejszą od tej światła w próżni[33].
+Niewykluczone, że ten eksperyment myślowy odegrał dużą rolę kilka lat później, kiedy Einstein pracował nad balistyczną (emisyjną) teorią światła. Dla teorii tego typu ten eksperyment myślowy prowadzi do poważnych trudności; przez to mógł się przyczynić do porzucenia przez Einsteina tych prac i do powstania szczególnej teorii względności[34].
+
+Czasami przypisuje się też młodemu Einsteinowi inny eksperyment myślowy – gdyby obserwator trzymający lustro poruszał się z prędkością c względem eteru, jego obraz w lustrze by zniknął. Najprawdopodobniej te legendy to wynik nieporozumienia i zmiany pierwotnego pomysłu Einsteina, opisanego powyżej[35].
+
+Studia i pierwsze małżeństwo
+
+Albert Einstein ze swoją pierwszą żoną, Milevą
+W czasie studiów Einstein zakochał się z wzajemnością w Milevie Marić[36][37], co nie podobało się jego matce[38][39][40]. W lipcu 1900 r. oboje zakochanych przystąpiło do zdawania egzaminów końcowych. Albert je zdał, w przeciwieństwie do Milevy[41][27]. Wtedy też młody Einstein opublikował swoją pierwszą pracę naukową – dotyczyła zjawiska włoskowatości[42].
+
+W 1901 r. Mileva zaszła w ciążę[43]. Na czas porodu udała się do rodzinnej Serbii[44] i urodziła tam córkę o imieniu Lise (zdrobniale Lieserl). Oddano ją po cichu do adopcji i jej dalsze losy są nieznane. Albert najprawdopodobniej nigdy jej nie zobaczył[29][45][46].
+
+21 lutego 1901 r. Einstein przyjął obywatelstwo szwajcarskie[47][48]. Mając już dyplom wykładowcy nauk ścisłych, zaczął szukać pracy[39]. Starał się bezskutecznie o asystenturę u wykładającego w ETHZ Webera, a później u Hurwitza i Wilhelma Ostwalda[49]. Dopiero w maju 1901 r. został zatrudniony na krótko jako zastępca nauczyciela w szkole średniej w Winterthur w Szwajcarii[39]. W tym czasie zajmował się tam ruchem materii względem eteru i kinetyczną teorią gazów[48]. Od października 1901 r. do stycznia 1902 r. uczył w prywatnej szkole w Schaffhausen[39], a równolegle pracował nad swoją pracą doktorską dotyczącą kinetycznej teorii gazów[50]. W lutym 1902 r. przeprowadził się do Berna[51], gdyż spodziewał się dostać stałą pracę w Szwajcarskim Urzędzie Patentowym w Bernie. Utrzymywał się z udzielania korepetycji[52][53]. W czerwcu został zatrudniony na okres próbny jako ekspert techniczny trzeciej klasy w urzędzie patentowym[39][54][52], a trzy miesiące później zatrudniono go na stałe.
+
+10 października 1902 r., wskutek choroby serca, zmarł ojciec Einsteina[55]. 6 stycznia 1903 r. Albert Einstein i Mileva Marić wzięli w Bernie ślub cywilny[55]. 14 maja 1904 r. urodził się pierwszy syn Einsteina, Hans Albert[55], który później również został wybitnym uczonym[55]. Kolejny syn, Eduard, urodził się 28 lipca 1910[56].
+
+Cudowny rok 1905
+
+Einstein w roku 1904 lub 1905
+Od młodości Einstein pracował nad uzgodnieniem elektrodynamiki Maxwella z zasadą względności. W tym celu pracował nad emisyjną teorią światła, opartą prawdopodobnie na potencjałach opóźnionych. Porzucił jednak te próby. Pewną rolę mógł w tym odegrać jego młodzieńczy eksperyment myślowy z gonieniem fali światła. Kiedy Einstein zrozumiał względność jednoczesności, prawdopodobnie pod wpływem prac Lorentza, zmienił strategię – zamiast modyfikować elektrodynamikę Maxwella, zrewidował podstawy mechaniki Newtona. To doprowadziło go potem do szczególnej teorii względności[57].
+
+Równolegle Einstein prowadził badania nad termodynamiką i fizyką statystyczną promieniowania. Prawdopodobnie to doprowadziło go do pojęcia cząstek światła, użytych potem przy wyjaśnieniu efektu fotoelektrycznego[58]. Pomysł cząstek światła mógł być też związany z jego wczesnymi pracami nad teorią emisyjną[potrzebny przypis].
+
+Rok 1905 jest określany jako Annus mirabilis (cudowny rok) Einsteina[59]. Był wtedy szwajcarskim urzędnikiem patentowym, niedawnym absolwentem fizyki, a jego dorobek obejmował tylko kilka publikacji. Był przez to mało znany w środowisku fizyków. Mimo to opublikował 5 prac, z których przynajmniej część była przełomowa.
+
+Jego publikacja Zur Elektrodynamik bewegter Körper[60] (O elektrodynamice ciał w ruchu) wprowadziła nową teorię, nazwaną później szczególną teorią względności (STW). Dzięki nowemu spojrzeniu na czas i przestrzeń STW pogodziła elektrodynamikę Maxwella z zasadą względności, bez modyfikowania tej pierwszej ani odwoływania się do budowy materii[i]. STW wyjaśniała też obserwowaną niezależność prędkości światła w próżni od obserwatora[j]. Einstein rozwinął STW w innej pracy z tego samego roku, gdzie poprawnie przewidział równoważność masy i energii. To ten fakt został potem wyrażony przez słynny wzór E=mc2.
+
+Einstein wyjaśnił też efekt fotoelektryczny, zaobserwowany w 1888 roku przez Philipa Lenarda[61]. Przyjął, że światło oddziałuje z materią w postaci cząstek – nazwanych później fotonami. To właśnie to wyjaśnienie – a nie teoria względności – było potem głównym powodem przyznania mu Nagrody Nobla. Pracę Einsteina można uznać za rozwinięcie koncepcji Plancka kwantów energii, choć mogły się rozwijać niezależnie[62].
+
+W swoim cudownym roku Einstein napisał też rozprawę doktorską pod tytułem O nowej metodzie wyznaczania rozmiarów molekuł (przyjętą 19 sierpnia na Uniwersytecie w Zurychu[63]) oraz wyjaśnił i opisał ruchy Browna. Mimo wielkiego znaczenia, jego prace nie zostały początkowo docenione[potrzebny przypis].
+
+W 1906 r. Einstein został awansowany na stanowisko eksperta technicznego drugiej klasy[52], jednak nie przestawał zajmować się fizyką. W 1907 r. sformułował zasadę równoważności[64]. Później nazwał ją „najszczęśliwszą myślą swojego życia”[65], ponieważ była przełomowym punktem w jego pracach nad ogólną teorią względności.
+
+Początki kariery akademickiej
+
+Einstein na pierwszej konferencji Solvay, Bruksela 1911
+W grudniu 1908 r. Einstein napisał do Uniwersytetu w Bernie podanie o przyjęcie na stanowisko privatdozenta[66]. Privatdozent nie otrzymywał wynagrodzenia z uczelni, a utrzymywał się z drobnych wpłat studentów. Był to jednak etap konieczny w karierze uczelnianej[67]. Einstein uzyskał to stanowisko 28 lutego 1909 r. Nie pozwalało mu ono zarobić na życie, więc nie zrezygnował z pracy w urzędzie patentowym[68][69].
+
+W marcu 1909 r. Einstein został profesorem nadzwyczajnym fizyki teoretycznej na uniwersytecie w Zurychu[70][71][72], na którym wcześniej obronił doktorat. W tym samym roku został doktorem honoris causa Uniwersytetu Genewskiego[70]. W latach 1909–1911 napisał jedenaście artykułów naukowych dotyczących fizyki teoretycznej[73]. W 1910 r. pierwszy raz zgłoszono go jako kandydata do Nagrody Nobla[74]. W 1911 r. Einstein został profesorem zwyczajnym na Uniwersytecie Niemieckim w Pradze[75][76]. Półtora roku później wrócił na macierzystą ETHZ jako profesor zwyczajny[75][77][78].
+
+W latach 1911–1912 Einstein otrzymywał wiele ofert zatrudnienia z różnych uniwersytetów, w tym z Uniwersytetu w Utrechcie[78]. Wiosną 1913 r. Max Planck i Walther Nernst złożyli mu potrójną propozycję:
+
+przyjęcie członkostwa Pruskiej Akademii Nauk (Preusissche Akademie der Wissenschaftlen),
+profesurę Uniwersytetu Berlińskiego z prawem, ale bez obowiązku wykładania,
+stanowisko dyrektora mającego powstać Instytutu Fizyki Cesarza Wilhelma (Kaiser Wilhem Institut für Physik, będącego obecnie Instytutem Fizyki w Berlinie)[79][80][81][82].
+Einstein, znużony pracą wykładowcy, chciał skupić się wyłącznie na myśleniu[82] i ofertę przyjął. W marcu 1914 r. przeprowadził się z rodziną do Berlina[83].
+
+Od czasu wyjazdu do Pragi w 1911 r. stosunki Einsteina z żoną Milevą zaczęły się pogarszać[84]. W czerwcu 1914 r. doszło do separacji[85][86]. W związku z tym Mileva wróciła z synami do Zurychu.
+
+Ogólna teoria względności i rozwód
+
+Zdjęcie zaćmienia Słońca w 1919 r. zamieszczone w raporcie Arthura Eddingtona potwierdzającym przewidywania ogólnej teorii względności nt. ugięcia promieni świetlnych w polu grawitacyjnym
+25 listopada 1915 r. Einstein przedstawił swoją najważniejszą pracę: ogólną teorię względności[82]. Jest ona uogólnieniem poprzedniej teorii, stosując zasadę względności również do niektórych ruchów z przyspieszeniem. Stwierdza równoważność grawitacji i przyspieszenia oraz opisuje różnice między geometrią euklidesową a geometrią w silnych polach grawitacyjnych. Teoria przewiduje również znacznie silniejsze niż w teorii Newtona odchylenie toru światła przechodzącego obok gwiazdy.
+
+W czasie I wojny światowej Einstein zajmował się nie tylko ogólną teorią względności. Opublikował prace na temat kosmologii i fal grawitacyjnych, znalazł nowe wyprowadzenie prawa Plancka, napisał pięćdziesiąt artykułów naukowych i wydał książkę popularyzującą teorię względności[87]. 5 lipca 1916 r. zastąpił Maxa Plancka na stanowisku przewodniczącego Niemieckiego Towarzystwa Fizycznego (Deutsche Physikalische Gesellschaft). Sprawował tę funkcję do 31 lipca 1918 r.[81] W 1918 r. Einstein napisał pracę o prawie promieniowania Plancka, w której przewidział istnienie emisji wymuszonej – zjawiska umożliwiającego budowę laserów[88].
+
+Wytężona praca w połączeniu z głodem spowodowały problemy zdrowotne Einsteina. W 1917 r. chorował na wrzody żołądka, żółtaczkę, był ogólnie wyczerpany i miał chorą wątrobę[89][85][90]. Podczas choroby zajmowała się nim jego kuzynka, Elsa Einstein. Latem 1917 r. Albert przeprowadził się do mieszkania obok niej, a rok później oboje postanowili się pobrać[85].
+
+14 lutego 1919 r. sąd w Zurychu orzekł rozwód Alberta i Milevy Einstein. Warunki określały, że Albert ma płacić alimenty, zdeponować w banku 40 000 marek niemieckich, z których odsetki miały być do dyspozycji byłej żony, a ponadto, gdyby dostał Nagrodę Nobla, miał jej przekazać całą sumę[91][92].
+
+W 1919 r. podczas zaćmienia Słońca dwie brytyjskie ekspedycje naukowe dokonały pomiaru odchylenia toru światła pochodzącego z gwiazdy znajdującej się za Słońcem i przechodzącego obok niego. Opublikowane w raporcie Arthura Eddingtona wyniki potwierdziły przewidywania ogólnej teorii względności Einsteina[93][94]. Odkrycie było nagłośnione i szeroko komentowane w mediach. Einstein stał się wtedy sławny także poza gronem naukowców[potrzebny przypis].
+
+Drugie małżeństwo i Nagroda Nobla
+
+Einstein ze swoją drugą żoną, Elsą
+2 lipca 1919 r. Einstein ożenił się ze swoją kuzynką Elsą Einstein[95].
+
+W latach 20. Einstein zaczął dużo podróżować. 3 kwietnia 1921 r. Einstein wyjechał z żoną do USA i wygłosił tam kilka wykładów. W czasie tej wizyty, 9 maja, otrzymał doktorat honoris causa Uniwersytetu w Princeton[96]. 30 maja wypłynął do Wielkiej Brytanii. 8 czerwca po raz kolejny został doktorem honoris causa, tym razem uczelni w Liverpoolu.
+
+Einstein dowiedział się, że planowano na niego zamach. W związku z tym 8 października 1922 r. ponownie wyjechał z Niemiec, tym razem do dalekiej Azji, aż na kilka miesięcy[97]. Odwiedził Kolombo, Singapur, Hongkong i Szanghaj, następnie Kobe i Kioto. W tym czasie dostał Nagrodę Nobla. 2 lutego 1923 r. Einsteinowie wylądowali w Palestynie. Tam Albert zaangażował się na jakiś czas w sprawy Uniwersytetu Hebrajskiego. W latach 1925–1927 był członkiem jego Rady Zarządzającej. W drodze powrotnej z podróży wstąpili do Hiszpanii. 15 marca 1923 r. wrócili do Berlina.
+
+W 1923 r. opublikował artykuł pod tytułem Czy teoria pola stwarza możliwości rozwiązania problemu kwantowego?[98]. Einstein już w tym czasie pracował nad teorią wielkiej unifikacji, która zdominowała jego późniejsze badania.
+
+W 1925 r. Einstein odbył kolejną podróż, tym razem do Ameryki Południowej – Argentyny, Brazylii i Urugwaju[potrzebny przypis].
+
+Przeprowadzka do Stanów Zjednoczonych
+
+Dom Alberta Einsteina przy 112 Mercer Street
+W 1930 r. Einstein drugi raz popłynął do Ameryki, przebywając od grudnia 1930 r. do marca 1931 r. oraz od grudnia 1931 r. do marca 1932 r. w Caltechu w Pasadenie[99]. Tam spotkał się z Abrahamem Flexnerem, który chciał przedstawić członkom Caltechu projekt budowy Instytutu Studiów Zaawansowanych w Princeton. Flexner zaproponował Einsteinowi posadę w tym ośrodku, na co Einstein się zgodził. W marcu 1932 r. wrócił do Niemiec.
+
+10 grudnia 1932 r. Einsteinowie trzeci raz wypłynęli do USA, znów do Kalifornii. 30 stycznia 1933 r. naziści doszli do władzy, a Adolf Hitler został kanclerzem Niemiec. Einstein, dowiedziawszy się o tym oświadczył, że nie wraca do Niemiec. Miał jednak kilka spraw do załatwienia w Europie, zamieszkał więc tymczasowo w Le Coq sur Mer w Belgii[100]. W tym czasie otrzymywał oferty pracy z Jerozolimy, Oksfordu, Lejdy, Madrytu i Paryża[101]. Wszystkie odrzucił. 7 października 1933 r. wypłynął z żoną, asystentem i sekretarką do Ameryki[102][103].
+
+17 października 1933 r. wylądowali oni w Nowym Jorku. Do 1935 r. mieszkali przy Library Place nr 2[104], później przenieśli się na Mercer Street nr 112[105][103]. W 1935 r. popłynęli na Bermudy, by wracając uzyskać wizy imigracyjne[103]. W październiku 1936 r. Einstein został mianowany doktorem honoris causa Uniwersytetu Nowojorskiego. 20 grudnia tego roku zmarła jego druga żona, Elsa. 1 października 1940 r. Einstein został zaprzysiężony jako obywatel Stanów Zjednoczonych.
+
+Amerykański projekt jądrowy
+
+Albert Einstein i Robert Oppenheimer ok. 1950 r.
+W sierpniu 1939 r. Einsteina odwiedzili Leó Szilárd i Eugene Wigner, zaniepokojeni możliwością skonstruowania przez III Rzeszę bomby atomowej. Wspólnie postanowili wysłać do ówczesnego prezydenta Stanów Zjednoczonych Franklina Delano Roosevelta list[k][106] o następującej treści:
+
+Szanowny Panie!
+Najnowsze prace E. Fermiego i L. Szilarda, które przedstawiono mi w postaci rękopisu, pozwalają oczekiwać, że w najbliższej przyszłości pierwiastek uran może stać się nowym ważnym źródłem energii. Pewne aspekty zaistniałej sytuacji wymagają czujności i, jeśli okaże się to konieczne, szybkiego działania ze strony rządu. Dlatego zamierzam zwrócić Pana uwagę na następujące fakty i zalecenia:
+W ciągu ostatnich czterech miesięcy stało się prawdopodobne, że dzięki pracom Joliota we Francji, jak również Fermiego i Szilarda w Ameryce, że uda się doprowadzić do jądrowej reakcji łańcuchowej w dużej masie uranu, w wyniku której powstaną olbrzymie ilości energii i znaczna obfitość nowych pierwiastków przypominających rad. Wydaje się niemal pewne, że dojdzie do tego w najbliższej przyszłości.
+To nowe zjawisko umożliwi konstruowanie bomb i nie jest wykluczone – choć mniej pewne – że mogą w ten sposób powstać niezwykle potężne bomby nowego typu. Jedna bomba tego typu, przewieziona na statku i zdetonowana w porcie, zniszczyłaby cały port wraz z częścią otaczającego go obszaru. Takie bomby mogą się jednak okazać za ciężkie, by dało się je transportować drogą powietrzną.
+Stany Zjednoczone dysponują bardzo ubogimi rudami uranu w niedużych ilościach. Dobre rudy występują w Kanadzie i dawnej Czechosłowacji, ale najważniejszym źródłem uranu jest Kongo Belgijskie (…)[107]
+
+Albert Einstein
+Prezydent odpisał:
+
+Drogi Profesorze!
+Chciałbym podziękować za Pana list z niezwykle ważnymi i interesującymi informacjami.
+Uznałem je za tak istotne, iż powołałem radę, złożoną z szefa Biura Standardów oraz wybitnych przedstawicieli sił zbrojnych, których zadaniem będzie wszechstronne zbadanie wszystkich aspektów Pańskich sugestii dotyczących uranu (...)
+Proszę przyjąć moje najszczersze wyrazy podziękowania[108].
+
+Franklin Delano Roosevelt
+Jednak budżet przyznany radzie na pierwszy rok wynosił zaledwie 6000$[108]. Nie jest prawdą, iż list Einsteina był bezpośrednią przyczyną zainicjowania projektu Manhattan. Prezydent zlecił budowę bomby atomowej w październiku 1941 r. (a więc dwa lata po otrzymaniu listu) i wtedy też sekretarz wojny dowiedział się o całej sprawie[108]. Einstein sam stwierdził:
+
+Nie brałem żadnego udziału w pracach [nad bombą atomową], naprawdę żadnego. Interesuję się bombą w takim samym stopniu jak każdy inny człowiek, no, może trochę bardziej[109].
+
+Prace unifikacyjne
+
+Albert Einstein w 1947 r.
+Ogólna teoria względności (OTW) ustaliła w fizyce zestaw praw grawitacji, a elektrodynamika Maxwella – elektromagnetyzmu. Einstein od lat 20. pracował nad jednolitą teorią pola[110], mającą opisywać grawitację i elektromagnetyzm jako dwa przejawy tego samego zjawiska. Przykładowo rozwijał teorię Kaluzy-Kleina[potrzebny przypis]. Zarówno OTW, jak i elektrodynamika opisują głównie świat makroskopowy. Za to w latach 20. pojawiła się pełna mechanika kwantowa świata mikroskopowego. Einstein już wtedy próbował przezwyciężyć tę przepaść, jednak nie przez kwantowanie grawitacji, ale nową teorię pola.
+
+W czasie pobytu w Princeton owdowiały Einstein poświęcił się jeszcze bardziej swoim bezowocnym próbom. Przez to stopniowo usuwał się z głównego nurtu badań w fizyce. W opinii wielu naukowców „zmarnował drugą połowę życia”[111]. Przykładowo nie uczestniczył w rozwijaniu awangardowej, rodzącej się wtedy fizyki cząstek elementarnych[potrzebny przypis].
+
+Dekady później okazało się, że niszowe, ambitne prace Einsteina były skazane na niepowodzenie. W tym czasie nie znano jeszcze dobrze jądrowych oddziaływań silnych ani słabych. W latach 70. powstała teoria oddziaływań elektrosłabych, unifikująca elektromagnetyzm z oddziaływaniami słabymi. Dalszym krokiem są rozwijane teorie wielkiej unifikacji, łączące oddziaływania elektrosłabe z silnymi. Unifikacja z grawitacją (superunifikacja) ma być dopiero trzecim krokiem, a nie pierwszym.
+
+Schyłek życia
+31 lipca 1943 r. Einstein został konsultantem Działu Badań i Wdrożeń Biura Uzbrojenia Marynarki Wojennej Stanów Zjednoczonych z pensją 25$ za dzień i pozostał nim do 30 czerwca 1946 r.[112] W tym samym roku otrzymał doktorat honoris causa Lincoln University[111].
+
+2 sierpnia 1946 r. Einstein został przewodniczącym nowo powstałego Komitetu Nadzwyczajnego Uczonych Atomistów (Emergency Committee of Atomic Scientists), mającego za cel informowanie opinii publicznej o kwestiach politycznych dotyczących bomby atomowej oraz o pokojowym wykorzystaniu energii jądrowej[113]. Dwa lata później został nagrodzony One World Award[111].
+
+W ostatnich latach życia Einstein miewał bóle w górnej części brzucha, a jesienią 1948 r. lekarz wykrył u niego guza wielkości pomarańczy[114]. 31 grudnia laparotomia wykazała, iż był to tętniak aorty[114]. W 1950 r. zaobserwowano powiększanie się tętniaka[114]. 18 marca Einstein spisał testament, w którym wszystkie swoje listy, rękopisy i prawa autorskie przekazał Uniwersytetowi Hebrajskiemu[114].
+
+W listopadzie 1952 r. Einsteinowi zaproponowano zostanie drugim prezydentem niedawno powstałego państwa Izrael, na co się nie zgodził[115][116]. W grudniu 1953 r. został rektorem honorowym Uniwersytetu Hebrajskiego[117] oraz otrzymał nagrodę Lord and Taylor Award[111].
+
+Śmierć
+W poniedziałek 18 kwietnia 1955 roku, o godzinie 01:15 Einstein zmarł[118]. Tego samego dnia jego zwłoki poddano kremacji w Trenton, a popioły rozsypano w nieznanym miejscu[119].
+
+Zanim skremowano ciało Einsteina, Thomas Stoltz Harvey, patolog szpitala w Princeton, wyjął bez pozwolenia rodziny Einsteina jego mózg. Harvey miał nadzieję, że w przyszłości neurobiologia będzie mogła odkryć, co sprawiło, że Einstein był tak inteligentny[120].
+
+ Osobny artykuł: Mózg Alberta Einsteina.
+Nagrody
+Nagroda Nobla
+Albert Einstein był nominowany do Nagrody Nobla jedenastokrotnie – prawie corocznie w latach 1910–1922, z wyjątkiem 1911 i 1915[74]. Jego kandydaturę zgłaszało 40 różnych naukowców, w tym 12 z nich kilkukrotnie, mianowicie:
+
+jeden z nich – Warburg – 6 razy;
+ośmiu – Ostwald, Wien, Ehrenhaft, Naunyn, von Laue, E. Meyer, S. Meyer i Planck – po 3 razy;
+trzech – de Haas, Nordström i Hadamard – po 2 razy.
+Licząc osobno różne zgłoszenia przez tę samą osobę, Einstein otrzymał łącznie ponad 60 nominacji.
+
+
+Albert Einstein (1921)
+Rok	Kategoria w której nominowano Einsteina	Zgłaszający	Liczba zgłaszających
+1910	Badania o charakterze teoretycznym lub matematyczno-przyrodniczym[74]	Wilhelm Ostwald[121]	1
+1912	Fizyka teoretyczna[74]	W. Ostwald, Peter Pringsheim, Schaefer, Wilhelm Wien[121]	4
+1913	Fizyka teoretyczna[74]	W. Ostwald, W. Wien, Bernhard Naunyn[121]	3
+1914	Badania o naturze bardziej spekulatywnej, fizyka teoretyczna[74]	B. Naunyn, Chwolson[122]	2
+1916	Fizyka molekularna[74]	Paul Ehrenhaft[122]	1
+1917	Prace związane z niezmiernie owocnymi badaniami Plancka dotyczącymi hipotezy kwantów[74]	de Haas, Otto Heinrich Warburg, Weiss[122]	3
+1918	Fizyka kwantowa[74]	O. Warburg, P. Ehrenhaft, W. Wien, Max von Laue, Edgar Meyer, Stefan Meyer[123]	6
+1919	Fizyka teoretyczna[74]	O. Warburg, M. von Laue, E. Meyer, Max Planck, Svante Arrhenius[123]	5
+1920	Fizyka matematyczna[74]	O. Warburg, Heinlich Wilhelm Waldeyer, Ornstein, Hendrik Antoon Lorentz, Julius, Pieter Zeeman, Heike Kamerlingh Onnes, Niels Bohr[124]	8
+1921	Fizyka matematyczna[74]	M. Planck, de Haas, O. Warburg, Dällenbach, Jaffe, Marks, Gunnar Nordström, Charles Walcott, Wiener, Arthur Stanley Eddington, Jaques Salomon Hadamard, Lyman, Oseen[125]	13
+1922	Fizyka matematyczna	M. Planck, P. Ehrenhaft, M. von Laue, J. Hadamard, S. Meyer, E. Meyer, G. Nordström, B. Nauyn, O. Warburg, Arnold Sommerfeld, Donder, Wagner, Emden, Poulton, Paul Langevin, Léon Brillouin[126]	16
+W 1922 r. Einstein otrzymał Nagrodę Nobla za rok 1921 „za zasługi dla fizyki teoretycznej, szczególnie za odkrycie praw rządzących efektem fotoelektrycznym”[127]. W czasie wręczania nagród Einstein był za granicą[128], więc w jego imieniu wystąpił Rudolf Nadolny, ambasador Niemiec w Szwecji[129].
+
+W większości nominacji uzasadnieniem było sformułowanie przez Einsteina teorii względności. Według komitetu noblowskiego nie była ona wystarczająco potwierdzona doświadczalnie. Z tego powodu Einstein otrzymał nagrodę tak późno. Jednak komitet był pod silnym naciskiem, by przyznać nagrodę Einsteinowi[130]. Z tego powodu komitet przyjął propozycję Oseena, by przyznać Einsteinowi nagrodę, jako uzasadnienie podając prace nad efektem fotoelektrycznym.
+
+Inne wyróżnienia
+Mimo oporów Komitetu Noblowskiego teoria względności została potem doceniona m.in. przez Towarzystwo Królewskie w Londynie (ang. The Royal Society of London) – w 1925 roku przyznało Einsteinowi Medal Copleya, w uzasadnieniu wprost podając teorię względności.
+
+W 1923 otrzymał niemiecki Order Pour le Mérite za Naukę i Sztukę, z którego zrezygnował w 1933[131].
+
+Narodowość i obywatelstwo
+
+Pomnik Alberta Einsteina w Izraelskiej Akademii Nauk
+
+Banknot 5 lir izraelskich (1968)
+Stan formalny
+Z pochodzenia Albert Einstein był niemieckim Żydem[8]. Mimo to w ciągu całego życia był obywatelem łącznie 4 różnych krajów: Niemiec, Szwajcarii, Austrii i USA. Okresowo bywał obywatelem dwóch z nich jednocześnie, a przez pewien czas był bezpaństwowcem. Jego status zmieniał się aż 6 razy:
+
+Do 17. roku życia był poddanym króla Wirtembergii.
+28 stycznia 1896 roku, na wniosek swojego ojca, został zwolniony z tego poddaństwa, dzięki czemu ojciec mógł złożyć prośbę o naturalizowanie syna jako obywatela Szwajcarii. Od tej daty do 21 marca 1901 Einstein pozostawał bezpaństwowcem.
+21 marca 1901 roku przyznano mu obywatelstwo Szwajcarii, a dokładnie miasta Zurych. Mieszkał nie tylko w Zurychu, ale także w Bernie wraz z żoną i dwoma synami. W cudownym roku 1905, kiedy opublikował szczególną teorię względności i inne przełomowe prace, był więc formalnie Szwajcarem. Z obywatelstwa Szwajcarii nigdy nie zrezygnował[132].
+Od 1 kwietnia 1911 roku do 30 września 1912 roku, w związku z objęciem katedry fizyki teoretycznej na Uniwersytecie w Pradze, stał się poddanym cesarza Austrii, nadal pozostając jednocześnie obywatelem Szwajcarii.
+W kwietniu 1914 roku stał się poddanym cesarza Rzeszy Niemieckiej w związku z objęciem funkcji profesora na Uniwersytecie w Berlinie. Po zakończeniu I wojny światowej i powstaniu Republiki Weimarskiej stał się automatycznie obywatelem Niemiec, jako osoba pozostająca na państwowej służbie tego kraju[132]. W momencie otrzymania Nagrody Nobla w 1921 był więc formalnie i Niemcem, i Szwajcarem. Obie te narodowości widnieją w oficjalnych spisach noblistów[133].
+Obywatelstwa niemieckiego został automatycznie pozbawiony przez rząd III Rzeszy w związku z jego rezygnacją z pełnienia funkcji publicznych w tym kraju i wyjazdem do Stanów Zjednoczonych w 1933 roku. Do 1940 roku pozostawał ponownie wyłącznie obywatelem Szwajcarii.
+1 października 1940 roku złożył przysięgę na konstytucję i został obywatelem Stanów Zjednoczonych, pozostając aż do śmierci nadal również obywatelem Szwajcarii[132].
+Opinia Einsteina
+Sam Albert Einstein uważał się za niemieckojęzycznego bezpaństwowca, pochodzenia żydowskiego. Zawsze protestował przeciwko przypisywaniu jego osiągnięć któremukolwiek z państw[134].
+
+W 1918 r., zapytany o teorię względności, Einstein powiedział:
+
+Jeżeli teoria względności okaże się prawdziwa, to Niemcy nazwą mnie wielkim Niemcem, Szwajcarzy – Szwajcarem, a Francuzi – wielkim uczonym. Jeżeli natomiast teoria względności okaże się błędna, wtedy Francuzi nazwą mnie Szwajcarem, Szwajcarzy – Niemcem, a Niemcy – Żydem[135].
+
+Jego ojczystym językiem i praktycznie jedynym, którym dobrze władał, był niemiecki. Wszystkie jego publikacje i książki były napisane po niemiecku. Mimo długiego pobytu w USA jego znajomość angielskiego sprowadzała się do najprostszych zwrotów i kilkuset słów potrzebnych do codziennego funkcjonowania w tym kraju[potrzebny przypis].
+
+Filozofia nauki – dział filozofii zajmujący się badaniem filozoficznych podstaw nauki, m.in. jej metod, struktury i założeń, a także różnicy między nauką i nie-nauką.
+
+Początki analizy poznania, zwłaszcza racjonalnych metod poznania, sięgają starożytności, jednak współcześnie termin „filozofia nauki” wiąże się zwykle[1][2] z tzw. nauką nowożytną, tj. rozwijającą się od ok. XVII wieku, w oparciu o empiryczno-matematyczną metodę naukową. Kluczowym etapem w rozwoju filozofii nauki była I połowa XX wieku, kiedy to w ramach tzw. pozytywizmu logicznego (zob. też niżej) przedstawione zostały przyjmowane powszechnie do dzisiaj rozumienia takich pojęć, jak teoria, hipoteza, weryfikacja, falsyfikacja, redukcjonizm i in. Do najważniejszych XX-wiecznych filozofów nauki należą: Bertrand Russell, Carl Gustav Hempel, Sir Karl Popper, Paul Oppenheim, Paul Feyerabend, Thomas Kuhn, Imre Lakatos, Ernest Nagel, Bas van Fraassen, Philip Kitcher i inni.
+
+W II połowie XX wieku przeprowadzono wiele badań nad społecznymi i historycznymi aspektami rozwoju nauki. Przykładowo, w latach 60. Thomas Kuhn wprowadził popularne do dziś pojęcie „rewolucji naukowej”[3].
+
+Dziś filozofia nauki stanowi jedną z głównych dyscyplin filozofii.
+
+
+Spis treści
+1	Historia
+1.1	Starożytna i nowożytna filozofia nauki
+1.1.1	Starożytność
+1.1.2	Średniowiecze
+1.1.3	Nowożytność
+1.2	Pozytywizm logiczny
+1.3	Inne kierunki w XX-wiecznej filozofii nauki
+1.3.1	Koherencjonizm, teza Duhema-Quine’a
+1.3.2	Anything goes
+1.3.3	Socjologia nauki
+2	Definicja nauki
+3	Metoda naukowa
+3.1	Problem demarkacji
+3.1.1	Falsyfikowalność jako kryterium demarkacji
+3.1.2	Paradoks falsyfikacji
+3.2	Problem indukcji
+4	Podstawowe pojęcia filozofii nauki
+4.1	Teoria
+4.2	Obserwacja
+4.3	Eksperyment
+4.3.1	Experimentum crucis
+4.3.2	Uwikłanie teoretyczne
+4.4	Wyjaśnienie naukowe
+5	Zagadnienia filozoficzne poszczególnych nauk
+5.1	Filozofia statystyki
+5.2	Filozofia matematyki
+5.3	Filozofia fizyki
+5.4	Filozofia chemii
+5.5	Filozofia biologii
+5.6	Filozofia nauk medycznych
+5.7	Filozofia psychologii
+5.8	Filozofia psychiatrii
+5.9	Filozofia nauk społecznych
+5.10	Filozofia ekonomii
+6	Zobacz też
+7	Przypisy
+8	Bibliografia
+9	Linki zewnętrzne
+Historia
+Starożytna i nowożytna filozofia nauki
+Starożytność
+
+Biblioteka Aleksandryjska, jej powstanie świadczy o spostrzeżeniu wagi wiedzy naukowej, jak i jej intensywnego rozwoju w tym okresie.
+Początki filozofii nauki sięgają Platona i jego ucznia, Arystotelesa[4]. Ci dwaj filozofowie wyróżnili dokładne oraz przybliżone rozumowanie, określili potrójny schemat rozumienia, zawierający rozumowanie abdukcyjne, dedukcyjne i indukcyjne, a także omówili zagadnienie rozumowania poprzez analogię.
+
+W epoce hellenistycznej swoje dzieła tworzą Euklides, Archimedes czy Hipparchos z Nikei, uważany za współtwórcę naukowych podstaw astronomii.
+
+Średniowiecze
+W XI wieku arabski fizyk Ibn al-Haytham przeprowadził swoje badania w dziedzinie optyki na drodze kontrolowanych eksperymentów i zastosowania geometrii. Wykorzystał je w badaniach nad obrazami powstającymi z odbicia i załamania światła. Natomiast w średniowiecznej Europie tworzył Roger Bacon (1214-1294), angielski myśliciel, którego określa się czasem jako ojca nowoczesnej metody naukowej[5]. Jego pogląd, że matematyka jest niezbędna do prawidłowego zrozumienia przyrody, uznano za wyprzedzający swoje czasy o 400 lat[6].
+
+Nowożytność
+Znaczącym okresem dla rozwoju nauki oraz namysłu nad jej metodą byłą nowożytność. W tym okresie przedefiniowano pojęcie nauki, której fundamentem stała się świadomość metodologiczna. Za podstawę poznania uznano rozum i doświadczenie. Nastąpił znaczący rozwój metod badawczych nastawionych na ujęcie ilościowe.
+
+Jednym z pierwszych myślicieli nowożytności, którzy prowadzili intensywny namysł nad nauką, był Francis Bacon. Był to filozof żyjący w czasach rewolucji naukowej. Miał on znaczący wpływ na rozwój współczesnej filozofii nauki. W swojej pracy Novum Organum (1620), w której nawiązał już samą nazwą do Organonu Arystotelesa, nakreślił nowy system logiki – dzieło to w założeniu było elementem pracy mającej na celu zreformowanie dotychczasowej nauki. Metoda Bacona polegała na prowadzeniu eksperymentów w celu wyeliminowania alternatywnych teorii.
+
+
+Dzieło Newtona, Philosophiae Naturalis Principia Mathematica
+W roku 1637 Kartezjusz opisał nowe ramy dla wiedzy naukowej w swoim traktacie „Rozprawa o metodzie”. Wskazał w nim na centralną rolę rozumu w ludzkim poznaniu (zob.Racjonalizm filozoficzny), a także ideę redukcjonizmu metodologicznego, tj. rozwiązywania problemów poprzez ich rozłożenie na mniejsze elementy i analizę każdego z nich z osobna.
+
+Przeciwne do poglądów Kartezjusza są założenia empiryzmu. W 1713 r. w drugiej edycji Philosophiae Naturalis Principia Mathematica Isaaca Newtona przedstawiona jest teza, że „hipotezy (...) nie mają miejsca w filozofii eksperymentalnej. W tej filozofii wnioski są wywodzone ze zjawisk i uogólniane poprzez indukcję”[7]. Przeczy to centralnej roli rozumu w poznaniu ludzkim, pokazując, że przed-doświadczalne sądy na temat zjawisk/eksperymentów nie powinny mieć miejsca. Ten fragment miał istotny wpływ na czytelników dzieła, „późniejsze pokolenia filozofów były skłonne do wypowiedzenia zakazu stawiania hipotez na temat przyczyn w filozofii naturalnej”[7]. Znalazło to swoje odzwierciedlenie w XVIII w., m.in. w poglądach Davida Hume’a. Hume wątpił w zdolność nauki do określania przyczynowości, formułując tzw. problem indukcji (zob. też niżej).
+
+Za istotne w procesie powstawania współczesnych koncepcji metody naukowej uważa się także prace XIX-wiecznego filozofa angielskiego Johna Stuarta Milla[8]. Mill usystematyzował m.in. różne rodzaje stanowisk empirystycznych.
+
+Pozytywizm logiczny
+ Główny artykuł: Pozytywizm logiczny.
+Koło Wiedeńskie to nazwa odnosząca się do grupy filozofów działającej w Wiedniu w latach 20. i 30. XX wieku. Byli to między innymi Rudolf Carnap, Herbert Fiegl, Friedrich Weismann, Otto Neurath, Hans Hahn, Kurt Gödel[9]. Przełomowym rokiem w ich działalności był rok 1929, w którym Hans Hahn, Rudolf Carnap i Otto Naurath zredagowali manifest filozoficzny Koła Wiedeńskiego („Naukowa koncepcja świata. Koło Wiedeńskie”). Pod koniec lat 30. XX w. wielu członków tej grupy odrzuciło fenomenalizm Macha na rzecz fizykalizmu Otto Neuratha. Logiczny pozytywizm, jako ruch filozoficzny, w znacznym stopniu przyczynił się do powstania filozofii analitycznej[10], która zdominowała filozofię w krajach anglosaskich aż do lat 60. XX w.[11][12][13] Ustalenia logicznego pozytywizmu często były krytykowane, jednak to właśnie ich działalność filozoficzna uczyniła z filozofii nauki wyodrębnioną subdyscyplinę[14]. Filozofia Koła Wiedeńskiego jest określana wieloma nazwami: logicznym pozytywizmem, logicznym empiryzmem, naukowym empiryzmem, neopozytywizmem. W Polsce najczęściej spotykaną nazwą jest neopozytywizm.
+
+Podstawowymi tezami filozoficznymi Koła Wiedeńskiego, mającymi wielkie znaczenie dla rozwoju filozofii nauki są:
+
+Empiryzm (Wiedza na temat świata pochodzi wyłącznie z doświadczeń zmysłowych). Empiryzm wyznaczał dla filozofów logicznego empiryzmu granicę pomiędzy zdaniami wartościowymi i bezwartościowymi poznawczo (zob. niżej: zasada weryfikacji). Przykładowo, Alfred Ayer pisał[15], że istnieją tylko dwa typy zdań sensownych: ufundowane na doświadczeniach zmysłowych zdania na temat świata oraz zdania matematyczne. Wszelkie pozostałe zdania muszą z konieczności zawierać w sobie terminy, które nie zostały poprawnie zdefiniowane, są więc nonsensowne. Szybko jednak okazało się, że tak przedstawiane kryterium sensowności stwarza poważne problemy, których rozwiązanie stanowiło sedno wczesnej działalności neopozytywizmu. Dyskusję nad tym zagadnieniem nazwano „sporem o zdania protokolarne”. Początkowo sens empiryczny przypisywano tzw. zdaniom protokolarnym, które miały zdawać sprawę z tego, co bezpośrednio dane. Jednakże od samego początku pomiędzy członkami Koła Wiedeńskiego nie było zgodności na temat tego, czym tak naprawdę są zdania protokolarne. Z jednej strony za zdania protokolarne możemy przyjąć zdania mówiące o doznaniach zmysłowych („Teraz tutaj jest biało”). Z drugiej zaś strony za zdania protokolarne możemy przyjąć zdania opisujące przedmioty („Na stole leży biała kartka”), te jednak, jak można wykazać, zawsze są obciążone teoretycznie („theory-laden”), tj. zakładają pewną wiedzę o świecie. W świetle tych problemów próbowano tak przeformułować kryterium sensowności empirycznej, by przypisywać je nie całym zdaniom, ale poszczególnym terminom – zdanie zbudowane wyłącznie z tych terminów i terminów logicznych uzyskiwałyby tym samym sens empiryczny. Cały spór o zdania protokolarne nie zakończył się jednak wypracowaniem zadowalającego stanowiska i wkrótce przestano się nim zajmować[16].
+Fizykalizm (wszystkie terminy da się zredukować do języka fizykalnego). Fizykalizm wiąże się z przeświadczeniem Koła Wiedeńskiego o jedności nauki. Aby taką jedność zagwarantować, nauka powinna być wyrażalna w jednym języku, który mógłby być intersubiektywnie sprawdzalny przez wszystkich uczonych (czyli: każdy uczony rozumie i wie, jak sprawdzić dane zdanie). Carnap i Neurath uważali, że funkcję taką musi spełnić język fizyki. Sądzili oni ponadto, że w języku tym nie tylko da się wyrazić ustalenia chemii i biologii, ale także tezy socjologii i psychologii: skoro nauki te tak naprawdę zajmują się badaniem procesów fizjologicznych i zachowaniem jednostek, czyli rzeczami, które powinny dać się wyrazić w języku fizyki[16].
+Zasada weryfikacji (inaczej weryfikacjonizm) głosi, że tylko zdania możliwe do empirycznego sprawdzenia mają wartość poznawczą. Warunku tego nie muszą spełniać tautologie logiczne i wywiedzione z nich zdania matematyki (zob. logicyzm), które – choć nie są sprawdzalne empirycznie – to są poznawczo wartościowe. Weryfikacjonizm uznaje więc wszelkie zdania niespełniające kryterium sprawdzalności za bezwartościowe poznawczo. Oznacza to zaprzeczenie wartości poznawczej zdań specyficznych dla wielu dziedzin: metafizyki, teologii, etyki i estetyki. Co prawda, zdania występujące w tych dziedzinach mogą wpływać na emocje i zachowanie, lecz nie z punktu widzenia wartości prawdziwościowej lub informacyjnej[17]. Dokładne sformułowanie zasady weryfikacji zmieniało się wraz z czasem i naporem krytyki do lat 50. XX wieku. W latach 60. XX wieku uznano, że nie da się jej w ogóle utrzymać[18]. Jednym z największych krytyków weryfikacjonizmu był Karl Popper. Przedstawiona przez niego krytyka i propozycja zastąpienia weryfikacji przez falsyfikację została opisana w sekcji poświęconej problemowi demarkacji[16].
+Carl Gustav Hempel, zaliczany do przedstawicielu empiryzmu logicznego, opisał popularny model wyjaśnienia naukowego, tzw. model DN (dedukcyjno-nomologiczny). Jego zaletą było wskazanie na logiczną formę wyjaśnienia bez jednoczesnego odwoływania się do niejasnego pojęcia przyczynowości. W modelu tym pewne zdarzenie otrzymuje uzasadnienie, jeśli uda się je podciągnąć pod jakieś ogólne prawo przyrody. Innymi słowy: da się to zdarzenie wydedukować z jakiejś ogólnej teorii w koniunkcji z pewnymi warunkami początkowymi[19] (zob. niżej w sekcji poświęconej|wyjaśnieniu naukowemu).
+
+Wielki wkład w XX-wieczną filozofię nauki miał też Sir Karl Raimund Popper. Jego system filozoficzny[20] został przez niego samego nazwany racjonalizmem krytycznym. Sformułował zasadę falsyfikowalności jako kryterium naukowości – zdanie naukowe to nie takie, które zostało lub przynajmniej może zostać potwierdzone (co głosi weryfikacjonizm), lecz takie, które może zostać obalone. Popper odrzucał klasyczne poglądy na temat roli indukcji w nauce – czyli metody stopniowego dochodzenia do prawdy na drodze uogólniania na bazie przypadków szczegółowych – na rzecz metody opartej na wysuwaniu hipotez podlegających falsyfikacji. Teoria w naukach empirycznych nigdy nie może zostać całkowicie udowodniona, ale może zostać sfalsyfikowana. Oznacza to, że teoria naukowa może i powinna być poddawana rygorystycznemu testowaniu poprzez sprawdzanie jej przewidywań w eksperymentach. Opis falsyfikacjonizmu znajduje się również w sekcji poświęconej problemowi demarkacji.
+
+Inne kierunki w XX-wiecznej filozofii nauki
+Koherencjonizm, teza Duhema-Quine’a
+Pierwsza obserwacja tranzytu Wenus w 1639 roku przez Jeremiah Horrocksa
+Jeremiah Horrocks wykonuje pierwszą obserwację tranzytu Wenus w 1639 r. Obraz W. R. Lavendera z 1903 r.
+W odróżnieniu od poglądu, że nauka opiera się na fundamentalnych założeniach, koherencjonizm zakłada, że twierdzenia wynikają z bycia częścią spójnego systemu. Albo raczej, że indywidualne twierdzenia nie mogą być potwierdzone przez nie same: tylko logicznie powiązane systemy mogą być uzasadnione[21]. Na przykład przewidywanie tranzytu Wenus (czyli przejścia Wenus przed tarczą słoneczną) jest uzasadnione przez to, że jest on spójny z szerszymi przekonaniami dotyczącymi ruchu ciał niebieskich oraz wcześniejszymi obserwacjami. Obserwacja jest aktem poznania – to znaczy, że opiera się na powstałym wcześniej rozumowaniu, systematycznym zbiorze przekonań. Co więcej, obserwacja tranzytu Wenus wymaga olbrzymiego szeregu dodatkowej wiedzy z zakresu optyki teleskopów, mechaniki głowicy teleskopu czy znajomości mechaniki nieba. Natomiast jeżeli przewidywania zawiodą i tranzyt nie zostanie zaobserwowany, to znaczy, że jest to okazja do skorygowania systemu czy zmiany dodatkowych założeń, a nie odrzucenia całej teorii. W ten sposób każde doświadczenie i każda obserwacja naukowa są jednocześnie testem dla wielu dyscyplin naukowych.
+
+Zgodnie z tezą Duhema-Quine’a, nie jest możliwe sprawdzenie teorii samej w sobie[22]. Każdorazowo trzeba bowiem dodawać pomocnicze hipotezy, aby przewidywania były sprawdzalne. Na przykład aby sprawdzić newtonowskie prawo powszechnego ciążenia w Układzie Słonecznym, potrzeba danych o masach i położeniach Słońca oraz wszystkich planet. Jednakże niemożność przewidzenia orbity Urana w XIX wieku doprowadziła nie do odrzucenia prawa Newtona, lecz do odrzucenia hipotezy, że na Układ Słoneczny składa się tylko siedem planet. W następstwie tego, poszukiwania przyniosły odkrycie ósmej planety – Neptuna. Przykład ten pokazuje, że jeśli test zawiódł, to znaczy, że coś jest nie w porządku – ale problemem jest wskazanie tego „czegoś”: brakującej planety, źle skalibrowanych urządzeń testowych, niespodziewanego zakrzywienia przestrzeni albo czegoś jeszcze innego.
+
+Jednym ze skutków tezy Duhema-Quine’a jest to, że jakąkolwiek teorię można uczynić zgodną z jakąkolwiek empiryczną obserwacją przez dodanie wystarczającej liczby odpowiednich doraźnych hipotez ad hoc. Karl Popper zaakceptował tę tezę, prowadzącą go do odrzucenia naiwnej falsyfikacji. Zamiast tego, uznał pogląd, w którym preferuje się najbardziej falsyfikowalne teorie naukowe[23].
+
+
+Paul Karl Feyerabend
+Anything goes
+Paul Feyerabend (1924-1994) utrzymywał, że żaden opis metodologii naukowej prawdopodobnie nie może być wystarczająco ogólny, by zawrzeć wszystkie podejścia i metody wykorzystywane przez naukowców, oraz że nie istnieją użyteczne i wolne od wyjątków reguły metodologiczne rządzące postępem naukowym. Feyerabend argumentował, że „jedyna zasada, która nie hamuje postępu, to: anything goes” (w języku polskim sformułowanie to tłumaczone jest jako „wszystko ujdzie” lub „wszystko się przyda”).
+
+Feyerabend powiedział, że nauka z czasem stała się coraz bardziej dogmatyczna i twarda oraz nabrała charakteru opresyjnego, przez co przeobraziła się bardziej w ideologię. Z powodu tego uznał, że istnieje fundamentalne podobieństwo nauki do religii czy magii, ale zwłaszcza do mitologii[24]. W „Przeciwko metodzie” pisał, że „nauka jest znacznie bliższa mitom niż filozofowie nauki są to skłonni przyznać. Jest to jedna z wielu form myśli rozwiniętych przez człowieka, niekoniecznie najlepsza”[24]. Feyerabend uważał, że wyłączna dominacja nauki jako sposobu kierowania społeczeństwem jest autorytarna i nieuzasadniona. Przez rozpowszechnianie tego stanowiska, określanego jako anarchizm epistemologiczny, Feyerabend zasłużył wśród swoich krytyków na tytuł „najgorszego wroga nauki”[25].
+
+Socjologia nauki
+Według Thomasa Kuhna, nauka jest z natury działalnością społeczną, która może być uprawiana tylko jako część społeczności[3]. Dla niego, fundamentalna różnica pomiędzy nauką i innymi dyscyplinami polega na odmiennym sposobie funkcjonowania środowiska naukowego względem innych środowisk, np. kościelnych. Według tego poglądu nauka jest uwarunkowana społeczne, chociaż niekoniecznie sugeruje to radykalniejsze stwierdzenie, jakoby opisywana przez naukę rzeczywistość była sama w sobie społeczną konstrukcją – to z kolei stanowi pogląd wielu postmodernistycznych filozofów nauki. W latach 90. XX wieku takie różnice poglądów w kręgach naukowego realizmu i postmodernizmu wywołały gwałtowne, publiczne reakcje naukowców, które zostały określone jako „Science Wars” – „wojny o naukę”[26].
+
+Popularnym kierunkiem rozwoju w ostatnich dekadach były badania nad formacją, strukturą, i ewolucją środowisk naukowych. Zajmowali się tym tacy socjologowie i antropolodzy jak David Bloor, Harry Collins, Bruno Latour i Anselm Strauss. Pojęcia i metody wywodzące się z ekonomii (takie jak racjonalny wybór, społeczny wybór czy teoria gier) również zostały wykorzystane do zrozumienia efektywności środowisk naukowych w „produkcji” wiedzy. Tak interdyscyplinarne podejście określa się współcześnie terminem science studies, czyli badania tego, w jaki sposób funkcjonuje środowisko naukowe rozumiane jak każda inna grupa społeczna, albo jakie są neurologiczne podstawy procesu powstawania wiedzy, w tym wiedzy naukowej[27].
+
+Definicja nauki
+Podanie zadowalającej i niewzbudzającej kontrowersji definicji terminu „nauka” jest bardzo trudne. Jednym z naczelnych problemów podejmowanych przez filozofię nauki jest problem demarkacji, który można rozumieć wlaśnie jako próbę podania adekwatnej definicji. Jest to problem, który do tej pory nie uzyskał zadowalającego rozwiązania. Znaczenie terminu „nauka” można przybliżyć na dwa sposoby. Po pierwsze, nauka to pewna zinstytucjonalizowana działalność ludzka dostarczająca wiedzy naukowej (formalnie, stwierdzenie takie nie mogłoby być definicją ze względu na występujące w nim błędne koło) – mowa tu więc o nauce jako o zjawisku społecznym. Po drugie, możemy wskazać pewne cechy, którymi winno charakteryzować się naukowe badanie świata – mowa tu więc o nauce jako o wytworze intelektualnym, ew. językowym. Elżbieta Kałuszyńska za takie cechy nauki uważa:
+
+racjonalizm (w sensie przeciwieństwa irracjonalizmu),
+krytycyzm,
+antydogmatyzm,
+intersubiektywną komunikowalność i sprawdzalność,
+jawność badań,
+niezakłócony przepływ informacji[28].
+Współcześnie, naukę definiuje się często[1][2][29] po prostu poprzez swoją metodę – nauka rozumiana jest więc jako wszelka działalność zorganizowana wedle prawideł metody naukowej.
+
+Metoda naukowa
+
+Metoda naukowa jako proces powtarzalny
+Metoda naukowa stanowi zbiór naukowych technik służących badaniu zjawisk fizycznych, zdobywaniu nowej wiedzy przyrodniczej, a także korygowaniu i scalaniu wiedzy już zdobytej[30]. Metoda naukowa jest powszechnie oparta na empirycznych lub mierzalnych wynikach eksperymentów i obserwacji, które zostają poddane specyficznym dla nauki metodom rozumowania[31].
+
+Metoda naukowa to postępujący w czasie proces, który zaczyna się zazwyczaj od obserwacji świata naturalnego. Istoty ludzkie są naturalnie dociekliwe, więc często zadają sobie pytania na temat otaczających ich rzeczy i formułują pomysły (hipotezy) wyjaśniające dlaczego rzeczy te zachowują się tak, a nie inaczej. Z najlepszych hipotez można wyciągnąć predykcje (przepowiednie) o zachowaniu się rzeczy, których poprawność można sprawdzić w różnoraki sposób. Zasadniczo najbardziej rygorystyczne sprawdzenie hipotez odbywa się przy pomocy starannie kontrolowanego i powtarzalnego eksperymentu fizycznego. W zależności od zgodności wyniku eksperymentu z predykcją teoretyczną, hipoteza może potrzebować udoskonalenia, przebudowania lub rozszerzenia – może także zostać całkowicie odrzucona. Jeśli konkretna hipoteza posiada bardzo mocne potwierdzenie empiryczne, to może posłużyć jako podstawa w budowaniu ogólnej teorii naukowej[32].
+
+Pomimo tego, że różne gałęzie nauki różnią się między sobą procedurami metodologicznymi, to możemy zaobserwować pomiędzy nimi pewną część wspólną – ogólny schemat postępowania naukowego. Składają się na niego kolejno: formułowanie hipotez (domysłów), wyprowadzanie z nich predykcji (przewidywań) oraz przeprowadzanie eksperymentów (lub dokonywanie obserwacji) w oparciu o te predykcje. Hipoteza to inaczej domysł sformułowany na podstawie wiedzy uzyskanej w trakcie formułowania pytania badawczego. Hipotezami mogą być zarówno domysły ogólne, jak i szczegółowe. Współcześnie uważa się, że nie jest istotne, jaka konkretnie droga prowadziła do sformułowania danej hipotezy (mogła być to nagła inspiracja, mogły być to lata żmudnych obserwacji); istotne jest, aby hipotezy naukowe były precyzyjne i falsyfikowalne. Oznacza to, że z hipotezy powinno dać się wywnioskować przewidywania, które mogłyby się okazać niezgodne ze stanem faktycznym. Wprowadza to wymóg „obalalności”, dzięki któremu w ogóle sens ma jakiekolwiek testowanie empiryczne hipotezy. Hipotezy niefalsyfikowalne, czyli potwierdzające się w każdym możliwym eksperymencie, są znakiem rozpoznawczym przedsięwzięć pseudonaukowych[33].
+
+Celem eksperymentu/obserwacji jest stwierdzenie, czy potwierdzają się predykcje wywiedzione z hipotezy[34]. Eksperymenty mogą być przeprowadzane wszędzie – od uczelnianego laboratorium po Wielki Zderzacz Hadronów ośrodka CERN; podobnie obserwacje: istotne naukowo obserwacje przeprowadza się za pomocą Teleskopu Kosmicznego Hubble’a, ale też lodówki i kubka z wodą (np. efekt Mpemby).
+
+Przedstawiony powyżej opis metody naukowej stwarza wrażenie ustalonego porządku działania. Należy go jednak raczej traktować jako zbiór ogólnych zasad postępowania naukowego, który nie bierze pod uwagę różnic metodologicznych występujących w naukach, a także pomija związaną z poznawaniem świata kreatywność uczonych. Nie należy więc traktować opisanej tutaj metody jako prostego i automatycznego wzorca, zawsze kończącego się sukcesem poznawczym, ale jako fundamentalne zasady, na których praktyka naukowa winna się opierać[35]. Nie wszystkie wyszczególnione stadia metody są obecne w każdym naukowym badaniu (czasem są obecne w różnym stopniu), a czasem występują w odmiennej kolejności[36].
+
+
+Karl Popper (fot. z lat 80)
+Problem demarkacji
+ Główny artykuł: Problem demarkacji.
+Problemem demarkacji określa się próbę wyznaczenia granicy oddzielającej naukę od pseudonauki. Dla przykładu, zastanówmy się, czy tezy psychoanalizy, kreacjonizmu albo hipoteza wieloświata inflacyjnego powinny być traktowane w ten sam sposób, jak osiągnięcia nauk przyrodniczych? Karl Popper określił to pytanie mianem centralnego problemu filozofii nauki[37]. Problem demarkacji wciąż pozostaje aktualny ze względu na to, że filozofii nie udało się wypracować rozwiązania niebudzącego zastrzeżeń. Niektórzy filozofowie uważają nawet, że problem demarkacji jest nierozwiązywalny, a nawet nieinteresujący[38][39].
+
+Potocznie pseudonauką określa się jakikolwiek obszar dociekań lub badań, który ukrywa swoje prawdziwe, pozanaukowe motywacje i próbuje upodobnić się zewnętrznie do nauki, aby uzyskać akceptację i prestiż, których nie byłby inaczej zdolny osiągnąć. W literaturze angielskojęzycznej można spotkać się z synonimami pseudonauki nie występującymi w polszczyźnie, takimi jak: fringe science (margines nauki) oraz junk science (śmieciowa nauka)[40]. Inne sławne określenie na pozory naukowości to „nauka spod znaku kultu cargo” (cargo cult science) autorstwa Richarda Feynmana. Używał on go w przypadkach, gdy badacze jakiegoś zagadnienia wierzą, że uprawiają naukę, ponieważ ich przedsięwzięcia z zewnątrz przypominają działalność naukową, ale tak naprawdę brakuje im „absolutnej rzetelności”, która pozwoliłaby na rygorystyczną ocenę ich wyników – brakiem takiej rzetelności są między innymi: samooszukiwanie siebie, bezkrytyczne przyjmowanie teorii własnego autorstwa, niewyszukiwanie błędów we własnych teoriach i eksperymentach[41].
+
+W praktyce często utożsamia się problem demarkacyjny z kwestią zdefiniowania nauki (zob. wyżej).
+
+Falsyfikowalność jako kryterium demarkacji
+Falsyfikowalność teorii jako kryterium odróżnienia nauki od nie-nauki została zaproponowana przez Karla Poppera i stanowi najsłynniejsze kryterium demarkacji. Została ona przedstawiona w opozycji wobec poglądu, że dobrym wyznacznikiem naukowości teorii jest duża liczba empirycznych potwierdzeń danej teorii. Ideę falsyfikacji można wyprowadzić z podstawowych własności implikacji logicznej w klasycznym rachunku zdań. W przypadku potwierdzenia mamy do czynienia z następującą formą rozumowania: „(Jeśli p, to q) i q” (przez p rozumiemy tu teorię naukową i/lub obecny stan wiedzy, a przez q przewidywane przez teorię zdarzenie). Przykładowo, mogę przewidywać, że biorąc pod uwagę prawo powszechnego ciążenia oraz obecne położenia ciał Układu Słonecznego (p), jutro w południe dojdzie do zaćmienia Słońca (q). Co ciekawe, faktyczne zaobserwowanie zaćmienia o tej porze (q) nie pozwala nam na wyciągnięcie wniosku, że p. Potwierdzenie przewidywania nie oznacza więc, że teoria jest prawdziwa – przede wszystkim ze względu na to, że zupełnie inna teoria może prowadzić do dokładnie takich samych wniosków. Co więcej, żadna ilość takich potwierdzających testów nie zezwala nam na wnioskowanie o prawdziwości teorii. Popper nazywał takie zdarzenie „okazaniem hartu przez teorię” wobec próby obalenia – w filozofii Poppera określa się takie zdarzenia zamiennie korroboracją albo terminem verisimilitude (prawdoupodobnieniem/uprawdopodobnienie; nie mylić z prawdopodobieństwem).
+
+W przypadku falsyfikacji mamy do czynienia natomiast ze schematem: „(Jeśli p, to q) i nie-q.”, a więc sytuacją, gdy przewidywanie (q) nie sprawdziło się (okazało się, że nie-q). Teoria została obalona[1].
+
+{\displaystyle [(p\Rightarrow q)\land \lnot q]\Rightarrow \lnot p}{\displaystyle [(p\Rightarrow q)\land \lnot q]\Rightarrow \lnot p}
+Ilustruje to zasadniczą asymetrię pomiędzy weryfikacją i falsyfikacją. Weryfikacja to stopniowo podnoszenie się „wiarygodności”/prawdoupodobnienia danej teorii, które jednak nigdy nie osiągają 100%. Falsyfikacja to nagłe, całkowite obalenie danej teorii. Tak przynajmniej powinno być w teorii Poppera; w rzeczywistości stosują się tu liczna zastrzeżenia, zwłaszcza związane z tezą Duhema-Quine’a (zob. powyżej).
+
+Wedle Poppera, teoria naukowa musi spełniać wymóg falsyfikowalności, czyli być teorią możliwą do obalenia. Teorie nienaukowe nie spełniają tego kryterium, czyli nie można z nich wywieść zdań, które po skonfrontowaniu z przyrodą mogłyby być fałszywe, co pozwalałoby na obalenie teorii. Ulubionymi przykładami nie-nauki były dla Poppera psychoanaliza i marksizm. Należy jednak pamiętać, że falsyfikacja jako kryterium naukowości stanowi pewną idealizację i przedstawia ogólną tendencje do odrzucania teorii wprost nieobalalnych. Nie opisuje natomiast adekwatnie rozwoju teorii naukowych w czasie[42].
+
+Paradoks falsyfikacji
+Dla Poppera astrologia jest teorią całkowicie niefalsyfikowalną (czyli nie da się z niej wyprowadzić przewidywań, które byłyby sprzeczne z doświadczeniem), a co za tym idzie: pseudonaukową. Dzieje się tak ze względu na to, że przepowiednie astrologiczne są z jednej strony tak szeroko formułowane by utrudnić jednoznaczne wykazanie ich fałszywości, a gdyby nawet taka niezgodność się pojawiła, to zawsze można taką przepowiednię przeformułować, by zapewnić jej zgodność z empirią (zob. hipoteza ad hoc). Co jednak się stanie jeśli poddamy przepowiednie astrologiczne poważnym testom, które wykluczą możliwość obrony przed sfalsyfikowaniem[2]?
+
+W 2003 roku opublikowano wynik badania[43] przeprowadzonego na 2100 parach ludzi urodzonych w 1958 roku w Londynie (w 73% par różnica w narodzinach była mniejsza niż 5 minut). Należy pamiętać, że czas narodzin jest kluczowy dla przepowiedni astrologicznych. Badacze porównywali cechy (w liczbie 110) przepowiadane przez astrologów u ludzi w każdej parze. Wyniki eksperymentu były druzgocące dla astrologii – nie stwierdzono jakiegokolwiek podobieństwa cech u sparowanych osobników[2].
+
+Jeśli jednak przyjmujemy za kryterium naukowości wymóg falsyfikowalności przewidywań, to przytoczone wyżej badanie nie przemawia na rzecz pseudonaukowości astrologii, ale podnosi ją do rangi nauki[2].
+
+Problem indukcji
+
+David Hume, posąg w Edynburgu
+David Hume (1711-1776) szkocki filozof urodzony w Edynburgu jako pierwszy zwrócił uwagę na problem indukcji. Zauważył, że brak podstaw twierdzeniom, w których traktujemy przeszłość jako podstawę do przekonań o przyszłości[44]. Twierdził on, ze „każdy skutek jest zdarzeniem różnym od swojej przyczyny”[45], a wszelki związek między nimi wynika z ludzkiego doświadczenia, które z czasem przeradza się w przyzwyczajenie. Z twierdzeń Davida Hume’a wynika, że nie jest wcale jasne, jak można wywnioskować ważność ogólnych twierdzeń z szeregu konkretnych przypadków, lub wnioskować o prawdziwości danej teorii z serii udanych doświadczeń[46]. Przykładowo: kurczak obserwuje, że każdego ranka rolnik przychodzi i podaje jedzenie przez setki dni z rzędu. Kurczak może zatem używać rozumowania indukcyjnego, aby wywnioskować, że rolnik przynosi jedzenie każdego ranka. Jednak pewnego ranka rolnik przychodzi i zabija kurczaka. Powstaje z tego zasadnicze pytanie, obrazujące problem indukcji. Czy rozumowanie naukowe jest bardziej wiarygodne niż rozumowanie wspominanego wyżej kurczaka?
+
+Na powyższy zarzut można by odpowiedzieć tak, że stosując rozumowanie indukcyjne, nie osiągamy pewności. Natomiast obserwowanie większej liczby przypadków ogólnego twierdzenia może przynajmniej sprawić, że nasze twierdzenie jest bardziej prawdopodobne. Zgodnie z tym punktem widzenia, kurczak nie może stwierdzić z pewnością, że kolejnego ranka rolnik ponownie przyniesie jedzenie, jednak jest w stanie oszacować prawdopodobieństwo takiego zajścia. Prawdopodobieństwo to może być bardzo bliskie jedności, jednak nigdy nie osiąga 100%. W kontekście takiego rozwiązania pojawiają się trudne pytania dotyczące tego, jak silne musi być prawdopodobieństwo danego zajścia, aby uzasadnione stało się sformułowanie stwierdzenia ogólnego. Wyjściem z tych trudności jest zadeklarowanie, że wszystkie przekonania dotyczące teorii naukowych są subiektywne, zaś tym, co interesuje filozofa nauki, jest sposób, w jaki subiektywne przekonania zmieniają się z biegiem czasu w miarę napływania nowych dowodów[46]. Współcześnie stosowaną metodą przy opisywaniu wzrostu pewności odnośnie do danego stwierdzenia (tzw. prawdopodobieństwa subiektywnego) w miarę napływania nowych danych jest tzw. epistemologia bayesowska.
+
+Natomiast trochę inną postawą jest twierdzenie, że to, co robią naukowcy, nie jest rozumowaniem indukcyjnym w ogóle, ale raczej pewnego rodzaju wnioskowaniem do najlepszego wyjaśnienia: proces naukowy nie polega po prostu na uogólnianiu na podstawie konkretnych przypadków, lecz na budowaniu hipotez na temat tego, co jest obserwowane. Niestety, nie zawsze jest jasne, co oznacza „najlepsze wyjaśnienie”. Pomocna może okazać się brzytwa Ockhama, która zaleca wybór najprostszego dostępnego wyjaśnienia spośród tych, które tłumaczą wszystkie fakty. Wracając do przykładu kurczaka, należy się zastanowić: czy łatwiej byłoby przypuszczać, że rolnik cały czas będzie troszczył się o kurczaka, karmiąc go co dzień, czy też że tuczy go pod przyszły ubój? Kluczowym problemem jest ustalenie, czym tak naprawdę jest oszczędność (parsymonia) wyjaśnienia. Chociaż różni badacze przedstawiali różne metody wyboru najprostszego wyjaśnienia[47], ogólnie przyjmuje się[48], że nie ma żadnej teoretycznie niezależnej metody oceny prostoty danego wyjaśnienia. Innymi słowy, wydaje się, że jest tak wiele różnych kryteriów oceny prostoty danego wyjaśnienia, ile istnieje teorii na ten temat, a zadanie wyboru między nimi wydaje się być tak samo problematyczne, jak wybór pomiędzy teoriami[47].
+
+Podstawowe pojęcia filozofii nauki
+Teoria
+W nauce termin „teoria” odnosi się do dobrze potwierdzonego wyjaśnienia jakiegoś aspektu świata natury, które na podstawie faktów daje się zweryfikować przez eksperyment i obserwację. Teorie muszą również spełniać inne wymagania, takie jak umiejętność tworzenia falsyfikowalnych przewidywań ze spójną dokładnością w szerokim zakresie badań naukowych, a także przedstawienia mocnych dowodów na korzyść teorii z wielorakich niezależnych źródeł.
+
+Siła teorii naukowej jest związana z różnorodnością zjawisk, jakie może wyjaśniać, ocenianych przez zdolność tworzenia w odniesieniu do nich falsyfikowalnych przewidywań. Teorie są ulepszane (albo zastępowane przez lepsze teorie), im więcej dowodów jest zebranych, zatem dokładność w przewidywaniu z czasem się poprawia. Właśnie ta rosnąca dokładność odpowiada postępowi wiedzy naukowej. Naukowcy wykorzystują więc teorie jako fundament do uzyskania dalszej wiedzy naukowej, a także w takich celach, jak leczenie chorób czy wynajdywanie nowych.
+
+Amerykańska National Academy of Sciences definiuje teorie naukowe w następujący sposób:
+
+Oficjalna naukowa definicja „teorii” jest całkowicie różna od potocznego znaczenia tego słowa. Odnosi się do całościowego wyjaśnienia pewnego aspektu natury, które jest poparte przez bogaty aparat dowodowy. Wiele teorii naukowych jest tak dobrze ustalonych, że jakikolwiek nowy dowód ma małe szanse, by znacząco je zmienić. Na przykład żaden nowy dowód nie wykaże, że Ziemia nie krąży po orbicie wokół Słońca (teoria heliocentryczna), albo że żywe istoty nie są zrobione z komórek (teoria komórkowa), a materia nie składa się z atomów, czy że powierzchnia Ziemi nie jest podzielona na płyty, które przesuwały się w geologicznych okresach (teoria płyt tektonicznych)... Jedną z najprzydatniejszych właściwości teorii naukowych jest to, że mogą być wykorzystywane do zakładania przewidywań co do zdarzeń lub zjawisk w naturze, które dotąd nie zostały jeszcze zaobserwowane[49].
+
+Obserwacja
+Różnicę między obserwacją a eksperymentem najprościej wyrazić porównaniem Adama Groblera[2]: eksperyment tak ma się do obserwacji, jak przesłuchiwanie do podsłuchiwania (w „śledztwie na temat przyrody”).
+
+
+Obserwator to ktoś, kto pozyskuje informacje o obserwowanym zjawisku, ale w nie samo nie interweniuje
+Obserwacja to aktywne zdobywanie informacji na temat jakiegoś zjawiska. Obserwacji dokonuje się przy pomocy zmysłów. Jednakże w działalności naukowej zmysły są zazwyczaj wspomagane przez instrumenty badawcze, a same pozyskiwane informacje podlegają zapisowi przez urządzenia rejestrujące. Termin „obserwacja” może być także używany na określenie jakichkolwiek danych eksperymentalnych pozyskanych w trakcie aktywności naukowej. Obserwacją możemy zatem nazwać samą działalność obserwacyjną, jak i jej rezultat. Obserwacje mogą posiadać charakter jakościowy albo ilościowy. W przypadku obserwacji jakościowej stwierdzamy jedynie, że jakaś właściwość występuje, albo że nie występuje, albo uzyskujemy jakiś inny rezultat, który nie daje się wyrazić liczbowo. W przypadku obserwacji ilościowej, oprócz stwierdzenia występowania jakiejś właściwości, przypisujemy jej pewną wartość liczbową.
+
+Obserwacja, obok eksperymentu, odgrywa zasadniczą rolę w formułowaniu i testowaniu hipotez naukowych. Biorąc jednak pod uwagę wymóg powtarzalności (reprodukcji) wyników obserwacyjnych, napotykamy na problem. Ludzkie wrażenia zmysłowe są subiektywne i mają charakter jakościowy, co sprawia trudność w ich komunikowaniu i porównywaniu z wrażeniami innych ludzi. Aby poradzić sobie z tym problemem opracowano metody przypisywania wartości liczbowych obserwowanym zjawiskom, co pozwoliło na rejestrowanie i porównywanie obserwacji dokonywanych przez różnych ludzi, w różnych miejscach i w innym czasie. Postępowanie takie nazywa się pomiarem, czyli odniesieniem obserwowanego zjawiska to pewnego zestandaryzowanego wzorca jednostki miary. Pomiary redukują więc subiektywne obserwacje do zestandaryzowanej miary liczbowej. W przypadku, w którym dwóm obserwacjom przypisano tą samą wartość liczbową, stwierdza się, że obserwacje te są sobie równoważne z pewną dokładnością wynikającą z samej metody pomiarowej.
+
+Zmysły ludzkie mają swoje ograniczenia, ponadto są podatne na błędy percepcji (np. złudzenia optyczne). Instrumenty naukowe zostały opracowane, aby poradzić sobie z tymi problemami, choć same posiadają swoje ograniczenia i niedoskonałości (zob. np. aberracja chromatyczna). Przykładowymi instrumentami, które powiększają zdolności percepcyjne człowieka są: wagi, zegary, teleskopy, mikroskopy, termometry, aparaty fotograficzne, urządzenia nagrywające dźwięk. Instrumenty naukowe mogą także pomagać w obserwacji poprzez przełożenie pewnych zjawisk nierejestrowalnych przez ludzkie zmysły, na zjawiska możliwe do zaobserwowania: chemiczne wskaźniki Ph, woltomierze, spektrometry, termowizjery, oscyloskopy, interferometry, liczniki Geigera.
+
+Poważnym problemem w trakcie przeprowadzania obserwacji i eksperymentów jest zaburzenie badanego zjawiska przez urządzenie pomiarowe. Prowadzi to do innych wyników pomiarowych, niż te, które opisywałyby zjawisko nieobserwowane. Fakt ten nazywany jest efektem obserwatora. Dla przykładu: nie jest możliwe zmierzenie ciśnienia w oponie samochodowej bez wypuszczenia z niej części powietrza, które jest konieczne do zadziałania manometru samochodowego (miernik ciśnienia). Jednakże w większości dziedzin naukowych, dzięki coraz lepszym urządzeniom pomiarowym, udaje się zredukować efekty obserwacji na badany układ do wartości pomijalnych, lub wpływ obserwacji aktu na badany układ jest dobrze znany.
+
+Eksperyment
+Eksperymentem nazywamy procedurę badawczą przeprowadzaną w celu skonfrontowania hipotezy lub teorii ze zjawiskiem, którego dotyczą. Sprawdzian taki może zakończyć się potwierdzeniem (potwierdzenie nie oznacza wykazania prawdziwości danej teorii) bądź wykazaniem fałszywości hipotez lub całej teorii (zob. wyżej: Falsyfikacja). Eksperymenty najczęściej polegają na wywołaniu i obserwowaniu zachodzenia jakiegoś zjawiska (lub jego intensywności) w zależności od wartości określonych zmiennych. Eksperymenty ze względu na cele i skalę badania mogą się od siebie znacznie różnić. Z jednej strony nawet dziecko może przeprowadzać proste eksperymenty, by zrozumieć zasadę działania grawitacji. Z drugiej zaś wieloosobowe zespoły badawcze mogą przeprowadzać wieloletnie badania w celu pogłębienia zrozumienia jakiegoś zjawiska (zob. np. BICEP – są to prowadzone przez długie lata programy badawcze, angażujące setki osób). To co jest im wspólne, to poleganie na powtarzalnych procedurach eksperymentalnych oraz logicznej analizie wyników eksperymentu.
+
+Eksperymenty są zazwyczaj tak konstruowane, aby minimalizować (idealnie: wykluczyć) wpływ zmiennych, które nie są przedmiotem badania (zob. ceteris paribus, czyli „przy ustalonych pozostałych warunkach”), a jednocześnie mogłyby zaburzyć wynik przeprowadzanego eksperymentu. Praktyka ta pozwala na zwiększenie wiarygodności uzyskanych wyników – najczęściej przeprowadza się to poprzez wprowadzenie procedur kontrolnych, co w medycynie określa się mianem próby kontrolnej. Przykładowo, jeśli interesuje nas skuteczność terapeutyczna aspiryny w przypadku gorączki, to oprócz osób, którym podaje się aspirynę, bada się również stan osób, którym nie podano tego leku (próba kontrolna). Gdyby eksperymenty nie były kontrolowane, to obserwowane wyniki mogłyby nie być spowodowane przez badaną zmienną, lecz przez jakąś inną (być może nieuświadomioną), co spowodowałoby błędną identyfikację zależności pomiędzy zjawiskami.
+
+Przy przeprowadzaniu eksperymentów, tak jak i w ogólnej metodzie naukowej, kładzie się nacisk na jawność i odpowiedzialność osób przeprowadzających eksperymenty. Kluczową rolę odgrywa szczegółowy zapis pomiarów eksperymentalnych, który pozwala na rzetelne przedstawianie rezultatów, możliwość powtórnego przeprowadzenia danego eksperymentu przez innych uczonych, a także krytykę samego projektu eksperymentu. Współcześnie, w czasopismach naukowych standardową praktyką jest dołączanie do artykułów naukowych zapisu z przebiegu eksperymentów, informacji o stosowanych urządzeniach, operacjach statystycznych, wielkości próby itd. Ideałem w nauce jest sytuacja, gdy eksperyment można odtworzyć (replikacja). W praktyce bywa, że eksperymentu nie da się odtworzyć; jest to szczególnie poważnym problemem w naukach psychologicznych[50].
+
+
+Negatyw jednego ze zdjęć wykonanego w trakcie wyprawy Eddingtona z 1919 roku
+Experimentum crucis
+Eksperyment krzyżowy (łac. experimentum crucis) to eksperyment, którego wynik w zamyśle ma pozwalać na definitywne określenie, czy badana hipoteza lub teoria jest lepsza od wszystkich innych hipotez bądź teorii uznawanych przez społeczność uczonych. Eksperyment taki musi dostarczać wyniku, który jest zdolny do obalenia wszystkich dostępnych hipotez prócz jednej.
+
+Przeprowadzenie takiego eksperymentu uważa się za konieczne, aby poszczególną hipotezę lub całą teorię włączyć w obszar wiedzy naukowej. Nie jest jednakże niczym dziwnym dla nauki, aby teorie były formułowane i rozwijane przed opracowaniem takiego eksperymentu – dzieje się tak zazwyczaj w przypadku teorii, które są zgodne z dotychczasowymi danymi eksperymentalnymi, ale nie udało się dla nich opracować eksperymentu rozstrzygającego.
+
+Słynnym przykładem eksperymentu krzyżowego była ekspedycja pod przewodnictwem Artura Eddingtona do Afryki z 1919 roku. Celem wyprawy było zarejestrowanie położenia gwiazd znajdujących się na niebie w pobliżu Słońca w trakcie zaćmienia. Obserwacje dokonane w trakcie tej wyprawy potwierdziły występowanie soczewkowania grawitacyjnego postulowanego przez ogólną teorię względności (OTW). Obserwacje Eddingtona stanowiły silny dowód przemawiający za OTW i jednocześnie wprost sprzeczny z teorią grawitacji Newtona, w ramach której nie występuje żadne wytłumaczenie pozornego przesuwania się gwiazd w pobliżu tarczy Słońca.
+
+Uwikłanie teoretyczne
+Prowadząc obserwację, naukowcy spoglądają przez teleskopy, wpatrują się w obrazy na ekranach, zapisują odczyty mierników itd. Ogólnie, na podstawowym poziomie, mogą zgodzić się z tym, co widzą – na przykład, że termometr okazuje 37.9 stopni Celsjusza. Ale jeśli ci naukowcy mają inne pomysły na temat teorii użytych do wyjaśnienia tych podstawowych obserwacji, mogą nie zgadzać się co do tego, co obserwują.
+
+
+Obraz kwazara Q2237+030 znany jako Krzyż Einsteina.
+Na przykład przed ogólną teorią względności Alberta Einsteina obserwatorzy prawdopodobnie zinterpretowaliby zamieszczony obok obraz jako pięć różnych obiektów w przestrzeni. Jednak w świetle tej teorii astronomowie stwierdzą, że w rzeczywistości są to tylko dwa przedmioty – jeden pośrodku oraz cztery inne obrazy drugiego przedmiotu wokoło. Ewentualnie, inni naukowcy mogliby podejrzewać, że zawiódł teleskop i tak naprawdę został zaobserwowany tylko jeden obiekt, więc pracowaliby już nad inną teorią. Obserwacje, które nie mogą być oddzielone od teoretycznej interpretacji, nazywane są uwikłaniem lub obciążeniem teoretycznym[51].
+
+Cała obserwacja wymaga zarówno percepcji, jak i poznania. To oznacza, że badacz nie prowadzi obserwacji biernie, ale raczej jest aktywnie zaangażowany w rozróżnianie obserwowanego zjawiska od spływających z jego otoczenia danych sensorycznych. Dlatego obserwacje są naznaczone jednostkowym postrzeganiem funkcjonowania świata, które może mieć wpływ na to, co zostanie dostrzeżone, zauważone albo uznana za godne rozważenia. W tym sensie, można spierać się o to, czy każda obserwacja jest uwikłana teoretycznie[51].
+
+Wyjaśnienie naukowe
+Wyjaśnienie według słownika języka polskiego to uwagi wyjaśniające rzecz niezrozumiałą, natomiast wyjaśniać oznacza uczynić coś zrozumiałym[52]. To co wyjaśnienie naukowe powinno uczynić zrozumiałym, to między innymi zdarzenia/zjawiska które miały już miejsce bądź pojawiają się regularnie. Co więcej, należało by się zastanowić kiedy wyjaśnienie naukowe jest rzeczywiście dobre. Filozofowie podjęli próbę badań kryteriów, dzięki którym można by określić czy dane wyjaśnienie naukowe czyni zrozumiałym dane zjawisko, oraz co znaczy stwierdzenie że teoria naukowa ma moc wyjaśniającą.
+
+Jedną z pierwszych i wpływowych teorii wyjaśnienia naukowego był model nomologiczno-dedukcyjny C. Hempla i P. Oppenheima. Mówi on, że prawidłowe wyjaśnienie naukowe składa się z następujących elementów:
+
+L – zbiór praw natury ogólnej;
+C – zbiór konkretnych warunków;
+E – eksplanandum, czyli konkretnie zdanie, które ma zostać wyjaśnione.
+Części L i C tworzą wspólnie eksplanans, czyli część wyjaśniającą. Model D-N przewiduje, że zdanie E wynika logicznie ze zdań L i C. Taki pogląd został poddany krytyce; przedstawiono m.in. szereg powszechnie znanych kontrprzykładów, ilustrujących zwykle, że struktury formalnie zgodnie z modelem D-N nie funkcjonują realnie jako wyjaśnienia naukowe.
+
+Przykładowo, przedstawiany jest argument odwołujący się do wskazań barometru[44]. Wyjaśnienie ma w nim następującą postać: „Kiedy słupek barometru opada, pojawia się burza” (L). „Słupek barometru opada” (C). „Występuje burza” (E). Zakładając, że opadanie słupka barometru rzeczywiście zawsze towarzyszy pojawieniu się burzy (czyli że rzeczywiście jest to prawo naukowe), to przykład spełnia wymogi wyjaśnienia stawiane przez model nomologiczno-dedukcyjny. Jednak mimo tego, że obserwacja barometru rzeczywiście może posłużyć do przewidzenia burzy, sam ruch cieczy w barometrze nie pomaga nam w zrozumieniu tego, skąd biorą się burze – nie stanowi więc w sensie intuicyjnym wyjaśnienia przyjścia burzy.
+
+Innym przykładem może być argument z antykoncepcją[44]. Joe Jones (mężczyzna), aktywny seksualnie, regularnie zażywa tabeli antykoncepcyjne. Jeżeli tabelki posiadają 100% skuteczności, to według modelu nomologiczno-dedukcyjnego; ilekroć dana osoba zażyje tabletki antykoncepcyjne, to uniknie ciąży, Jednak to, że Jones nie zachodzi w ciążę, nie jest wyjaśniane przez to, że zażywa tabletki, ale przez to, że jest mężczyzną.
+
+Istnieją wersje modelu D-N, w których uznaje się, że dobre wyjaśnienie naukowe musi być statystycznie istotne dla wyników, które mają zostać wyjaśnione – odrzucony zostaje więc wymóg ścisłego logicznego wynikania.
+
+Inni filozofowie nauki (np. Philip Kitcher) twierdzą, że kluczem do dobrego wytłumaczenia jest ujednolicenie odmiennych zjawisk (im więcej zjawisk dane wyjaśnienie wyjaśnia, tym lepiej) – jest to pogląd określany jako unifikacjonizm. Istnieje ponadto model, zgodnie z którym wyjaśnienie naukowe zjawiska E to takie, które wskazuje na mechanizm przyczynowy wiążący E z innymi zjawiskami świata przyrody (teorię taką rozwijał zwłaszcza Wesley Salmon).
+
+Zagadnienia filozoficzne poszczególnych nauk
+Nie ma czegoś takiego, jak nauka bez filozofii; jest tylko nauka, której bagaż filozoficzny zabierany jest na pokład bez zbadania[53].
+
+– Daniel Dennett, Darwin's Dangerous Idea, 1995
+
+Wielu filozofów nauki, oprócz odpowiadania na ogólne pytania dotyczące nauki i indukcji, zajmuje się badaniem podstawowych problemów poszczególnych nauk. Sprawdzają również implikacje poszczególnych nauk, odnosząc je do szerszych zagadnień filozoficznych. Pod koniec XX i na początku XXI wieku nastąpił wzrost liczby praktyków filozofii danej nauki[54].
+
+Filozofia statystyki
+Opisany powyżej problem indukcji uzyskuje odmienną interpretacje w debatach na temat podstaw statystyki[55]. Standardowe podejście do testów statystycznych pozwala na uniknięcie twierdzeń, czy dowody popierają hipotezę, czy też czynią ją bardziej prawdopodobną. Typowy test uzyskuje wartość p, czyli prawdopodobieństwo, że dowody są takie jakie są, przy założeniu, że teza jest prawdziwa. Jeśli wartość p jest zbyt niska to hipoteza zostaje odrzucona, w sposób analogiczny do falsyfikacji – w przeciwieństwie do twierdzenia Bayesa, które przypisuje prawdopodobieństwo hipotezom. Tematy pokrewne w filozofii statystyki: interpretacje prawdopodobieństwa, nadmiarowość, różnica między korelacją a przyczyną.
+
+
+Kalafior romanesco, w strukturze którego można dostrzec spirale logarytmiczne.
+Filozofia matematyki
+Filozofia matematyki zajmuje się badaniem filozoficznych podstaw i implikacji matematyki[56]. Podstawowymi problemami stawianymi w tym zakresie są: czy liczby, figury geometryczne i inne jednostki matematyczne są niezależne od umysłu ludzkiego; oraz pytanie o naturę zdań matematycznych. Czy pytanie „Czy 1+1=2 jest prawdą?” różni się fundamentalnie od pytania „Czy piłka jest czerwona?”? Czy matematyka jest wytwarzana, czy odkrywana? Czy matematyka potrzebuje doświadczenia, czy wystarczy samo rozumowanie? Co to znaczy udowodnić twierdzenie matematyczne i jak mieć pewność, że dowód matematyczny jest poprawny? Ponadto filozofowie matematyki stawiają sobie za cel wyjaśnienie związku matematyki z logiką, ludzkimi zdolnościami i materialnym wszechświatem.
+
+Filozofia fizyki
+Filozofia fizyki zajmuje się badaniem podstawowych filozoficznych zagadnień leżących u podstaw współczesnej fizyki. Podstawowymi pytaniami filozofii fizyki są pytania o naturę czasu i przestrzeni, atomów i atomizmu, pytania kosmologiczne, interpretacja mechaniki kwantowej, podstawy mechaniki statystycznej, przyczynowości, determinizmu i natury praw fizycznych[57]. Klasycznie, kilka z tych problemów było badanych w ramach metafizyki (na przykład kwestie dotyczące determinizmu, przyczynowości, czasu i przestrzeni).
+
+Filozofia chemii
+Filozofia chemii zajmuje się filozoficznym badaniem metodologii i treści nauk chemicznych. Obejmuje badania nad ogólną filozofią nauki zastosowaną w chemii – na przykład: czy zjawiska chemiczne mogą być wyjaśnione przez mechanikę kwantową lub czy nie byłaby możliwa redukcja chemii do fizyki. Kolejnym przykładem jest dyskusja chemików na temat tego, jak teorie są uznawane w kontekście potwierdzania mechanizmów reakcji. Potwierdzanie mechanizmów reakcji sprawia trudność, ponieważ nie można ich bezpośrednio obserwować. Chemicy mogą używać pośrednich środków, jako dowodów wykluczających pewne mechanizmy, ale często nie są pewni, czy pozostały mechanizm jest prawidłowy, ponieważ istnieje wiele innych możliwych mechanizmów, które nie są testowane, a nawet pomyślane[58]. Filozofowie starają się również wyjaśnić znaczenie pojęć chemicznych (na przykład związków chemicznych), które nie odnoszą się do konkretnych obiektów fizycznych.
+
+Filozofia biologii
+Filozofia biologii zajmuje się badaniem podstaw metafizycznych, epistemologicznych i etycznych w naukach biologicznych i biomedycznych. Chociaż filozofowie są od dawna zainteresowani biologią (np. Arystoteles, Kartezjusz, Leibniz, Kant), to filozofia biologii, jako osobna dziedzina wyklarowała się dopiero w latach 60. i 70. XX wieku[59]. Filozofowie nauki zaczęli przywiązywać coraz większą wagę do biologii pod wpływem zmian, jakie nastąpiły od powstania nowoczesnej syntezy w latach 30. i 40. XX w. przez odkrycia struktury kwasu deoksyrybonukleinowego (DNA) w 1953 roku, do najnowszych postępów w inżynierii genetycznej. Zajęto się także innymi kluczowymi zagadnieniami, takimi jak redukcja wszystkich procesów życiowych do reakcji biomedycznych oraz włączenie psychologii do neurologii. Poszukiwania obecnej filozofii psychologii obejmują badania dotyczące podstaw teorii ewolucji i roli wirusów jako trwałych symbiontów w genomach żywiciela[60]. W konsekwencji – w przeciwieństwie do dawnych narracji, w których dominowały wrażenia replikacji błędów (mutacji), ewolucja porządku treści genetycznych jest postrzegana przez kompetentnych edytorów genomu[61].
+
+
+Fragment Przysięgi Hipokratesa pochodzącyj z III wieku naszej ery.
+Filozofia nauk medycznych
+Poza etyką i bioetyką medyczną, filozofia medycyny zajmuje się epistemologią i ontologią / metafizyką medycyny. Epistemologia medycyny zapytuje o medycynę opartą na faktach (EBM) lub praktykę medyczną opartą na dowodach (EBP) – w szczególności o rolę randomizacji[62][63][64], kontrolę ślepej próby i placebo. W konteście tych obszarów badań szczególną rolę dla ontologii medycyny pełnią dualizm kartezjański, monogenetyczna koncepcja choroby[65], koncepcja placebo i efekt placebo[66][67][68][69]. Coraz bardziej rośnie zainteresowanie metafizyką medycyny[70], zwłaszcza idea przyczynowości – filozofowie medycyny mogą interesować się nie tylko wiedzą medyczną, ale także naturą tejże.
+
+
+Wilhelm Wundt (siedzący) z kolegami w jego psychologicznym laboratorium, jednym z pierwszych tego rodzaju.
+Filozofia psychologii
+Filozofia psychologii zajmuje się teoretycznymi podstawami współczesnej psychologii. Niektóre z nich wynikają z epistemologicznych obaw dotyczących metodologii badań psychologicznych[71]. Innymi kwestiami poruszanymi przez filozofię psychologii są pytania o naturę umysłu, mózgu i poznania – częściej klasyfikowane jako część nauk kognitywnych lub filozofię umysłu. Na przykład: czy ludzie są istotami racjonalnymi[71]? Czy istnieje wolna wola i jaki ma związek z doświadczeniem podejmowania decyzji? Filozofia psychologii ściśle monitoruje współczesne badania nad psychologią poznawczą, psychologią ewolucyjną, sztuczną inteligencją wyjaśniając, co może, a czego nie może wyjaśnić psychologia.
+
+Godnym uwagi rozwojem w filozofii psychologii jest funkcjonalna kontekstualna lub kontekstowa nauka behawioralna (CBS). Jest to filozofia nauki zakorzeniona w filozoficznym pragmatyzmie i kontekstualizmie.
+
+Filozofia psychiatrii
+Filozofia psychiatrii bada teorie związane z psychiatrią i chorobami psychicznymi. Filozof Dominic Murphy identyfikuje trzy obszary poszukiwań w psychiatrii: pierwszy dotyczy badania psychiatrii, jako nauki wykorzystującej szerzej narzędzia filozofii nauki; drugi dotyczy badania koncepcji wykorzystywanych w dyskusji na temat chorób psychicznych, w tym doświadczeń w chorobach psychicznych oraz pojawiających się pytań normatywnych, trzeci obszar obejmuje badanie powiązań i nieścisłości między filozofią umysłu a psychopatologią[72].
+
+Filozofia nauk społecznych
+Filozofia nauk społecznych zajmuje się badaniem logiki i metod nauk społecznych takich jak socjologia, antropologia i politologia[73]. Filozofowie nauk społecznych badają różnice i podobieństwa nauk społecznych i przyrodniczych, związki przyczynowe między zjawiskami społecznymi, ewentualne istnienie praw socjalnych oraz ontologiczne znaczenie struktur i jednostek.
+
+Ojcem filozofii nauk społecznych jest Auguste Comte (1798-1857)[74]. Jego pozytywistyczna koncepcja ustaliła filozoficzne fundamenty socjologii formalnej i badań społecznych. Perspektywa ta jest ściśle związana ze scjentyzmem – wiarą w to, że metody nauk społecznych mogą być stosowane we wszystkich obszarach poszukiwań, czy to filozoficznych, czy społecznych, czy naukowych, czy jakichkolwiek innych. Ortodoksyjny pozytywizm został odrzucony przez większość współczesnych socjologów i historyków. Współcześnie bierze się pod uwagę przede wszystkim zniekształcające efekty obserwatora i ograniczenia strukturalne. Pozwoliły na to sceptycyzujące ruchy takie jak krytyczny realizm i neopragmatyzm. Wielki wkład w osłabienie dedukcyjnego myślenia o nauce miał filozof Thomas Kuhn[75].
+
+
+Amartya Sen został laureatem Nagrody Nobla z ekonomii za „łączenie narzędzi ekonomii i filozofii”[76]
+Filozofia ekonomii
+Można powiedzieć, że filozofia ekonomii jest namysłem nad tym co robią ekonomiści. Filozofowie ekonomii często zajmują się jej historią oraz refleksją nad jej przedmiotem i charakterem jako nauki. Sama ekonomia jest dosyć nietypową nauką, uwikłaną w przeróżne spory odnośnie do samych jej podstaw, tworząc tym samym pole działania dla filozofów ekonomii.
+
+Można wyróżnić siedem kategorii pytań filozoficznych dotyczących ekonomii[77]:
+
+pytania o dziedzinę dyskursu – dotyczą odpowiedzi na pytanie jaką nauką jest ekonomia (definicja ekonomii) oraz badają jej przedmiot,
+pytania ontologiczne – dotyczą istnienia oraz charakteru wzajemnych relacji pomiędzy przedmiotami badań ekonomii (np. funkcja pieniądza, czym jest pieniądz itp.),
+pytania semantyczne – dotyczą znaczenia pojęć stosowanych w ekonomii, np. inflacja, raz jest wskazywana jako przyczyna pewnych zjawisk (krzywa Phillipsa), innym razem jako miara wzrostu cen na rynku,
+pytania epistemologiczne – sposoby i granice poznania w ekonomii,
+pytania metodologiczne – dotyczące metod badania i sposobów wyjaśniania bytów ekonomicznych,
+pytania aksjologiczne – pytania o wartości oraz o ich wpływ na twierdzenia ekonomiczne,
+pytania socjologiczne – dotyczą kontekstu odkrycia naukowego oraz wskazania przyczyn powodzenia danych koncepcji ekonomicznych, a upadku innych.
