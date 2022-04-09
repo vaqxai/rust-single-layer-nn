@@ -1,6 +1,6 @@
 use crate::math;
 use std::process;
-use std::fmt::Debug;
+use std::fmt::Display;
 
 pub struct Perceptron {
 	pub inputs: Vec<f64>,
@@ -48,7 +48,7 @@ impl Perceptron {
 		let error = expected_output - output;
 
 		if (inputs.len() != self.weights.len()) {
-			println!("Inputs and weights must be the same length, but were: {}, {} in {:?}", inputs.len(), self.weights.len(), self);
+			println!("Inputs and weights must be the same length, but were: {}, {} in {}", inputs.len(), self.weights.len(), self);
 			process::exit(0x0100);
 		}
 
@@ -60,7 +60,7 @@ impl Perceptron {
 	}
 }
 
-impl Debug for Perceptron {
+impl Display for Perceptron {
 	fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
 		write!(f, "Perceptron {{ inputs: {:?}, weights: {:?}, bias: {}, learning_rate: {} }}", self.inputs, self.weights, self.bias, self.learning_rate)
 	}
