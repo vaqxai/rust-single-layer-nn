@@ -114,7 +114,9 @@ fn main() {
 
     for i in 0..args.iterations {
         train(&mut p_polish, &mut p_english, &mut p_german);
-        println!("Perceptrons trained {} times", i+1);
+        if (i+1) % 5 == 0 || i+1 == args.iterations {
+            println!("Perceptrons trained {} times", i+1);
+        }
         vprint(format!("Polish perceptron: {}\nEnglish perceptron: {}\nGerman perceptron: {}", p_polish, p_english, p_german));
     }
 
