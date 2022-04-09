@@ -1,12 +1,12 @@
 mod math;
 mod perceptron;
+use once_cell::sync::OnceCell;
 use perceptron::Perceptron;
 mod fileread;
 mod lettercounter;
 use lettercounter::count_letters;
 
 use clap::Parser;
-
 
 fn train(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut Perceptron) {
 
@@ -43,7 +43,7 @@ fn test(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut Pe
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about)]
-struct Args {
+pub struct Args {
     #[clap(short, long, help = "A string to classify with the net", conflicts_with = "testfile")]
     text: Option::<String>,
 
@@ -54,12 +54,38 @@ struct Args {
     testfile: String,
 
     #[clap(short, long, default_value_t = 1, help = "The number of times to train the network")]
-    iterations: u8,
+    iterations: u64,
+
+    #[clap(short, long, help = "Print additional info")]
+    verbose: bool,
+}
+
+static ARGS: OnceCell::<Args> = OnceCell::new();
+
+fn vprint(message: String) {
+    if ARGS.get().unwrap_or(&Args::parse()).verbose {
+        println!("{}", message);
+    }
 }
 
 fn main() {
 
-    let args = Args::parse();
+    match ARGS.set(Args::parse()) {
+        Ok(_) => {},
+        Err(_) => {
+            println!("Could not set args global variable, because it was already set");
+            return;
+        },
+    };
+
+    let args = match ARGS.get() {
+        Some(args) => args,
+        None => {
+            println!("Could not get args global variable.");
+            return;
+        },
+    };
+
 
     let mut p_polish: Perceptron = Perceptron::new(26, args.learning_rate);
     let mut p_english: Perceptron = Perceptron::new(26, args.learning_rate);
@@ -68,16 +94,18 @@ fn main() {
     for i in 0..args.iterations {
         train(&mut p_polish, &mut p_english, &mut p_german);
         println!("Perceptrons trained {} times", i+1);
-        println!("Polish perceptron: {}\nEnglish perceptron: {}\nGerman perceptron: {}", p_polish, p_english, p_german);
+        vprint(format!("Polish perceptron: {}\nEnglish perceptron: {}\nGerman perceptron: {}", p_polish, p_english, p_german));
     }
 
-    if let Some(text) = args.text {
-        let input_letters = count_letters(&text);
+    println!("Training complete!");
+
+    if let Some(text) = &args.text {
+        let input_letters = count_letters(&text.to_ascii_lowercase());
         let outcome_polish = p_polish.predict(&input_letters);
         let outcome_english = p_english.predict(&input_letters);
         let outcome_german = p_german.predict(&input_letters);
 
-        println!("Perceptron thinks this text is polish: {} german {} english {} ", outcome_polish, outcome_german, outcome_english);
+        println!("Perceptron thinks this text is polish: {} german: {} english: {} ", outcome_polish, outcome_german, outcome_english);
     } else {
         test(&mut p_polish, &mut p_english, &mut p_german, &args.testfile);
     }
