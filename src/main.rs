@@ -5,6 +5,8 @@ mod fileread;
 mod lettercounter;
 use lettercounter::count_letters;
 
+use clap::Parser;
+
 
 fn train() {
     let mut pPoland = Perceptron::new(26, 0.1);
@@ -40,9 +42,21 @@ fn train() {
 
 }
 
-fn main() {
-    println!("Hello, world!");
-    let mut percPoland = Perceptron::new(26 , 0.1);
-    percPoland.train(&vec!(0.1, 0.2), 1.0);
+#[derive(Parser, Debug)]
+#[clap(author, version, about, long_about = None)]
+struct Args {
+    #[clap(short, long)]
+    name: String,
 
+    #[clap(short, long, default_value_t = 1)]
+    count: u8,
+}
+
+fn main() {
+
+    let args = Args::parse();
+
+    for _ in 0..args.count {
+        println("Hello {}!", args.name)
+    }
 }
