@@ -16,17 +16,17 @@ fn train() {
     // TODO: Mod perceptrons to use a different classification function
     // TODO: Add a parser for user-input
 
-    let mut input_letters = count_letters(&fileread::file_to_str("polish.txt"));
+    let mut input_letters = count_letters(&fileread::file_to_str("train/polish.txt"));
     pPoland.train(&input_letters, 1.0);
     pEnglish.train(&input_letters, 0.0);
     pGerman.train(&input_letters, 0.0);
 
-    input_letters = count_letters(&fileread::file_to_str("english.txt"));
+    input_letters = count_letters(&fileread::file_to_str("train/english.txt"));
     pEnglish.train(&input_letters, 1.0);
     pPoland.train(&input_letters, 0.0);
     pGerman.train(&input_letters, 0.0);
 
-    input_letters = count_letters(&fileread::file_to_str("german.txt"));
+    input_letters = count_letters(&fileread::file_to_str("train/german.txt"));
     pGerman.train(&input_letters, 1.0);
     pPoland.train(&input_letters, 0.0);
     pEnglish.train(&input_letters, 0.0);
