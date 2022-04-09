@@ -33,12 +33,36 @@ fn train(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut P
 }
 
 fn test(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut Perceptron, filepath: &str){
-    let test_data = count_letters(&fileread::file_to_str_ascii_only(filepath));
+    let input_str = &fileread::file_to_str_ascii_only(filepath);
+    let test_data = count_letters(input_str);
     let outcome_polish = p_polish.predict(&test_data);
     let outcome_english = p_english.predict(&test_data);
     let outcome_german = p_german.predict(&test_data);
 
-    println!("Perceptron thinks this text is polish: {} german {} english {} ", outcome_polish, outcome_german, outcome_english);
+    interpret_results(outcome_polish, outcome_english, outcome_german, input_str);
+}
+
+fn interpret_results(outcome_polish: f64, outcome_english: f64, outcome_german: f64, text: &String) {
+
+    let outcome_polish = outcome_polish.round() as i32;
+    let outcome_english = outcome_english.round() as i32;
+    let outcome_german = outcome_german.round() as i32;
+
+    let input_truncated = match text.len() {
+        32.. => &text[0..32],
+        _   => &text,
+    };
+
+    match (outcome_polish, outcome_english, outcome_german) {
+        (1, 0, 0) => println!("Network thinks this text is polish: {}...", input_truncated),
+        (0, 1, 0) => println!("Network thinks this text is english: {}...", input_truncated),
+        (0, 0, 1) => println!("Network thinks this text is german: {}...", input_truncated),
+        (1, 0, 1) => println!("Network thinks this text is polish or german: {}...", input_truncated),
+        (0, 1, 1) => println!("Network thinks this text is polish or english: {}...", input_truncated),
+        (1, 1, 0) => println!("Network thinks this text is polish or english: {}...", input_truncated),
+        (0, 0, 0) => println!("Network thinks this text is neither polish, english nor german: {}...", input_truncated),
+        _ => println!("Network could not classify this text: {}", input_truncated),
+    }
 }
 
 #[derive(Parser, Debug)]
@@ -105,7 +129,8 @@ fn main() {
         let outcome_english = p_english.predict(&input_letters);
         let outcome_german = p_german.predict(&input_letters);
 
-        println!("Perceptron thinks this text is polish: {} german: {} english: {} ", outcome_polish, outcome_german, outcome_english);
+        interpret_results(outcome_polish, outcome_english, outcome_german, text)
+
     } else {
         test(&mut p_polish, &mut p_english, &mut p_german, &args.testfile);
     }
