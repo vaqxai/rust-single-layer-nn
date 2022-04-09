@@ -72,7 +72,7 @@ fn main() {
     }
 
     if let Some(text) = args.text {
-        let mut input_letters = count_letters(&text);
+        let input_letters = count_letters(&text);
         let outcome_polish = p_polish.predict(&input_letters);
         let outcome_english = p_english.predict(&input_letters);
         let outcome_german = p_german.predict(&input_letters);
