@@ -1,5 +1,5 @@
 [package]
-name = "nai-03-app"
+name = "rust-single-layer-nn"
 version = "0.1.1"
 edition = "2021"
 authors = ["Vaqxai <https://github.com/vaqxai>"]
