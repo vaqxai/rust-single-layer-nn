@@ -1,5 +1,5 @@
 [package]
-name = "rust-single-layer-nn"
+name = "single-layer-nn"
 version = "0.1.1"
 edition = "2021"
 authors = ["Vaqxai <https://github.com/vaqxai>"]
