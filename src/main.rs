@@ -32,33 +32,52 @@ fn train(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut P
 fn test(p_polish: &mut Perceptron, p_english: &mut Perceptron, p_german: &mut Perceptron, filepath: &str){
     let input_str = &fileread::file_to_str_ascii_only(filepath);
     let test_data = count_letters(input_str);
-    let outcome_polish = p_polish.predict(&test_data);
-    let outcome_english = p_english.predict(&test_data);
-    let outcome_german = p_german.predict(&test_data);
+    let outcome_polish = p_polish.predict_raw(&test_data);
+    let outcome_english = p_english.predict_raw(&test_data);
+    let outcome_german = p_german.predict_raw(&test_data);
 
     interpret_results(outcome_polish, outcome_english, outcome_german, input_str);
 }
 
 fn interpret_results(outcome_polish: f64, outcome_english: f64, outcome_german: f64, text: &String) {
 
-    let outcome_polish = outcome_polish.round() as i32;
-    let outcome_english = outcome_english.round() as i32;
-    let outcome_german = outcome_german.round() as i32;
+    println!("Perceptrons' reactions: PL: {}, EN: {}, GE {}", outcome_polish, outcome_english, outcome_german);
+
+    // choose the strongest reaction
+
+    let mut strongest_reaction = "";
+    let mut strongest_reaction_value = 0.0;
+
+    if outcome_polish > strongest_reaction_value {
+        strongest_reaction = "polish";
+        strongest_reaction_value = outcome_polish;
+    }
+
+    if outcome_english > strongest_reaction_value {
+        strongest_reaction = "english";
+        strongest_reaction_value = outcome_english;
+    }
+
+    if outcome_german > strongest_reaction_value {
+        strongest_reaction = "german";
+    }
+
+    // only show first 64 chars of input
 
     let input_truncated = match text.len() {
-        32.. => &text[0..32],
-        _   => &text,
+        64.. => {
+            let out = &text[0..64];
+            out.to_owned().push('…');
+            out
+        },
+        _   => text,
     };
 
-    match (outcome_polish, outcome_english, outcome_german) {
-        (1, 0, 0) => println!("Network thinks this text is polish: {}...", input_truncated),
-        (0, 1, 0) => println!("Network thinks this text is english: {}...", input_truncated),
-        (0, 0, 1) => println!("Network thinks this text is german: {}...", input_truncated),
-        (1, 0, 1) => println!("Network thinks this text is polish or german: {}...", input_truncated),
-        (0, 1, 1) => println!("Network thinks this text is polish or english: {}...", input_truncated),
-        (1, 1, 0) => println!("Network thinks this text is polish or english: {}...", input_truncated),
-        (0, 0, 0) => println!("Network thinks this text is neither polish, english nor german: {}...", input_truncated),
-        _ => println!("Network could not classify this text: {}", input_truncated),
+    match strongest_reaction {
+        "polish" => println!("Network thinks this text is polish: {}...", input_truncated),
+        "english" => println!("Network thinks this text is english: {}...", input_truncated),
+        "german" => println!("Network thinks this text is german: {}...", input_truncated),
+ _ => println!("Network could not classify this text: {}", input_truncated),
     }
 }
 

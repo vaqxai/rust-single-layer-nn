@@ -5,6 +5,6 @@ pub fn random_f64() -> f64 {
 	rng.gen::<f64>()
 }
 
-pub fn _sigmoid(x: f64) -> f64 {
+pub fn sigmoid(x: f64) -> f64 {
 	1.0 / (1.0 + (-x).exp())
 }

@@ -26,21 +26,19 @@ impl Perceptron {
 		}
 	}
 
-	pub fn predict(&self, inputs: &Vec<f64>) -> f64 {
+	pub fn predict_raw(&self, inputs: &Vec<f64>) -> f64 {
 		let mut sum = 0.0;
 		for i in 0..inputs.len() {
 			sum += inputs[i] * self.weights[i];
 		}
 
-		// sum += self.bias; // Why?
-		// math::sigmoid(sum)
+		sum += self.bias;
 
-		if sum < self.bias {
-			0.0
-		} else {
-			1.0
-		}
+		sum
+	}
 
+	pub fn predict(&self, inputs: &Vec<f64>) -> f64 {
+		math::sigmoid(self.predict_raw(inputs))
 	}
 
 	pub fn train(&mut self, inputs: &Vec<f64>, expected_output: f64) {
